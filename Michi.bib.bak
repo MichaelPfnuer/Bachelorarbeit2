@@ -1,0 +1,30 @@
+% This file was created with JabRef 2.11.1.
+% Encoding: UTF8
+
+
+@Book{Bussysteme_in_der_Praxis,
+  Title                    = {Bussysteme in der Praxis},
+  Author                   = {Wilfried Klaas},
+  Editor                   = {Franzis Verlag GmbH},
+  Year                     = {2015},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.06}
+}
+
+@Book{Raspberri_Pi_Handbuch,
+  Title                    = {Raspberry Pi 
+Das umfassende Handbuch},
+  Author                   = {Kofler, Kühnast and Scherbeck},
+  Publisher                = {Rheinwerk Verlag GmbH, Bonn},
+  Year                     = {2015},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.06}
+}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:Automatically created groups\;2\;;
+}
+

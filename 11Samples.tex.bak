@@ -1,0 +1,128 @@
+\chapter{Grundlagen I}
+\label{chapter_grundlagen_I}
+
+\thispagestyle{RW}
+\pagestyle{RW}
+
+\section{Abschnitt I}
+
+\subsection{Unterabschnitt I}
+
+%source:
+%source saved: no
+%spellcheck: no
+%sourcecheck: no
+
+\ac{TWAIN} %Abkürzung bei ersten Auftreten ausschreiben
+
+\acs{TWAIN} %Abkürzung schreiben
+
+\acf{TWAIN}   %Gibt die Langform und die Kurzform aus.
+
+\acl{TWAIN}	%Gibt nur die Langform ohne die Kurzform aus.
+
+\texttt{printf("Hallo Welt")} %für Ausschnitte von Sourcecode innerhalb von Text
+
+\textit{saned} %für das erste Auftreten eines wichtigen Begriffs
+
+\cite{x3} %Quellverweis
+
+\cite{x4} %Quellverweis
+
+\cite{x5} %Quellverweis
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.4]{BilderAllgemein/Logo}
+\end{center}
+	%\includegraphics[width=\textwidth]
+	%\end{center}
+	% Title
+	\caption{Das FHS-Logo}
+	% Unique name: identifier for referencing
+	\label{FIG_LOGO}
+\end{figure}
+%source:
+%source saved: no
+%reference: no
+%spellcheck: no
+%sourcecheck: no
+
+\begin{quote}
+“Ein Socket ist eine bidirektionale (Vollduplex-)Software-Struktur, die zur Netzwerk- oder Interprozesskommunikation verwendet wird.“ \cite{x2}
+\end{quote}
+%source:
+%source saved: no
+%spellcheck: no
+
+\lstset{escapeinside={\%*}{*)},numbers=none}%oder numbers=left
+\begin{lstlisting}[language=C,
+caption=Beispiel-Listing,
+label=LST_SAMPLE]
+serverTCP = new TcpListener(IPAddress.Parse(serverIP), serverPort);
+\end{lstlisting}
+%source:
+%source saved: no
+%reference: no
+%spellcheck: no
+%sourcecheck: no
+
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Matlab, caption=Einfaches Matlabprogramm, label=list:hello.m]{Listings/hello.m}
+%source:
+%source saved: no
+%reference: no
+%spellcheck: no
+%sourcecheck: no
+
+\section{Formeln}
+%
+Formeln sind für jeden Abschnitt rechtsbündig von dieser zu nummerieren, um einen späteren Bezug in der Arbeit zu gewährleisten. Formeln werden üblicherweise in "`Computer Modern Roman"' (\LaTeX{}-Standard) gesetzt. In diesem Template wird die Formel-Schrift bzw. das Package \texttt{eulervm} verwendet. Abgesetzte Formeln werden in \LaTeX{} durch die 
+\emph{equation} Umgebung definiert. Formelausdrücke innerhalb von Textabschnitten erhält man durch \$Formel\$.
+
+\subsection*{Beispiel}
+%
+Der \emph{Sinus cardinalis} oder sinc-Funktion ist eine mathematische Funktion $f$, welche in nicht-normierter Version als
+
+\begin{equation}
+	f(x) := \frac{\sin(x)}{x}
+	\label{eq:bsp}
+\end{equation}
+%source:
+%source saved: no
+%reference: no
+%spellcheck: no
+
+definiert wird. In der digitalen Signalverarbeitung findet meistens nachfolgende normierte Version $\mathrm{si}(x)$ oder $\mathrm{sinc}(x)$ Anwendung \cite{Gru04}, \cite{WikiSinc}. Für eine Visualisierung dieser Funktionen siehe Abb.~\ref{Darstellung_Sinc}.
+
+\begin{equation}
+	f(x) := \frac{\sin(\pi x)}{\pi x}
+	\label{EQ_SAMPLE}
+\end{equation}
+%source:
+%source saved: no
+%reference: no
+%spellcheck: no
+
+\section{Beispiel für Tabellen}
+%
+Es empfiehlt sich, für Tabellen die Standard-\LaTeX{}-Umgebung \emph{tabular} zu verwenden. Bei Bedarf können natürlich auch Erweiterungen (z.B.~\emph{tabularx} oder \emph{array}) zur Anwendung kommen. Eine mögliche Darstellung zeigt Tabelle \ref{Table_Sinc}.
+
+\begin{table}[h!]%
+	\begin{center}
+		\begin{tabular}{|r|r|r|}
+			\firsthline
+			$x$&$\mathrm{sinc}(x)$&$\mathrm{sin}(x)$\\\hline\hline
+			$-0.5$&0.6366&-0.4794\\\hline
+			$0$&1.0000&0\\\hline
+			$0.5$&0.6366&0.4794\\\hline
+		\end{tabular}
+		\caption{Zwei Werte der Sinc-Funktion}
+		\label{Table_Sinc}
+	\end{center}
+\end{table}
+%source:
+%sourcecheck: no
+%source saved: no
+%reference: no
+%spellcheck: no

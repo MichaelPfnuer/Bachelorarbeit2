@@ -1,0 +1,86 @@
+\documentclass
+[
+a4paper,
+german,
+openright,                    % Kap.beginn immer rechts! (fkt. nur bei report, nicht bei article)
+12pt                          % ersatzweise 12pt, wenn mehr Seiten entstehen sollen
+]
+{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Dokumenteneigenschaften
+
+\newcommand{\Author}{Michael Pfn\"ur} 
+\newcommand{\Title}{M\"oglichkeiten zur Einbindung von Single Board Computer  in ein bestehendes Fertigungsumfeld}
+\newcommand{\Keywords}{KEYWORD 1, KEYWORD 2, KEYWORD 3, KEYWORD 4, KEYWORD 5}
+\newcommand{\Advisor}{FH-Ass. Prof. Dipl. Phys. Judith Schwarzer}
+\newcommand{\Birthdate}{22.02.1981}
+\newcommand{\EnrolNum}{1310555048}
+\newcommand{\VenueMonthYear}{Salzburg, Mai 2016}
+\newcommand{\VenueDate}{Salzburg, am 15.05.2016}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout zusammengestellt von Richard Wanger im WS 2015/2016. Verschiedene Vorlagen wurden bei der Erstellung
+% kombiniert und nach dem Masterleitfaden (Stand: Oktober 2015) adaptiert. Verwendung ohne Gewähr!
+
+\usepackage{style}		%alle packages und Formatvorlagen befinden sich in dieser Datei
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ORGANISATORISCHES
+
+\begin{document}
+\include{01Titelblatt}
+\include{02EidesstattlicheErklaerung}
+\include{03InfosAbstract}
+\include{04Danksagung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%VERZEICHNISSE
+
+\tableofcontents
+\protect \addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+\include{05Abkuerzungsverzeichnis}
+
+\listoffigures
+\protect \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+\listoftables
+\protect \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+\lstlistoflistings
+\protect \addcontentsline{toc}{chapter}{Listingverzeichnis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%INHALT
+\include{06Einleitung}
+\include{07TheoretischerTeil}
+\include{08PraktischerTeil}
+\include{09Zusammenfassung}
+%\include{11Samples}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LITERATURVERZEICHNIS
+
+\interlinepenalty=10000 % Literatureinträge: Absätze zusammenhalten
+\clearpage
+\addcontentsline{toc}{chapter}{Literatur}
+\singlespace
+\bibliography{Michi}
+\interlinepenalty=100
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANHÄNGE
+
+\begin{appendix}
+%\include{Anhang_Mathematik}                 % A
+%\include{Anhang_FormatDerParameterdateien}  % B
+%\include{Anhang_Quelltexte}                 % C
+%\include{Anhang_Datenblaetter}              % D
+%\include{Anhang_Glossar}                    % E
+\end{appendix}
+
+\end{document}

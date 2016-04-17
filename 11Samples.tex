@@ -1,0 +1,97 @@
+\chapter{Beispiäle}
+
+\thispagestyle{standard}
+\pagestyle{standard}
+
+\section{Text und Zitate}
+
+In Moby-Dick geht es in erster Linie um die Jagd auf einen weißen Pottwal \footnote{nach: https://de.wikipedia.org/wiki/Moby-Dick}. Kurze Zitate (unter drei Zeilen) müssen mit Anführungszeichen gekennzeichnet werden. Außerdem müssen die Quelle sowie die Seite angegeben werden. Ein Beispiel für ein kurzes Zitat: \glqq Komisch. Manch einer von uns wünschte sich, er lebe auf einer Südseeinsel.\grqq \cite{MELVILLE:MOBYDICK1997} (Seite 100).
+
+  \begin{quote}
+"Das Buch hier Lieblingsbuch. Viele Blätter viele, schöne Bilder. Du kennen Worte?"\newline
+"Ja"\newline
+"Ich kennen Bilder. Das ein Wal. Du lesen Worte!"\newline
+"Durch das Herz des Wals strömt mehr Flüssigkeit als durch das große Wasserleitungsrohr unter der London Bridge, jedoch strömt das Wasser nicht so stark, wie das Blut, das vom Herz des Wals pocht."\newline
+"Du gut, ich danken dir."  \upshape \cite{MELVILLE:MOBYDICK1997} (Seite 500)
+  \end{quote}
+
+Ein sehr praktisches Package ist cleveref. Es automatisiert und erleichtert das setzen von Referenzen ungemein. Als Beispiel wird eine Referenz auf das FHS-Logo gesetzt siehe \cref{FIG_LOGO}.
+
+Für das Verfassen von wissenschaftlichen Arbeiten können eine Vielzahl an Quellentypen herangezogen werden. Beispiele hierfür sind Leitfäden (Manuals) \citep{RFC2828} \citep{80211i} \citep{80211} \cite{X800} \citep{TR102377} \citep{EN301893} \citep{PUB197} \citep{PUB74}, Bücher \citep{Fis04a} \citep{Rei05a} \citep{Tan00a} \citep{Ste04a} \citep{GMS00a} \citep{HL98a}, Sammelbände \citep{EHL00a} \citep{Sch94a}, Journal-Artikel \citep{TM03a} \citep{CP03a}, Konferenz-Proceedings \citep{HCB00a} \citep{KBW04a} \citep{KSW04a} \citep{HK05a}, Internetmagazine \citep{Eke05a}, Webquellen \cite{nist} \cite{php} \cite{BDKMT93a} \cite{IDSSM} sowie Diplomarbeiten und Dissertationen \citep{Sch98} \cite{Hae94a}.
+
+Als Beispiel für eine Abkürzung wird hier \ac{ADF} angeführt. Das Package schreibt automatisch das erste Vorkommen der Abkürzung aus. Die zweite Verwendung von \ac{ADF} wird also abgekürzt. Ist ein Ausschreiben einer Abkürzung gewünscht wird der acl-Befehl verwendet. Dies führt zu \acl{ADF}. Abkürzungen müssen in der Datei \glqq 05Abkuerzungsverzeichnis\grqq angegeben werden.
+
+\section{Quelltext}
+
+\texttt{printf("Hallo Welt")} für Ausschnitte von Sourcecode innerhalb von Text
+
+\lstset{escapeinside={\%*}{*)},numbers=none}%oder numbers=left
+\begin{lstlisting}[language=C,
+caption=Beispiel-Listing,
+label=LST_SAMPLE]
+serverTCP = new TcpListener(IPAddress.Parse(serverIP), serverPort);
+\end{lstlisting}
+
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Matlab, caption=Einfaches Matlabprogramm in einer Datei, label=list:hello.m]{Listings/hello.m}
+
+\section{Bilder}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[scale=0.4]{BilderAllgemein/Logo.jpg}
+\end{center}
+	%\includegraphics[width=\textwidth]
+	%\end{center}
+	% Title
+	\caption{Das FHS-Logo}
+	% Unique name: identifier for referencing
+	\label{FIG_LOGO}
+\end{figure}
+
+\section{Formeln}
+
+Formeln sind für jeden Abschnitt rechtsbündig von dieser zu nummerieren, um einen späteren Bezug in der Arbeit zu gewährleisten. Formeln werden üblicherweise in "`Computer Modern Roman"' (\LaTeX{}-Standard) gesetzt. In diesem Template wird die Formel-Schrift bzw. das Package \texttt{eulervm} verwendet. Abgesetzte Formeln werden in \LaTeX{} durch die 
+\emph{equation} Umgebung definiert. Formelausdrücke innerhalb von Textabschnitten erhält man durch \$Formel\$.
+
+\subsection*{Beispiel}
+%
+Der \emph{Sinus cardinalis} oder sinc-Funktion ist eine mathematische Funktion $f$, welche in nicht-normierter Version als
+
+\begin{equation}
+	f(x) := \frac{\sin(x)}{x}
+	\label{eq:bsp}
+\end{equation}
+
+definiert wird. In der digitalen Signalverarbeitung findet meistens nachfolgende normierte Version $\mathrm{si}(x)$ oder $\mathrm{sinc}(x)$ Anwendung \cite{x1}, \cite{x2}. Für eine Visualisierung dieser Funktionen siehe Abb.~\ref{FIG_LOGO}.
+
+\begin{equation}
+	f(x) := \frac{\sin(\pi x)}{\pi x}
+	\label{EQ_SAMPLE}
+\end{equation}
+
+\section{Beispiel für Tabellen}
+%
+Es empfiehlt sich, für Tabellen die Standard-\LaTeX{}-Umgebung \emph{tabular} zu verwenden. Bei Bedarf können natürlich auch Erweiterungen (z.B.~\emph{tabularx} oder \emph{array}) zur Anwendung kommen. Eine mögliche Darstellung zeigt Tabelle \ref{Table_Sinc}.
+
+\begin{table}[h!]%
+	\begin{center}
+		\begin{tabular}{|r|r|r|}
+			\firsthline
+			$x$&$\mathrm{sinc}(x)$&$\mathrm{sin}(x)$\\\hline\hline
+			$-0.5$&0.6366&-0.4794\\\hline
+			$0$&1.0000&0\\\hline
+			$0.5$&0.6366&0.4794\\\hline
+		\end{tabular}
+		\caption{Zwei Werte der Sinc-Funktion}
+		\label{Table_Sinc}
+	\end{center}
+\end{table}
+
+
+
+
+
+
+
+

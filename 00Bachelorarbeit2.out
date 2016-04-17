@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter*.4}{Inhaltsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.5}{Abk\374rzungsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter*.6}{Abbildungsverzeichnis}{}% 3
+\BOOKMARK [0][-]{chapter*.7}{Tabellenverzeichnis}{}% 4
+\BOOKMARK [0][-]{chapter*.8}{Listingverzeichnis}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 6
+\BOOKMARK [0][-]{chapter.2}{Theoretischer Teil}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Begriffsdefinition}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Vergleich von verschiedenen SBC}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Bussysteme}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{1-Wire}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{I2C-Bus}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{SPI-Bus}{section.2.3}% 13
+\BOOKMARK [0][-]{chapter.3}{Praktischer Teil}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Temperaturmessung mit Sensor DB18S20}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Vibrationsmessung mit Sensor BMA020}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 18
+\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 19

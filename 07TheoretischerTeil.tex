@@ -1,0 +1,112 @@
+\chapter{Theoretischer Teil}
+\label{chapter_TheoretischerTeil}
+Dieses Kapitel befasst sich mit den theoretischen Grundlagen, die für den Einsatz von \acp{SBC} zur Datenerfassung mittels verschiedenen Sensoren nötig sind. In Abschnitt \ref{section_Begriffsdefiniton} werden die im weiteren Verlauf der Arbeit verwendeten Fachbegriffe erläutert, um die beschriebenen Zusammenhänge gut zu verstehen. Der Abschnitt \ref{section_Vergleich_SBC} behandelt die unterschiedlichen sich auf dem Markt befindenden \acp{SBC} mit ihren jeweiligen Vor- bzw. Nachteilen. Die verschiedenen Bussysteme wie z.B. der \ac{I$^2$C}  Bus werden in Abschnitt \ref{section_Bussysteme} erklärt und deren Funktionsweise erläutert. 
+
+
+\section{Begriffsdefinition}
+\label{section_Begriffsdefiniton}
+Die in diesem Abschnitt beschriebenen Definitionen wurden, soweit nicht anders angegeben aus folgendem Dokument entnommen \citep{Bussysteme_in_der_Praxis}.
+
+\subsection*{Single Board Computer}
+Unter einem \textit{Single Board Computer} (\ac{SBC}) versteht man ein Computersystem, welches sich komplett auf einer einzigen Platine befindet. \acp{SBC} können fast die gleichen Aufgaben erledigen wie gewöhnliche Computer, allerdings sind die Einplatinen Rechner diesen in Hinblick auf die Hardwareausstattung doch um einiges unterlegen.
+
+\subsection*{Bussysteme}
+\textit{Bussysteme} sind Systeme, die verwendet werden zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der einzelnen Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
+
+\subsection*{Raspberry Pi}
+Der \textit{Raspberry Pi} ist ein \ac{SBC}, der von der britischen \textit{Raspberry Pi Foundation} aus Komponenten von Android-Smartphones entwickelt wurde.
+
+\subsection*{Raspbian}
+\textit{Raspbian} ist ein Betriebssystem, welches auf der Linux Distribution Debian basiert und speziell auf den Raspberry Pi angepasst wurde.
+
+\subsection*{RRDTool}
+Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperaturmessungen oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
+
+\subsection*{General Purpose Input/Output}
+
+%Abschnitt Vergleich von SBCs 
+\section{Vergleich von verschiedenen SBC}
+\label{section_Vergleich_SBC}
+In diesem Abschnitt werden einige der bekanntesten \acp{SBC}, die sich auf dem Markt befinden miteinander verglichen, um den bestmöglichen für die vorgegebenen Anforderungen auswählen zu können.
+Wichtige Kriterien für die Auswahl sind, dass die Möglichkeit besteht verschiedene Betriebssysteme (Windows und Linux) mit dem jeweiligen Einplatinenrechner betreiben zu können, sowie die verbaute Hardware(Taktfrequenz des Chips, RAM-Speicher). Ein weiterer Punkt welcher von Bedeutung ist, ist die Unterstützung von verschiedenen Kommunikationsschnittstellen (\ac{I$^2$C}, \ac{SPI}, 1-Wire), um eine große Anzahl von Sensoren nutzen zu können. Eine Übersicht der einzelnen Komponenten der verschiedenen \acp{SBC} sind in den Tabellen \ref{Tabelle_Vergleich_SBC1} und \ref{Tabelle_Vergleich_SBC2} dargestellt.
+
+%Tabelle 1
+\begin{table}[H]
+%\rowcolors{2}{black!10}{black!20}
+\centering
+\begin{tabular}{
+llll
+}
+\toprule
+\multicolumn{1}{p{3cm}}{\textit{\ac{SBC}}} & \multicolumn{1}{p{3.5cm}}{\textit{Operating System} } & \multicolumn{1}{p{1,5cm}}{\textit{RAM} }&\multicolumn{1}{p{3cm}}{ \centering\textit{CPU} }\\\midrule
+Banana Pi & Linux, Android & 1 GB & ARM Cortex-A7, 1 GHz\\
+&&&\\
+Raspberry Pi2&Windows, Linux&1 GB&ARM Cortex-A7 900 MHz\\
+&&&\\
+Raspberry Pi3&Windows, Linux&1 GB&ARM Cortex-A53 1,2 GHz\\
+&&&\\
+BeagleBone Black & Linux & 512 MB & ARM Cortex-A8 1 GHz\\
+&&&\\
+HummingBoard i2eX & Linux, Android & 1 GB & ARM Cortex-A9 1 GHz\\
+&&&\\
+Intel Galileo Gen 2 & Windows, Linux & 256 MB & x86 Quark 400 MHz\\
+&&&\\
+Radxa Rock & Linux & 2 GB & ARM Cortex-A9 1,6 GHz\\
+\bottomrule
+\end{tabular}
+\caption{Vergleich OS, RAM, CPU verschiedener SBCs}
+\label{Tabelle_Vergleich_SBC1}
+\end{table}
+
+\begin{threeparttable}[H]
+%\rowcolors{2}{black!10}{black!20}
+\centering
+\begin{tabular}{
+llll
+}
+\toprule
+\multicolumn{1}{p{3cm}}{\textit{\ac{SBC}}} & \multicolumn{1}{p{3.5cm}}{\textit{Communication} } & \multicolumn{1}{p{3cm}}{\textit{Networking} }&\multicolumn{1}{p{3cm}}{ \textit{GPIO} }\\\midrule
+Banana Pi & I$^2$C, SPI & 1\;GigE & 80\\
+&&&\\
+Raspberry Pi2&I$^2$C, SPI&10/100\;Mbps&40\\
+&&&\\
+Raspberry Pi3&I$^2$C, SPI&10/100\;Mbps\tnote{1} &40\\
+&&&\\
+BeagleBone Black &I$^2$C, SPI&10/100\;Mbps&66\\
+&&&\\
+HummingBoard i2eX &I$^2$C, SPI&1\;GigE&8\\
+&&&\\
+Intel Galileo Gen 2 & I$^2$C, SPI&10/100\;Mbps&20\\
+&&&\\
+Radxa Rock & I$^2$C, SPI\tnote{2}&10/100\;Mbps&80\\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}\footnotesize
+\item[1] mit WLAN on Board
+\item[2] nur für Android
+\end{tablenotes}
+
+\caption{Vergleich Schnittstellen, Netzwerkverbindung, Anzahl GPIO Pins}
+\label{Tabelle_Vergleich_SBC2}
+\end{threeparttable}
+
+Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist. Aus diesem Grund fiel die Wahl auf den Raspberry Pi 3, da dieser auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den RPI 3 war, dass es für diesen 
+
+
+
+
+
+
+
+\section{Bussysteme}
+\label{section_Bussysteme}
+
+\subsection{1-Wire}
+\label{subsection_1Wire}
+
+\subsection{I$^2$C-Bus}
+\label{subsection_I2C}
+
+\subsection{SPI-Bus}
+\label{subsection_SPI}
