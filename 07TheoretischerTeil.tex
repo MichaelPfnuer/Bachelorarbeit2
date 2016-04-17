@@ -14,7 +14,7 @@ Unter einem \textit{Single Board Computer} (\ac{SBC}) versteht man ein Computers
 \textit{Bussysteme} sind Systeme, die verwendet werden zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der einzelnen Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
 
 \subsection*{Raspberry Pi}
-Der \textit{Raspberry Pi} ist ein \ac{SBC}, der von der britischen \textit{Raspberry Pi Foundation} aus Komponenten von Android-Smartphones entwickelt wurde.
+Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry Pi Foundation} aus Komponenten von Android-Smartphones entwickelt wurde.
 
 \subsection*{Raspbian}
 \textit{Raspbian} ist ein Betriebssystem, welches auf der Linux Distribution Debian basiert und speziell auf den Raspberry Pi angepasst wurde.
@@ -23,6 +23,9 @@ Der \textit{Raspberry Pi} ist ein \ac{SBC}, der von der britischen \textit{Raspb
 Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperaturmessungen oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
 
 \subsection*{General Purpose Input/Output}
+
+\subsection*{Python}
+
 
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBC}
@@ -91,8 +94,11 @@ Radxa Rock & I$^2$C, SPI\tnote{2}&10/100\;Mbps&80\\
 \label{Tabelle_Vergleich_SBC2}
 \end{threeparttable}
 
-Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist. Aus diesem Grund fiel die Wahl auf den Raspberry Pi 3, da dieser auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den RPI 3 war, dass es für diesen 
+Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist. Aus diesem Grund fiel die Wahl auf den \ac{RPI}\;3, da dieser beide Betriebssysteme unterstützt und auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den \ac{RPI}\;3 war, dass es für diesen eine sehr große Anzahl an unterstützten Sensoren gibt (Sensoren die mit einer elektrischen Spannung von 3,3\;$V$ - 5\;$V$) betrieben werden. Dies ermöglicht einen sehr weit gefächerten Einsatz des \ac{RPI}\;3 und ist für das vorgesehene Projekt von großer Bedeutung.
 
+%%Kapitel Raspberry PI
+\section{Raspberry Pi 3}
+Das folgende Kapitel beschreibt den Raspberry Pi 3 und befasst sich genauer mit den verbauten Komponenten, welche im weiteren Verlauf der Arbeit benötigt werden. 
 
 
 
