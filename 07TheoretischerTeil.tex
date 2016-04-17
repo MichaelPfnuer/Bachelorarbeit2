@@ -26,6 +26,9 @@ Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erste
 
 \subsection*{Python}
 
+\subsection*{Bluetooth Low Energy}
+
+\subsection*{Windows 10 IoT}
 
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBC}
@@ -98,10 +101,41 @@ Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{S
 
 %%Kapitel Raspberry PI
 \section{Raspberry Pi 3}
+\label{section_Raspberry_Pi3}
 Das folgende Kapitel beschreibt den Raspberry Pi 3 und befasst sich genauer mit den verbauten Komponenten, welche im weiteren Verlauf der Arbeit benötigt werden. 
 
+\subsection{Allgemeine technische Daten}
+\label{subsection_Allgemeine_technische_Daten}
+Die im folgenden Information wurden, soweit nicht anders angegeben von der offiziellen Homepage der \textbf{Raspberry Pi Foundation} entnommen \citep{RaspberryPiHomePage}.\\
+Der \ac{RPI} 3 ist ein Kreditkarten großer Einplatinenrechner, welcher aktuell an die \textit{sieben Million} Mal verkauft wurde \citep{RPI_Verkaufszahlen}. Dieser besitzt\dots
+\begin{itemize}
+\item einen 1.2\;GHz 64-bit quad-core ARMv8 CPU
+\item 802.11n Wireless LAN
+\item Bluetooth 4.1
+\item \ac{BLE}
+\item 4 USB Ports
+\item 40 GPIO Pins
+\item Full HDMI Port
+\item Ethernet Port
+\item \ac{CSI}
+\item \ac{DSI}
+\item Micro SD Karten Slot
+\end{itemize}
 
+Die aktuelle Version des Raspberry Pi, der \ac{RPI}\;3 ist in Abbildung \ref{Abb_Bild_RPI3} dargestellt.
 
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.4]{BilderAllgemein/RPI3.png}
+  \caption{Raspberry Pi\;3 \citep{RPI_Bild}}
+  \label{Abb_Bild_RPI3}
+\end{figure}
+
+Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} auf dem Gerät zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten (nicht mehr nur auf Linux Betriebssysteme beschränkt) ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen beim aktuellen ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr extra durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
+
+\subsection{GPIO}
+\label{subsection_GPIO}
+sdfsf
 
 
 

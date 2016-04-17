@@ -5,7 +5,7 @@
 @Book{Bussysteme_in_der_Praxis,
   Title                    = {Bussysteme in der Praxis},
   Author                   = {Wilfried Klaas},
-  Editor                   = {Franzis Verlag GmbH},
+  Publisher                = {Franzis Verlag GmbH},
   Year                     = {2015},
   Owner                    = {Michi},
   Timestamp                = {2016.04.06}
@@ -14,11 +14,30 @@
 @Book{Raspberri_Pi_Handbuch,
   Title                    = {Raspberry Pi 
 Das umfassende Handbuch},
-  Author                   = {Kofler, Kühnast and Scherbeck},
+  Author                   = {Kofler and Kühnast and Scherbeck},
   Publisher                = {Rheinwerk Verlag GmbH, Bonn},
   Year                     = {2015},
   Owner                    = {Michi},
   Timestamp                = {2016.04.06}
+}
+
+@Electronic{RPI_Verkaufszahlen,
+  Title                    = {SENIOR PI},
+  Author                   = {Liz Upton},
+  Language                 = {Englisch},
+  Month                    = {Oktober},
+  Organization             = {Raspberry Pi Foundation},
+  Url                      = {https://www.raspberrypi.org/blog/senior-pi/},
+  Year                     = {2015},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.17}
+}
+
+@Electronic{RaspberryPiHomePage,
+  Title                    = {RASPBERRY PI 3 MODEL B},
+  Url                      = {https://www.raspberrypi.org/products/raspberry-pi-3-model-b/},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.17}
 }
 
 @comment{jabref-meta: groupsversion:3;}

@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: 00Bachelorarbeit2.aux
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 00Bachelorarbeit2.aux
 The style file: deIEEEtran.bst
 A level-1 auxiliary file: 01Titelblatt.aux
 A level-1 auxiliary file: 02EidesstattlicheErklaerung.aux
@@ -9,9 +11,55 @@ A level-1 auxiliary file: 06Einleitung.aux
 A level-1 auxiliary file: 07TheoretischerTeil.aux
 A level-1 auxiliary file: 08PraktischerTeil.aux
 A level-1 auxiliary file: 09Zusammenfassung.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Michi.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
+You've used 4 entries,
+            3998 wiz_defined-function locations,
+            835 strings with 7902 characters,
+and the built_in function-call counts, 1419 in all, are:
+= -- 98
+> -- 13
+< -- 0
++ -- 7
+- -- 3
+* -- 64
+:= -- 271
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 108
+empty$ -- 149
+format.name$ -- 3
+if$ -- 289
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 25
+newline$ -- 41
+num.names$ -- 3
+pop$ -- 78
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 106
+stack$ -- 0
+substring$ -- 0
+swap$ -- 63
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 4
+warning$ -- 0
+while$ -- 3
+width$ -- 5
+write$ -- 58

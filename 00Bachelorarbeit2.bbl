@@ -21,13 +21,28 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Raspberri_Pi_Handbuch}
-Kofler, Kühnast, und Scherbeck, \emph{Raspberry Pi Das umfassende
-  Handbuch}.\hskip 1em plus 0.5em minus 0.4em\relax Rheinwerk Verlag GmbH,
-  Bonn, 2015.
+\bibitem{RPI_Bild}
+\BIBentryALTinterwordspacing
+E.~Upton. (2016, Februar) \BIBforeignlanguage{Englisch}{RASPBERRY PI 3 ON SALE
+  NOW AT \$35}. [Online]. Available:
+  \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
   0.4em\relax Franzis Verlag GmbH, 2015.
+
+\bibitem{RaspberryPiHomePage}
+\BIBentryALTinterwordspacing
+RASPBERRY PI 3 MODEL B. [Online]. Available:
+  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{RPI_Verkaufszahlen}
+\BIBentryALTinterwordspacing
+L.~Upton. (2015, Oktober) \BIBforeignlanguage{Englisch}{SENIOR PI}. Raspberry
+  Pi Foundation. [Online]. Available:
+  \url{https://www.raspberrypi.org/blog/senior-pi/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
