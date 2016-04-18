@@ -9,7 +9,7 @@
 \BOOKMARK [1][-]{section.2.2}{Vergleich von verschiedenen SBC}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.3}{Raspberry Pi 3}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.3.1}{Allgemeine technische Daten}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{GPIO}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{GPIO-Kontakte}{section.2.3}% 12
 \BOOKMARK [1][-]{section.2.4}{Bussysteme}{chapter.2}% 13
 \BOOKMARK [2][-]{subsection.2.4.1}{1-Wire}{section.2.4}% 14
 \BOOKMARK [2][-]{subsection.2.4.2}{I2C-Bus}{section.2.4}% 15

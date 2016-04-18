@@ -23,13 +23,13 @@ Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry
 Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperaturmessungen oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
 
 \subsection*{General Purpose Input/Output}
-
+Unter \textit{\ac{GPIO}} versteht man elektrische Kontakte, die zur Realisierung verschiedener Funktionen für elektronische Geräte verwendet werden. Eine genauere Erklärung erfolgt in Abschnitt \ref{subsection_GPIO} \citep{Raspberri_Pi_Handbuch}.
 \subsection*{Python}
-
+\textit{Python} ist eine Programmiersprache, die vor allem auf dem Raspberry Pi bevorzugt verwendet wird.
 \subsection*{Bluetooth Low Energy}
-
+\textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Die Stromkosten bei \ac{BLE} sind um einiges geringe als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
 \subsection*{Windows 10 IoT}
-
+\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq Version von Windows 10, die auf Mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBC}
 \label{section_Vergleich_SBC}
@@ -133,11 +133,25 @@ Die aktuelle Version des Raspberry Pi, der \ac{RPI}\;3 ist in Abbildung \ref{Abb
 
 Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} auf dem Gerät zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten (nicht mehr nur auf Linux Betriebssysteme beschränkt) ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen beim aktuellen ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr extra durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
 
-\subsection{GPIO}
+\subsection{GPIO-Kontakte}
 \label{subsection_GPIO}
-sdfsf
+Wie bereits in Abschnitt \ref{subsection_Allgemeine_technische_Daten} angesprochen besitzt der \ac{RPI}\,3 40 GPIO-Kontakte, welche in einer Ecke der Platine zu 2\;x\;20 Kontakten angeordnet sind. Diese haben einen Rasterabstand von 2,54 mm zueinander und stellen die Grundlage für viele Projekte dar. Die ersten Modelle des \ac{RPI} besaßen dagegen nur 26 Pins die zur Verfügung standen. Die GPIO-Pins sind elektrische Kontakte, die zur Messung und Steuerung von elektronischen Geräten wie z.B. Sensoren, Analog Digital Wandlern, LEDs etc. verwendet werden.\\
+Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;General Purpose Input\;/\;Output}), sowie zwei verschiedene Spannungsversorgungen (\textit{3,3\;V} und \textit{5\;V}) und Masse Anschlüsse (\textit{0\;V}). Weiterhin beinhaltet die Steckerleiste Kontakte für den \ac{I$^2$C}-, \ac{SPI}- und 1-Wire-Bus. Bei der Verwendung der GPIO-Kontakten für verschiedene Projekte, muss darauf geachtet werden, welche Bezeichnung verwendet wird. Diese ist in vielen Literaturen verschieden angegeben, da es drei verschiedene Möglichkeiten der Bezeichnung gibt. Die Benennung kann durch
+\begin{itemize}
+\item die physikalische Pin-Nummer, anhand seine Position auf dem Board (von oben gesehen, Pin 1 besitzt eine quadratische Lötstelle)
+\item die BCM-Pin-Nummer, welche sich auf die Nummerierung der offiziellen Dokumentation des BCM2836-Chips bezieht
+\item den Pin Namen, welcher von den \ac{RPI} Entwicklern vergeben wurde 
+\end{itemize} 
+vorgenommen werden \citep{Raspberri_Pi_Handbuch}.\\
+In Abbildung ist die Pin Belegung des \ac{RPI} grafisch dargestellt.
 
-
+%Grafik GPIO Pins
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.35]{BilderAllgemein/GPIO.png}
+  \caption{GPIO-Header \citep{GPIO_Header_Bild}}
+  \label{Abb_Bild_GPIO}
+\end{figure}
 
 \section{Bussysteme}
 \label{section_Bussysteme}

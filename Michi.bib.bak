@@ -21,6 +21,17 @@ Das umfassende Handbuch},
   Timestamp                = {2016.04.06}
 }
 
+@Electronic{RPI_Bild,
+  Title                    = {RASPBERRY PI 3 ON SALE NOW AT \$35},
+  Author                   = {Eben Upton},
+  Language                 = {Englisch},
+  Month                    = {Februar},
+  Url                      = {https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/},
+  Year                     = {2016},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.17}
+}
+
 @Electronic{RPI_Verkaufszahlen,
   Title                    = {SENIOR PI},
   Author                   = {Liz Upton},
@@ -31,6 +42,13 @@ Das umfassende Handbuch},
   Year                     = {2015},
   Owner                    = {Michi},
   Timestamp                = {2016.04.17}
+}
+
+@Electronic{GPIO_Header_Bild,
+  Title                    = {Raspberry Pi 3 GPIO Header},
+  Url                      = {https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-9-339300/pi3_gpio.png?01AD=3Z4NxOT14vDqj5xQnLln4tKvhMlNS46sBwNJbyWdF1G9SYBdybnt05w&01RI=83B9D2FE8A3EF1E&01NA=},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.18}
 }
 
 @Electronic{RaspberryPiHomePage,
