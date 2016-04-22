@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.7)  18 APR 2016 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.7)  22 APR 2016 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,7 +1035,7 @@ LaTeX Info: Redefining \nameref on input line 33.
 \openout2 = `01Titelblatt.aux'.
 
  (./01Titelblatt.tex
-<BilderAllgemein/Logo.jpg, id=91, 273.06015pt x 102.3825pt>
+<BilderAllgemein/Logo.jpg, id=99, 273.06015pt x 102.3825pt>
 File: BilderAllgemein/Logo.jpg Graphic file (type jpg)
 
 <use BilderAllgemein/Logo.jpg>
@@ -1096,7 +1096,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<BilderAllgemein/Unterschrift.JPG, id=99, 133.9404pt x 55.1661pt>
+<BilderAllgemein/Unterschrift.JPG, id=107, 133.9404pt x 55.1661pt>
 File: BilderAllgemein/Unterschrift.JPG Graphic file (type jpg)
 
 <use BilderAllgemein/Unterschrift.JPG>
@@ -1396,7 +1396,7 @@ Package acronym Info: Label `acro:CSI' newly defined as it shall be overridden
 although it is yet undefined on input line 120.
 Package acronym Info: Label `acro:DSI' newly defined as it shall be overridden
 although it is yet undefined on input line 121.
-<BilderAllgemein/RPI3.png, id=263, 803.25093pt x 663.22781pt>
+<BilderAllgemein/RPI3.png, id=273, 803.25093pt x 663.22781pt>
 File: BilderAllgemein/RPI3.png Graphic file (type png)
 
 <use BilderAllgemein/RPI3.png>
@@ -1428,41 +1428,62 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 143.
  [15 <./BilderAllgemein/RPI3.png>]
-<BilderAllgemein/GPIO.png, id=294, 783.92876pt x 810.02625pt>
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
+
+ []
+
+<BilderAllgemein/GPIO.png, id=304, 783.92876pt x 810.02625pt>
 File: BilderAllgemein/GPIO.png Graphic file (type png)
 
 <use BilderAllgemein/GPIO.png>
 Package pdftex.def Info: BilderAllgemein/GPIO.png used on input line 151.
 (pdftex.def)             Requested size: 274.37918pt x 283.51343pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 156.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 156.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 162.
+(babel)             in language  on input line 164.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+ [16 <./BilderAllgemein/GPIO.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 174.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 174.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 179.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 162.
+(hyperref)                removing `math shift' on input line 179.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 162.
+(hyperref)                removing `superscript' on input line 179.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 162.
+(hyperref)                removing `math shift' on input line 179.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 182.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
+(babel)             in language  on input line 182.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 60.
@@ -1472,7 +1493,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 60.
- [16 <./BilderAllgemein/GPIO.png>]
+ [17]
 \openout2 = `08PraktischerTeil.aux'.
 
  (./08PraktischerTeil.tex
@@ -1502,7 +1523,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
- [17
+ [18
 
 
 
@@ -1524,7 +1545,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
- [18
+ [19
 
 
 
@@ -1562,7 +1583,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
- [19
+ [20
 
 
 
@@ -1576,17 +1597,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `00Bachelorarbeit2.out' has not changed.
-(rerunfilecheck)             Checksum: B15C9305272365F0814F23EF212A8C45;1391.
+(rerunfilecheck)             Checksum: 8489D31FCB5D21431B0CE977EDF05D23;1552.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 15322 strings out of 493089
- 235060 string characters out of 6134842
+ 15343 strings out of 493089
+ 235612 string characters out of 6134842
  381086 words of memory out of 5000000
- 18309 multiletter control sequences out of 15000+600000
+ 18326 multiletter control sequences out of 15000+600000
  81826 words of font info for 75 fonts, out of 8000000 for 9000
  1157 hyphenation exceptions out of 8191
  49i,14n,45p,1150b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1601,10 +1622,10 @@ al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/lm/lmsy10.pfb>
-Output written on 00Bachelorarbeit2.pdf (20 pages, 2215414 bytes).
+Output written on 00Bachelorarbeit2.pdf (21 pages, 2218833 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 336 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

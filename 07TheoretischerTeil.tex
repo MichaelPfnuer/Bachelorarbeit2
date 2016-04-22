@@ -142,7 +142,7 @@ Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;Gener
 \item die BCM-Pin-Nummer, welche sich auf die Nummerierung der offiziellen Dokumentation des BCM2836-Chips bezieht
 \item den Pin Namen, welcher von den \ac{RPI} Entwicklern vergeben wurde 
 \end{itemize} 
-vorgenommen werden \citep{Raspberri_Pi_Handbuch}.\\
+vorgenommen werden \citep{Raspberri_Pi_Handbuch}.\\\\
 In Abbildung ist die Pin Belegung des \ac{RPI} grafisch dargestellt.
 
 %Grafik GPIO Pins
@@ -153,11 +153,28 @@ In Abbildung ist die Pin Belegung des \ac{RPI} grafisch dargestellt.
   \label{Abb_Bild_GPIO}
 \end{figure}
 
+%% Section Bussysteme
 \section{Bussysteme}
 \label{section_Bussysteme}
+Im folgenden Kapitel werden die am häufigsten verwendeten Bussysteme für die verschiedenen Sensoren erläutert. Zu diesen Bussystemen gehören der \textit{1-Wire}, \textit{\ac{I$^2$C}} und der \textit{\ac{SPI}} Bus. Auch wird auf die Funktion, sowie die Eigenheiten der Datenübertragung des jeweiligen Busses eingegangen.
 
 \subsection{1-Wire}
 \label{subsection_1Wire}
+Der 1-Wire Bus ist ein serielles Bussystem von der Firma \textit{Dallas\footnote{2001 von Maxim Integrated übernommen}} , bei dem die Daten seriell (nacheinander) über eine Datenleitung übertragen werden.
+\subsubsection{Allgemeine Informationen}
+\label{subsection_Allgemeine_Informationen_1Wire}
+ Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen benötigt, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl an Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Dies kommt daher, da für die Datenübertragung und die Stromversorgung die gleiche Leitung genutzt wird, wird während der Kommunikation der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren wo die interne Spannungsversorgung nicht ausreichend ist  eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
+Diese System ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es nur einen Master (z.B. \ac{RPI}) gibt aber mehrere Slaves (z.B. Sensoren). Die Anzahl der Sensoren kann bis zu 100 betragen, die parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in
+\begin{itemize}
+\item 8 Bit \textit{Family Code}
+\item 48 Bit \textit{Seriennummer}
+\item 8 Bit \textit{CRC-Prüfsumme}
+\end{itemize}
+
+\subsubsection{Protokoll}
+\label{subsection_Protokoll_1Wire}
+
+
 
 \subsection{I$^2$C-Bus}
 \label{subsection_I2C}
