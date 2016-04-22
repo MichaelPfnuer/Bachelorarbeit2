@@ -13,7 +13,7 @@
 \BOOKMARK [1][-]{section.2.4}{Bussysteme}{chapter.2}% 13
 \BOOKMARK [2][-]{subsection.2.4.1}{1-Wire}{section.2.4}% 14
 \BOOKMARK [3][-]{subsubsection.2.4.1.1}{Allgemeine Informationen}{subsection.2.4.1}% 15
-\BOOKMARK [3][-]{subsubsection.2.4.1.2}{Protokoll}{subsection.2.4.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.1.2}{\334bertragungsprotokoll}{subsection.2.4.1}% 16
 \BOOKMARK [2][-]{subsection.2.4.2}{I2C-Bus}{section.2.4}% 17
 \BOOKMARK [2][-]{subsection.2.4.3}{SPI-Bus}{section.2.4}% 18
 \BOOKMARK [0][-]{chapter.3}{Praktischer Teil}{}% 19

@@ -164,17 +164,49 @@ Der 1-Wire Bus ist ein serielles Bussystem von der Firma \textit{Dallas\footnote
 \subsubsection{Allgemeine Informationen}
 \label{subsection_Allgemeine_Informationen_1Wire}
  Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen benötigt, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl an Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Dies kommt daher, da für die Datenübertragung und die Stromversorgung die gleiche Leitung genutzt wird, wird während der Kommunikation der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren wo die interne Spannungsversorgung nicht ausreichend ist  eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
-Diese System ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es nur einen Master (z.B. \ac{RPI}) gibt aber mehrere Slaves (z.B. Sensoren). Die Anzahl der Sensoren kann bis zu 100 betragen, die parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in
+Diese System ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es nur einen Master (z.B. \ac{RPI}) gibt aber mehrere Slaves (z.B. Sensoren). Die Aufgabe des Masters in diesem System ist es, die Kommunikation zu steuern. Die Anzahl der Sensoren kann bis zu 100 betragen, die parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in \citep{Bussysteme_in_der_Praxis}
 \begin{itemize}
 \item 8 Bit \textit{Family Code}
 \item 48 Bit \textit{Seriennummer}
 \item 8 Bit \textit{CRC-Prüfsumme}
 \end{itemize}
 
-\subsubsection{Protokoll}
+\subsubsection{Übertragungsprotokoll}
 \label{subsection_Protokoll_1Wire}
+Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. In dem andern Fall wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Da wie schon angesprochen keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden. Dafür gibt es zwei Übertragungsmöglichkeiten, den \textit{normalen Modus} wo ca. 16,3\;$kBit/s$ übertragen werden und den \textit{Overdrive Modus} mit bis zu 142\;$kBit/s$.\\
+Die Zeitspanne für die Übertragung von 1 Bit beträgt immer 60\,$\mu s$. Diese Steuerung, egal in welche Richtung die Übertragung stattfindet werden durch den Master initiiert. Die Befehle die dazu notwendig sind, können aus der Tabelle \ref{Tabelle_Befehle_1Wire} entnommen werden \citep{Bussysteme_in_der_Praxis}.
 
-
+%Tabelle 1
+\begin{table}[H]
+%\rowcolors{2}{black!10}{black!20}
+\centering
+\begin{tabular}{
+llll
+}
+\toprule
+\multicolumn{1}{p{2cm}}{\textit{Befehl} }&\multicolumn{1}{p{10cm}}{\centering\textit{Beschreibung} }\\\midrule
+\textbf{Write 1} & Der Master zieht für $1-15\;\mu s$ auf Low. Der Rest des Slots bleibt \\
+& ungenutzt.\\
+&\\
+\textbf{Write 0} & Der Master zieht den Bus für mindestens $60\;\mu s$ bis maximal\\
+& $120\;\mu s$ auf Low.\\
+&\\
+\textbf{Read}& Der Master zieht für $1-15\;\mu s$ auf Low. Der Slave, der kommunizieren\\
+& möchte, hält für eine 0 den Bus weiter auf Low. Will der Slave eine\\
+& 1 senden, gibt er direkt den Bus wieder frei. Wie man leicht erkennt,\\
+& ist der Status \textit{Write 1} oder Read für den Master gleich.\\
+& Alleine der Status des Sensors bestimmt, ob ein Read oder Write 1 \\
+& ausgeführt wird.\\
+&\\
+\textbf{Reset /} & Der Master zieht den Bus für min. $480\;\mu s$ auf Low. Wenn ein\\
+\textbf{Presence} & Slave am Bus vorhanden ist, zieht er max. $60\;\mu s$ (also einen\\
+& Slot) die Leitung auf Low. Somit weiß der Master, dass mindestens\\
+& ein Slave angeschlossen ist.\\ 
+\bottomrule
+\end{tabular}
+\caption{Befehle bei 1-Wire \citep[S. 35]{Bussysteme_in_der_Praxis}}
+\label{Tabelle_Befehle_1Wire}
+\end{table}
 
 \subsection{I$^2$C-Bus}
 \label{subsection_I2C}

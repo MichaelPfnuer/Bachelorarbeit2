@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.7)  22 APR 2016 20:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.7)  22 APR 2016 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1396,7 +1396,7 @@ Package acronym Info: Label `acro:CSI' newly defined as it shall be overridden
 although it is yet undefined on input line 120.
 Package acronym Info: Label `acro:DSI' newly defined as it shall be overridden
 although it is yet undefined on input line 121.
-<BilderAllgemein/RPI3.png, id=273, 803.25093pt x 663.22781pt>
+<BilderAllgemein/RPI3.png, id=276, 803.25093pt x 663.22781pt>
 File: BilderAllgemein/RPI3.png Graphic file (type png)
 
 <use BilderAllgemein/RPI3.png>
@@ -1432,7 +1432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-<BilderAllgemein/GPIO.png, id=304, 783.92876pt x 810.02625pt>
+<BilderAllgemein/GPIO.png, id=307, 783.92876pt x 810.02625pt>
 File: BilderAllgemein/GPIO.png Graphic file (type png)
 
 <use BilderAllgemein/GPIO.png>
@@ -1464,26 +1464,38 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 179.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 179.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 179.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 179.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 179.
+(babel)             in language  on input line 178.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 178.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 178.
+ [17]
+Overfull \hbox (3.62637pt too wide) in paragraph at lines 183--207
+ [][] 
+ []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 211.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 211.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 211.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 211.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 211.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 214.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 214.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 60.
@@ -1493,7 +1505,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 60.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 60.
- [17]
+ [18]
 \openout2 = `08PraktischerTeil.aux'.
 
  (./08PraktischerTeil.tex
@@ -1523,7 +1535,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
- [18
+ [19
 
 
 
@@ -1545,7 +1557,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
- [19
+ [20
 
 
 
@@ -1583,7 +1595,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
- [20
+ [21
 
 
 
@@ -1597,24 +1609,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `00Bachelorarbeit2.out' has not changed.
-(rerunfilecheck)             Checksum: 8489D31FCB5D21431B0CE977EDF05D23;1552.
+(rerunfilecheck)             Checksum: 7DCC523AAA62BEE0C64E985F43F2F07C;1567.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 15343 strings out of 493089
- 235612 string characters out of 6134842
+ 15349 strings out of 493089
+ 235737 string characters out of 6134842
  381086 words of memory out of 5000000
- 18326 multiletter control sequences out of 15000+600000
+ 18330 multiletter control sequences out of 15000+600000
  81826 words of font info for 75 fonts, out of 8000000 for 9000
  1157 hyphenation exceptions out of 8191
- 49i,14n,45p,1150b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
-cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
-e/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2015/texmf-d
-ist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2015/texmf-dist/fonts/type
+ 49i,14n,45p,1153b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
+15/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2015/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
 m/lmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loc
@@ -1622,10 +1634,10 @@ al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/lm/lmsy10.pfb>
-Output written on 00Bachelorarbeit2.pdf (21 pages, 2218833 bytes).
+Output written on 00Bachelorarbeit2.pdf (22 pages, 2224740 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
