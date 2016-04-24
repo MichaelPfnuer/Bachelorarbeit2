@@ -16,10 +16,12 @@
 \contentsline {subsubsection}{\numberline {2.4.1.1}Allgemeine Informationen}{17}{subsubsection.2.4.1.1}
 \contentsline {subsubsection}{\numberline {2.4.1.2}\IeC {\"U}bertragungsprotokoll}{17}{subsubsection.2.4.1.2}
 \contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{18}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}SPI-Bus}{18}{subsection.2.4.3}
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Temperaturmessung mit Sensor DB18S20}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}Vibrationsmessung mit Sensor BMA020}{19}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{20}{chapter.4}
-\contentsline {chapter}{Literatur}{21}{chapter.4}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Allgemeine Informationen}{19}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.2}\IeC {\"U}bertragungsprotokoll}{19}{subsubsection.2.4.2.2}
+\contentsline {subsection}{\numberline {2.4.3}SPI-Bus}{19}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Temperaturmessung mit Sensor DB18S20}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{20}{section.3.2}
+\contentsline {section}{\numberline {3.3}Vibrationsmessung mit Sensor BMA020}{20}{section.3.3}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{21}{chapter.4}
+\contentsline {chapter}{Literatur}{22}{chapter.4}

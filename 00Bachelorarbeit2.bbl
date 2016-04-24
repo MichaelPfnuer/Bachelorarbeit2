@@ -62,4 +62,7 @@ L.~Upton. (2015, Oktober) \BIBforeignlanguage{Englisch}{SENIOR PI}. Raspberry
   \url{https://www.raspberrypi.org/blog/senior-pi/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{I2C_Datenblatt}
+\emph{I2C-bus specification and user manual}, NXP Semiconductor, April 2014.
+
 \end{thebibliography}

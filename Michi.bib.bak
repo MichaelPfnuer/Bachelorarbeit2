@@ -44,6 +44,22 @@ Das umfassende Handbuch},
   Timestamp                = {2016.04.17}
 }
 
+@Manual{,
+  Title                    = {I2C-bus specification and user manual},
+  Month                    = {April},
+  Organization             = {NXP Semiconductor},
+  Year                     = {2014},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.23}
+}
+
+@Electronic{Bluetooth_Low_Energy,
+  Title                    = {Bluetooth Low Energy},
+  Url                      = {https://www.bluetooth.com/what-is-bluetooth-technology/bluetooth-technology-basics/low-energy},
+  Owner                    = {Michi},
+  Timestamp                = {2016.04.18}
+}
+
 @Electronic{GPIO_Header_Bild,
   Title                    = {Raspberry Pi 3 GPIO Header},
   Url                      = {https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-9-339300/pi3_gpio.png?01AD=3Z4NxOT14vDqj5xQnLln4tKvhMlNS46sBwNJbyWdF1G9SYBdybnt05w&01RI=83B9D2FE8A3EF1E&01NA=},

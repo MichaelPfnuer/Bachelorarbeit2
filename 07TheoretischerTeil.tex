@@ -30,6 +30,7 @@ Unter \textit{\ac{GPIO}} versteht man elektrische Kontakte, die zur Realisierung
 \textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Die Stromkosten bei \ac{BLE} sind um einiges geringe als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
 \subsection*{Windows 10 IoT}
 \textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq Version von Windows 10, die auf Mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
+
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBC}
 \label{section_Vergleich_SBC}
@@ -208,8 +209,29 @@ llll
 \label{Tabelle_Befehle_1Wire}
 \end{table}
 
+%I2C Bus
 \subsection{I$^2$C-Bus}
 \label{subsection_I2C}
+Der \ac{I$^2$C} Bus ist auch noch unter einem anderen Namen als \ac{TWI} Bus (z.B. bei Atmel) bekannt. Er wurde 1982 von der Firma Philips Semiconductors\footnote{heute NPX} entwickelt und wird vornehmlich zur internen Kommunikation von Geräten benutzt \citep{Bussysteme_in_der_Praxis}.
+
+\subsubsection{Allgemeine Informationen}
+\label{subsubsection_Allgemeine_Informationen_I2C}
+Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben. 
+
+\subsubsection{Ad}
+\subsubsection{Übertragungsprotokoll}
+\label{subsubsection_Übertragungsprotokoll_I2C}
+Für eine fehlerfreie Übertragung bei dem \ac{I$^2$C} Bussystem müssen bestimmte Bedingungen eingehalten werden.\\
+Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen Pegel während der High Phase der Taktleitung nicht ändern (siehe Abbildung \ref{Abb_Bild_I2C_data_valid})
+
+%Grafik Data valid
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.65]{BilderAllgemein/I2C_data_valid.png}
+  \caption{Bedingung für gültiges Bit auf Datenleitung \citep[S. 8]{I2C_Datenblatt}}
+  \label{Abb_Bild_I2C_data_valid}
+\end{figure}
+
 
 \subsection{SPI-Bus}
 \label{subsection_SPI}
