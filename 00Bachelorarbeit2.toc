@@ -2,26 +2,26 @@
 \contentsline {chapter}{Inhaltsverzeichnis}{4}{chapter*.4}
 \contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{5}{chapter*.5}
 \contentsline {chapter}{Abbildungsverzeichnis}{6}{chapter*.6}
-\contentsline {chapter}{Tabellenverzeichnis}{7}{chapter*.7}
-\contentsline {chapter}{Listingverzeichnis}{8}{chapter*.8}
+\contentsline {chapter}{Tabellenverzeichnis}{7}{chapter*.8}
+\contentsline {chapter}{Listingverzeichnis}{8}{chapter*.9}
 \contentsline {chapter}{\numberline {1}Einleitung}{9}{chapter.1}
 \contentsline {chapter}{\numberline {2}Theoretischer Teil}{10}{chapter.2}
 \contentsline {section}{\numberline {2.1}Begriffsdefinition}{10}{section.2.1}
 \contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{11}{section.2.2}
 \contentsline {section}{\numberline {2.3}Raspberry Pi 3}{13}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{14}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Bussysteme}{16}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}1-Wire}{16}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Allgemeine Informationen}{17}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Allgemeine Informationen}{16}{subsubsection.2.4.1.1}
 \contentsline {subsubsection}{\numberline {2.4.1.2}\IeC {\"U}bertragungsprotokoll}{17}{subsubsection.2.4.1.2}
 \contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{18}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Allgemeine Informationen}{19}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {2.4.2.2}\IeC {\"U}bertragungsprotokoll}{19}{subsubsection.2.4.2.2}
-\contentsline {subsection}{\numberline {2.4.3}SPI-Bus}{19}{subsection.2.4.3}
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}Temperaturmessung mit Sensor DB18S20}{20}{section.3.1}
-\contentsline {section}{\numberline {3.2}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{20}{section.3.2}
-\contentsline {section}{\numberline {3.3}Vibrationsmessung mit Sensor BMA020}{20}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{21}{chapter.4}
-\contentsline {chapter}{Literatur}{22}{chapter.4}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Allgemeine Informationen}{18}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Definierte Zust\IeC {\"a}nde und Adressierung}{18}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {2.4.2.3}\IeC {\"U}bertragungsprotokoll}{20}{subsubsection.2.4.2.3}
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Temperaturmessung mit Sensor DB18S20}{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3}Vibrationsmessung mit Sensor BMA020}{22}{section.3.3}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{23}{chapter.4}
+\contentsline {chapter}{Literatur}{24}{chapter.4}

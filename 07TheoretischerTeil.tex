@@ -11,7 +11,7 @@ Die in diesem Abschnitt beschriebenen Definitionen wurden, soweit nicht anders a
 Unter einem \textit{Single Board Computer} (\ac{SBC}) versteht man ein Computersystem, welches sich komplett auf einer einzigen Platine befindet. \acp{SBC} können fast die gleichen Aufgaben erledigen wie gewöhnliche Computer, allerdings sind die Einplatinen Rechner diesen in Hinblick auf die Hardwareausstattung doch um einiges unterlegen.
 
 \subsection*{Bussysteme}
-\textit{Bussysteme} sind Systeme, die verwendet werden zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der einzelnen Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
+\textit{Bussysteme} sind Systeme, die verwendet werden zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
 
 \subsection*{Raspberry Pi}
 Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry Pi Foundation} aus Komponenten von Android-Smartphones entwickelt wurde.
@@ -48,8 +48,6 @@ llll
 \multicolumn{1}{p{3cm}}{\textit{\ac{SBC}}} & \multicolumn{1}{p{3.5cm}}{\textit{Operating System} } & \multicolumn{1}{p{1,5cm}}{\textit{RAM} }&\multicolumn{1}{p{3cm}}{ \centering\textit{CPU} }\\\midrule
 Banana Pi & Linux, Android & 1 GB & ARM Cortex-A7, 1 GHz\\
 &&&\\
-Raspberry Pi2&Windows, Linux&1 GB&ARM Cortex-A7 900 MHz\\
-&&&\\
 Raspberry Pi3&Windows, Linux&1 GB&ARM Cortex-A53 1,2 GHz\\
 &&&\\
 BeagleBone Black & Linux & 512 MB & ARM Cortex-A8 1 GHz\\
@@ -74,8 +72,6 @@ llll
 \toprule
 \multicolumn{1}{p{3cm}}{\textit{\ac{SBC}}} & \multicolumn{1}{p{3.5cm}}{\textit{Communication} } & \multicolumn{1}{p{3cm}}{\textit{Networking} }&\multicolumn{1}{p{3cm}}{ \textit{GPIO} }\\\midrule
 Banana Pi & I$^2$C, SPI & 1\;GigE & 80\\
-&&&\\
-Raspberry Pi2&I$^2$C, SPI&10/100\;Mbps&40\\
 &&&\\
 Raspberry Pi3&I$^2$C, SPI&10/100\;Mbps\tnote{1} &40\\
 &&&\\
@@ -174,7 +170,7 @@ Diese System ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, da
 
 \subsubsection{Übertragungsprotokoll}
 \label{subsection_Protokoll_1Wire}
-Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. In dem andern Fall wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Da wie schon angesprochen keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden. Dafür gibt es zwei Übertragungsmöglichkeiten, den \textit{normalen Modus} wo ca. 16,3\;$kBit/s$ übertragen werden und den \textit{Overdrive Modus} mit bis zu 142\;$kBit/s$.\\
+Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. In dem andern Fall wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Da wie schon angesprochen keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden. Dafür gibt es zwei Übertragungsmöglichkeiten, den \textit{normalen Modus} wo ca. 16,3\;$kBit/s$ übertragen werden und den \textit{Overdrive Modus} mit bis zu 142\;$kBit/s$.
 Die Zeitspanne für die Übertragung von 1 Bit beträgt immer 60\,$\mu s$. Diese Steuerung, egal in welche Richtung die Übertragung stattfindet werden durch den Master initiiert. Die Befehle die dazu notwendig sind, können aus der Tabelle \ref{Tabelle_Befehle_1Wire} entnommen werden \citep{Bussysteme_in_der_Praxis}.
 
 %Tabelle 1
@@ -195,9 +191,8 @@ llll
 \textbf{Read}& Der Master zieht für $1-15\;\mu s$ auf Low. Der Slave, der kommunizieren\\
 & möchte, hält für eine 0 den Bus weiter auf Low. Will der Slave eine\\
 & 1 senden, gibt er direkt den Bus wieder frei. Wie man leicht erkennt,\\
-& ist der Status \textit{Write 1} oder Read für den Master gleich.\\
-& Alleine der Status des Sensors bestimmt, ob ein Read oder Write 1 \\
-& ausgeführt wird.\\
+& ist der Status \textit{Write 1} oder Read für den Master gleich. Alleine der \\
+& Status des Sensors bestimmt, ob ein Read oder Write 1 ausgeführt wird. \\
 &\\
 \textbf{Reset /} & Der Master zieht den Bus für min. $480\;\mu s$ auf Low. Wenn ein\\
 \textbf{Presence} & Slave am Bus vorhanden ist, zieht er max. $60\;\mu s$ (also einen\\
@@ -216,22 +211,69 @@ Der \ac{I$^2$C} Bus ist auch noch unter einem anderen Namen als \ac{TWI} Bus (z.
 
 \subsubsection{Allgemeine Informationen}
 \label{subsubsection_Allgemeine_Informationen_I2C}
-Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben. 
+Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben \citep{Bussysteme_in_der_Praxis}. 
 
-\subsubsection{Ad}
-\subsubsection{Übertragungsprotokoll}
-\label{subsubsection_Übertragungsprotokoll_I2C}
-Für eine fehlerfreie Übertragung bei dem \ac{I$^2$C} Bussystem müssen bestimmte Bedingungen eingehalten werden.\\
-Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen Pegel während der High Phase der Taktleitung nicht ändern (siehe Abbildung \ref{Abb_Bild_I2C_data_valid})
+\subsubsection{Definierte Zustände und Adressierung}
+\label{subsubsection_definierte_Zustände_Adressierung}
+Bei der Kommunikation mittels \ac{I$^2$C} müssen bestimmte Zustände eingehalten werden um die korrekte Funktion sicherzustellen. Diese werden im folgenden dargestellt. Für die folgenden Definitionen dient falls nicht anders angegeben folgende Quelle \citep{I2C_Datenblatt}.
+\subsubsection*{Gültigkeit Datenbit}
+\label{subsubsection_Gültigkeit_Datenbit}
+Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen Pegel während der High Phase der Taktleitung nicht ändern. Dieser Zustand ist in Abbildung \ref{Abb_Bild_I2C_data_valid} dargestellt.
 
 %Grafik Data valid
 \begin{figure}[!h] 
   \centering
      \includegraphics[scale=.65]{BilderAllgemein/I2C_data_valid.png}
-  \caption{Bedingung für gültiges Bit auf Datenleitung \citep[S. 8]{I2C_Datenblatt}}
+  \caption{Bedingung für gültiges Bit auf Datenleitung \citep[S. 9]{I2C_Datenblatt}}
   \label{Abb_Bild_I2C_data_valid}
 \end{figure}
 
+\subsubsection*{START Bedingung}
+\label{subsubsection_START_Bedingung}
+Damit eine Kommunikation stattfinden kann muss diese als erstes einmal gestartet werden. Dies geschieht, indem der Master die SDA Leitung auf Ground zieht, während die SCL Leitung auf HIGH gesetzt ist. Dieser Zustand wird in Abbildung nocheinmal grafisch dargestellt
 
-\subsection{SPI-Bus}
-\label{subsection_SPI}
+\subsubsection*{STOP Bedingung}
+\label{subsubsection_STOP_Bedingung}
+Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese unterscheidet sich von der START Bedingung dadurch, dass der Master bei HIGH Zustand der Taktleitung die Datenleitung ebenfalls auf HIGH zieht. Grafisch ist dies in Abbildung dargestellt.
+
+%Grafik START STOP
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.65]{BilderAllgemein/I2C_START_STOP.png}
+  \caption{START, STOP Bedingung \ac{I$^2$C}  \citep[S. 9]{I2C_Datenblatt}}
+  \label{Abb_Bild_I2C_START_STOP}
+\end{figure}
+
+% Subsectio Adressierung
+\subsubsection*{Adressierung}
+\label{subsubsection_Adressierung}
+Bei der Adressierung wird nach der Start Bedingung 1 Byte vom Master an den Slave gesendet. Bei diesem Byte stellen die ersten sieben Bits die Adresse des Slaves dar und das achte Bit das Read\,/\,Write Bit. Die Kennzeichnung des R\,/\,W Bits ist immer aus Sicht des Masters zu deuten. Dies bedeutet, dass bei WRITE Daten vom Master an den Slave übertragen werden und bei READ Daten vom Slave an den Master.
+Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} verdeutlicht noch einmal den Aufbau des ersten Bytes.\\ Dadurch, dass sieben Bits für die Adresse des Slaves verwendet werden können und 16 Adressen davon für Erweiterungen reserviert sind, können bis zu maximal 112 Teilnehmer (Berechnung entsprechend Formel \ref{Formel_Max_Teilnehmer_I2C} ) an den Bus angeschlossen werden.
+
+\begin{equation}
+max. Teilnehmer = 2^7-16 = 112
+\label{Formel_Max_Teilnehmer_I2C}
+\end{equation}
+
+%Grafik Slave Adresse
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.65]{BilderAllgemein/I2C_slave_address.png}
+  \caption{Erstes Byte nach Start Bedingung \ac{I$^2$C}  \citep[S. 13]{I2C_Datenblatt}}
+  \label{Abb_Bild_I2C_Slave_Adresse}
+\end{figure}
+
+%Subsubsection Übertragungsprotokoll
+\subsubsection{Übertragungsprotokoll}
+\label{subsubsection_Übertragungsprotokoll_I2C}
+Das Übertragungsprotokoll beim \ac{I$^2$C} Bus ist immer so aufgebaut, dass die Kommunikation mit einem Start Signal beginnt und als nächstes das Byte mit der Slave Adresse und dem R\,/\,W Bit folgt. Jedes Byte das gesendet wird, wird durch den Slave mit einem ACK-Bit quittiert. Je nachdem wie das R\,/\,W Bit gesetzt ist (READ = 1, WRITE = 0) werden die Daten byteweise gelesen oder geschrieben. Das ACK Bit wird dann entweder vom Master oder vom Slave gesendet. Ist das letzte Byte der Übertragung gesendet, wird dieses vom Master mit einem NACK quittiert. Im Anschluss wird die Kommunikation durch die STOP Bedingung beendet. In Abbildung ist der Ablauf noch einmal grafisch dargestellt.\newpage
+
+%Grafik Übertragungsprotokoll
+\begin{figure}[h!] 
+  \centering
+     \includegraphics[scale=.53]{BilderAllgemein/I2C_data_transfer.png}
+  \caption{Datentransfer \ac{I$^2$C} Bus  \citep[S. 13]{I2C_Datenblatt}}
+  \label{Abb_Bild_I2C_Slave_Adresse}
+\end{figure}
+\newpage
+

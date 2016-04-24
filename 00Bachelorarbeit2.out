@@ -1,8 +1,8 @@
 \BOOKMARK [0][-]{chapter*.4}{Inhaltsverzeichnis}{}% 1
 \BOOKMARK [0][-]{chapter*.5}{Abk\374rzungsverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter*.6}{Abbildungsverzeichnis}{}% 3
-\BOOKMARK [0][-]{chapter*.7}{Tabellenverzeichnis}{}% 4
-\BOOKMARK [0][-]{chapter*.8}{Listingverzeichnis}{}% 5
+\BOOKMARK [0][-]{chapter*.8}{Tabellenverzeichnis}{}% 4
+\BOOKMARK [0][-]{chapter*.9}{Listingverzeichnis}{}% 5
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 6
 \BOOKMARK [0][-]{chapter.2}{Theoretischer Teil}{}% 7
 \BOOKMARK [1][-]{section.2.1}{Begriffsdefinition}{chapter.2}% 8
@@ -16,8 +16,8 @@
 \BOOKMARK [3][-]{subsubsection.2.4.1.2}{\334bertragungsprotokoll}{subsection.2.4.1}% 16
 \BOOKMARK [2][-]{subsection.2.4.2}{I2C-Bus}{section.2.4}% 17
 \BOOKMARK [3][-]{subsubsection.2.4.2.1}{Allgemeine Informationen}{subsection.2.4.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.4.2.2}{\334bertragungsprotokoll}{subsection.2.4.2}% 19
-\BOOKMARK [2][-]{subsection.2.4.3}{SPI-Bus}{section.2.4}% 20
+\BOOKMARK [3][-]{subsubsection.2.4.2.2}{Definierte Zust\344nde und Adressierung}{subsection.2.4.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.4.2.3}{\334bertragungsprotokoll}{subsection.2.4.2}% 20
 \BOOKMARK [0][-]{chapter.3}{Praktischer Teil}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Temperaturmessung mit Sensor DB18S20}{chapter.3}% 22
 \BOOKMARK [1][-]{section.3.2}{Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{chapter.3}% 23
