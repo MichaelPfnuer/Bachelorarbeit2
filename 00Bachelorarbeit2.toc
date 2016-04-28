@@ -20,8 +20,9 @@
 \contentsline {subsubsection}{\numberline {2.4.2.2}Definierte Zust\IeC {\"a}nde und Adressierung}{18}{subsubsection.2.4.2.2}
 \contentsline {subsubsection}{\numberline {2.4.2.3}\IeC {\"U}bertragungsprotokoll}{20}{subsubsection.2.4.2.3}
 \contentsline {chapter}{\numberline {3}Praktischer Teil}{22}{chapter.3}
-\contentsline {section}{\numberline {3.1}Temperaturmessung mit Sensor DB18S20}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Vibrationsmessung mit Sensor BMA020}{22}{section.3.3}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{23}{chapter.4}
-\contentsline {chapter}{Literatur}{24}{chapter.4}
+\contentsline {section}{\numberline {3.1}Ben\IeC {\"o}tigte Materialien}{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}Temperaturmessung mit Sensor DB18S20}{24}{section.3.2}
+\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{24}{section.3.3}
+\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{24}{section.3.4}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{25}{chapter.4}
+\contentsline {chapter}{Literatur}{26}{chapter.4}

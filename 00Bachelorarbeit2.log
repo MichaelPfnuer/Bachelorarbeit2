@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  24 APR 2016 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  28 APR 2016 22:27
 entering extended mode
 **00Bachelorarbeit2.tex
 (00Bachelorarbeit2.tex
@@ -1043,7 +1043,7 @@ LaTeX Info: Redefining \nameref on input line 33.
 (00Bachelorarbeit2.out) (00Bachelorarbeit2.out)
 \@outlinefile=\write5
  (01Titelblatt.tex
-<BilderAllgemein/Logo.jpg, id=106, 273.06015pt x 102.3825pt>
+<BilderAllgemein/Logo.jpg, id=110, 273.06015pt x 102.3825pt>
 File: BilderAllgemein/Logo.jpg Graphic file (type jpg)
 
 <use BilderAllgemein/Logo.jpg>
@@ -1101,7 +1101,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<BilderAllgemein/Unterschrift.JPG, id=114, 133.9404pt x 55.1661pt>
+<BilderAllgemein/Unterschrift.JPG, id=118, 133.9404pt x 55.1661pt>
 File: BilderAllgemein/Unterschrift.JPG Graphic file (type jpg)
 
 <use BilderAllgemein/Unterschrift.JPG>
@@ -1370,7 +1370,7 @@ although it is yet undefined on input line 117.
 Package acronym Info: Label `acro:DSI' newly defined as it shall be overridden
 although it is yet undefined on input line 118.
 
-<BilderAllgemein/RPI3.png, id=296, 803.25093pt x 663.22781pt>
+<BilderAllgemein/RPI3.png, id=311, 803.25093pt x 663.22781pt>
 File: BilderAllgemein/RPI3.png Graphic file (type png)
 
 <use BilderAllgemein/RPI3.png>
@@ -1406,7 +1406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
 
-<BilderAllgemein/GPIO.png, id=327, 783.92876pt x 810.02625pt>
+<BilderAllgemein/GPIO.png, id=342, 783.92876pt x 810.02625pt>
 File: BilderAllgemein/GPIO.png Graphic file (type png)
 
 <use BilderAllgemein/GPIO.png>
@@ -1485,7 +1485,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 216.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 216.
- <BilderAllgemein/I2C_data_valid.png, id=368, 679.53876pt x 220.825pt>
+ <BilderAllgemein/I2C_data_valid.png, id=383, 679.53876pt x 220.825pt>
 File: BilderAllgemein/I2C_data_valid.png Graphic file (type png)
 
 <use BilderAllgemein/I2C_data_valid.png>
@@ -1508,7 +1508,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 234.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 234.
-[18] <BilderAllgemein/I2C_START_STOP.png, id=379, 680.5425pt x 217.81375pt>
+[18] <BilderAllgemein/I2C_START_STOP.png, id=394, 680.5425pt x 217.81375pt>
 File: BilderAllgemein/I2C_START_STOP.png Graphic file (type png)
 
 <use BilderAllgemein/I2C_START_STOP.png>
@@ -1529,7 +1529,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 252.
 [19 <./BilderAllgemein/I2C_data_valid.png> <./BilderAllgemein/I2C_START_STOP.pn
-g>] <BilderAllgemein/I2C_slave_address.png, id=393, 680.5425pt x 155.58125pt>
+g>] <BilderAllgemein/I2C_slave_address.png, id=408, 680.5425pt x 155.58125pt>
 File: BilderAllgemein/I2C_slave_address.png Graphic file (type png)
 
 <use BilderAllgemein/I2C_slave_address.png>
@@ -1554,7 +1554,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 269.
 [20 <./BilderAllgemein/I2C_slave_address.png>]
-<BilderAllgemein/I2C_data_transfer.png, id=405, 854.19125pt x 309.155pt>
+<BilderAllgemein/I2C_data_transfer.png, id=420, 854.19125pt x 309.155pt>
 File: BilderAllgemein/I2C_data_transfer.png Graphic file (type png)
 
 <use BilderAllgemein/I2C_data_transfer.png>
@@ -1580,18 +1580,56 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 3.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 3.
+
+LaTeX Warning: Reference `section_DS18S20' on page 22 undefined on input line 4
+.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 42.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 42.
+[22
+
+
+
+] <BilderAllgemein/Daten_DB18S20.png, id=438, 744.53156pt x 538.26094pt>
+File: BilderAllgemein/Daten_DB18S20.png Graphic file (type png)
+
+<use BilderAllgemein/Daten_DB18S20.png>
+Package pdftex.def Info: BilderAllgemein/Daten_DB18S20.png used on input line 4
+6.
+(pdftex.def)             Requested size: 446.72238pt x 322.95906pt.
+
+Overfull \hbox (5.70467pt too wide) in paragraph at lines 46--47
+ [][] 
+ []
+
+<BilderAllgemein/DS18S20.png, id=441, 191.21437pt x 122.70844pt>
+File: BilderAllgemein/DS18S20.png Graphic file (type png)
+
+<use BilderAllgemein/DS18S20.png>
+Package pdftex.def Info: BilderAllgemein/DS18S20.png used on input line 54.
+(pdftex.def)             Requested size: 152.9717pt x 98.16687pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 63.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 63.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
@@ -1601,11 +1639,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
- [22
-
-
-
-] (09Zusammenfassung.tex
+ [23 <./BilderAllgemein/Daten_DB18S20.png> <./BilderAllgemein/DS18S20.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 61.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 61.
+ [24] (09Zusammenfassung.tex
 Kapitel 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1620,7 +1663,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 62.
- [23
+ [25
 
 
 
@@ -1633,18 +1676,9 @@ Package babel Info: Redefining ngerman shorthand "~
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `Englisch'. Using the pattern for
 ** the default language instead.
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
-$\T1/lmr/m/n/12 community / servlet / JiveServlet / previewBody / 73950 -[] 102
- -[] 9 -[] 339300 / pi3 _ gpio . png ?$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
-$\T1/lmr/m/n/12 01AD = 3Z4NxOT14vDqj5xQnLln4tKvhMlNS46sBwNJbyWdF1G9SYBdybnt05w 
-&$
- []
-
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `englisch'. Using the pattern for
+** the default language instead.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `Englisch'. Using the pattern for
 ** the default language instead.
@@ -1658,7 +1692,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 86.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 86.
- [24
+ [26
 
 
 
@@ -1671,17 +1705,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `00Bachelorarbeit2.out' has not changed.
-(rerunfilecheck)             Checksum: BC4D072A96EB1558F69F50171EB0B8A4;1811.
+(rerunfilecheck)             Checksum: 5AB8AEFD7A4E97B939FA9D850039CF5F;1883.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15488 strings out of 493673
- 237449 string characters out of 3143931
+ 15543 strings out of 493673
+ 238802 string characters out of 3143931
  380040 words of memory out of 3000000
- 18304 multiletter control sequences out of 15000+200000
+ 18349 multiletter control sequences out of 15000+200000
  81826 words of font info for 75 fonts, out of 3000000 for 9000
  1041 hyphenation exceptions out of 8191
  49i,14n,45p,1151b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1695,9 +1732,9 @@ fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmsy10.pfb>
-Output written on 00Bachelorarbeit2.pdf (25 pages, 2368553 bytes).
+Output written on 00Bachelorarbeit2.pdf (27 pages, 2494108 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
- 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
