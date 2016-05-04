@@ -1,17 +1,8 @@
 #!/usr/bin/python3
 # -*-coding: utf-8 -*-
 
-import mysql.connector
 import sys
 import os
-
-#Verbindung zur Datenbank herstellen
-try:
-       db = mysql.connector.connect(host="localhost", user="root", passwd="test123", db="Sensordaten")
-except:
-       print("No connection to database")
-       exit(0)
-
 
 #1-Wire Slave-Liste lesen
 file = open('/sys/devices/w1_bus_master1/w1_master_slaves')
@@ -31,16 +22,8 @@ for line in w1_slaves:
 	temperature = round(temperature,2)
 	print(str(w1_slave) + ': %6.2f C' % temperature)
 
-	#Coursor fuer Datenbankzugriff
-	cur = db.cursor()
+################ Sensor-Daten speichern #############
 
-	#Daten in Datenbank schreiben
-	sql = "INSERT INTO Sensordaten.DB18S20_Sensor (SensorID,Temperatur) VALUES(%s,%s)"
-	cur.execute(sql,(w1_slave,temperature,))
-	cur.close()
-
-
-db.commit()
-db.close()
+ret = rrd_update('/home/pi/Temperatur/TemperaturSensor/TemperaturAufzeichnungDB18S20.rrd','N:%s'%(temperature));
 
 sys.exit(0)

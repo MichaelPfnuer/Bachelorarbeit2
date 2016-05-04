@@ -86,4 +86,10 @@ L.~Upton. (2015, Oktober) \BIBforeignlanguage{Englisch}{SENIOR PI}. Raspberry
   \url{https://www.raspberrypi.org/blog/senior-pi/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Hompage_RRDtool}
+\BIBentryALTinterwordspacing
+T.~Oetiker. (2014, September) \BIBforeignlanguage{englisch}{About RRDtool}.
+  OETIKER+PARTNER AG. [Online]. Available: \url{http://oss.oetiker.ch/rrdtool/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

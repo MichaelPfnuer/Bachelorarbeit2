@@ -85,22 +85,70 @@ Um die vom Sensor erfassten Daten auf dem \ac{RPI}\,3 auszulesen, wird ein Pytho
 
 %Quellcode DS18S20
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
-\lstinputlisting[language=Python, firstline=16, lastline=32, caption=Auslesen der gemessenen Temperatur, label=list:Quellcode_DS18S20]{Listings/DS18S20/DS18S20.py}
+\lstinputlisting[language=Python, firstline=16, lastline=32, caption=Auslesen der gemessenen Temperatur, label=list_DS18S20]{Listings/DS18S20/DS18S20.py}
 
 Um die Temperatur des Sensors auslesen zu können wird als erstes das File wie in Zeile 2 des Codes ersichtlich ist geöffnet und dessen Inhalt in eine Variable gespeichert. Dieses File enthält die gesamten an den \ac{RPI}\,3 angeschlossenen IDs der 1-Wire Sensoren. Jeder angeschlossenen 1-Wire Sensor besitzt im Pfad \texttt{/sys/bus/w1/devices/} einen Ordner mit seiner ID. In diesem gibt es wiederum eine Datei mit der Bezeichnung \texttt{w1\_slave}, die die gemessenen Daten enthält. Um diese auszulesen, werden in unseren Python Script in den Zeilen $8-15$ verschiedene Schritte durchgeführt, auf die nicht näher eingegangen wird\footnote{kann in verschiedenen Python Tutorials nachgelesen werden}. Da die Temperatur in dieser Datei vom Sensor im Format von z.B. 17687 ($\approx$ 17,7 $^\circ$C) angegeben wird, muss dieser Wert noch durch 1000 dividiert werden um den genauen Temperaturwert zu erhalten(Zeile 15 im Quellcode). In Zeile 16 wird der Wert noch auf zwei Stellen nach dem Komma gerundet und ist in der Variable \texttt{temperature} gespeichert. Mit dem Wert dieser Variable kann nun weiter gearbeitet werden.
 
 %Subsection Datenspeicherung
-\subsection{Speicherung der Daten}
+\subsection{Datenspeicherung}
 \label{subsectio_Datenspeicherung_DS18S20}
 Wie schon in Abschnitt \ref{section_DS18S20} angesprochen, wird in dieser Arbeit auf zwei verschiedene Möglichkeiten der Datenspeicherung eingegangen. Zum Einen mit dem RRDtool und zum Andern mittels mySQL Datenbank. Die Möglichkeit der Datenspeicherung in einer mySQL Datenbank wird im Abschnitt \ref{section_HTY221} beschrieben. In diesem Abschnitt wird näher auf die Möglichkeiten mit dem RRDtool eingegangen.
 
 \subsection*{RRDtool}
-Unter dem RRDtool versteht man ein Programm, welches es ermöglicht, Messdaten für einen beim Erstellen festgelegten Zeitbereich zu speichern. RRD steht für \textit{Round-Robin-Database}, diese wird durch das Tool in einer Datei erzeugt, die von der Erstellung weg eine feste Größe besitzt. Dies ist ein großer Unterschied zu herkömmlichen mySQL Datenbanken, da bei diesen mit zunehmender Zeit und Datenmenge auch die Größe der Datenbank immer mit anwächst. Das Anwachsen der Größe der Datei wird bei der RRD Datenbank dadurch verhindert, dass sie wie ein Ringbuffer arbeitet. Dies bedeutet, dass wenn der Speicherplatz belegt ist, Werte zusammengefasst (z.B. durch Bildung eines Mittelwertes für einen Tag aus den einzelnen stündlichen Werten) und die ältesten überschrieben werden. Somit kann sichergestellt werden, dass die Größe der Datenbank schon beim Erstellen dieser festgelegt ist.\\
-Wie eine solche Datenbank definiert und erstellt wird, wird im Quellcode beschrieben. Zum Erstellen der Datenbank wurde ein Shell-Script verwendet um nicht jedes Mal wenn die Datenbank neu erstellt wird alle Befehle einzeln eingeben zu müssen.
+Das RRDtool ist ein Programm, welches es ermöglicht, Messdaten für einen beim Erstellen festgelegten Zeitbereich zu speichern. RRD steht für \textit{Round-Robin-Database}, diese wird durch das Tool in einer Datei erzeugt, die von der Erstellung weg eine feste Größe besitzt. Dies ist ein großer Unterschied zu herkömmlichen mySQL Datenbanken, da bei diesen mit zunehmender Zeit und Datenmenge auch die Größe der Datenbank anwächst. Das Anwachsen der Größe der Datei wird bei der RRD Datenbank dadurch verhindert, dass sie wie ein Ringbuffer arbeitet, was bedeutet, dass wenn der Speicherplatz belegt ist, Werte zusammengefasst (z.B. durch Bildung eines Mittelwertes für einen Tag aus den einzelnen stündlichen Werten) und die ältesten überschrieben werden. Somit kann sichergestellt werden, dass die Größe der Datenbank schon beim Erstellen dieser festgelegt ist.\\
+Wie eine solche Datenbank definiert und erstellt wird, wird im Quellcode \ref{list_Quellcode_RRD_Datenbank} beschrieben. Zum Erstellen der Datenbank wurde ein Shell-Script verwendet um nicht jedes Mal wenn die Datenbank neu erstellt wird alle Befehle einzeln eingeben zu müssen.
 
+\subsection*{Erstellen der Datenbank}
+\label{subsection_Erstellen_DB_DS18S20}
 %Quellcode DS18S20
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
-\lstinputlisting[language=Python, firstline=1, lastline=9, caption=Erstellung RRD Datenbank , label=list:Quellcode_RRD_Datenbank]{Listings/DS18S20/RRD_DB_Erstellen.sh}
+\lstinputlisting[language=Python, firstline=1, lastline=9, caption=Erstellung RRD Datenbank , label=list_Quellcode_RRD_Datenbank]{Listings/DS18S20/RRD_DB_Erstellen.sh}
+
+Zeile 2 des in \ref{list_Quellcode_RRD_Datenbank} dargestellten Source Codes erstellt das File, welches als Datenbank fungiert. Weiterhin wird die Schrittweite\footnote{Datenbank erwartet alle 60 Sekunden einen Wert} auf \textit{60 Sekunden} festgelegt. In der nächsten Zeile wird die Datenreihe festgelegt, die Zahlen am Ende der Zeile legen fest, dass wenn innerhalb von 120 Sekunden kein gültiger Wert geliefert wird, die Datenbank an dessen Stelle \textit{NAN} (Not A Number) einträgt. Die Begründung liegt darin, dass wenn im weiteren Verlauf Mittelwerte etc. gebildet werden keine Verfälschung der Daten erfolgt (würde passieren wenn z.B. 0 eingetragen wird). In Zeile 4 wird der Zeitbereich der Speicherung von den gelieferten Werten festgelegt. In dem dargestellten Beispiel werden jede Minute ein Wert gespeichert und dies 600 Minuten ($\approx$ 10 Stunden) lang. Die Zeilen 5-9 des Quellcodes dienen dazu um die Bereiche von Maximl- bzw. Minimalwerten, sowie die Zeitspannen wann älteren Datenwerte zusammengefasst werden zu definieren. Genauere Informationen bezüglich der Erstellung der Datenbank können von folgender Adresse bezogen werden \url{http://oss.oetiker.ch/rrdtool/} \citep{Hompage_RRDtool}.\\\\
+Das in Quellcode \ref{list_Quellcode_RRD_Datenbank} dargestellte Script musste nach dem speichern noch ausführbar gemacht werden. Dabei ergab sich das Problem, dass dieses beim Aufrufen die Datenbank wegen einer fehlenden Berechtigung nicht erstellen konnte. Dies wurde dadurch behoben, dass in Zeile 1 des Scripts der Aufruf des rrdtool mit \textit{sudo} realisiert wurde. Mit dem erfolgreichen Ausführen des Scripts wurde die Datenbank im Verzeichnis \texttt{/home/pi/Temperatur/TemperaturSensor/} erstellt.
+
+\subsection*{Speicherung der Daten des DS18S20}
+\label{subsection_Speicherung der Daten des DS18S20}
+Damit die über das Python Script wie vorher dargestellt ausgelesenen Daten in die Datenbank geschrieben werden, wurde am Ende des Scriptes folgende Zeile hinzugefügt.
+
+\lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
+\lstinputlisting[language=Python, firstline=25, lastline=27, caption=Datenspeicherung in DB]{Listings/DS18S20/DS18S20.py}
+
+Durch diese Codezeile, wird ein Update der Datenbank durchgeführt und der Wert, der in der Variable \texttt{temperature} gespeichert ist in diese geschrieben.
+\newpage
+
+%Subsection Visualisierung
+\subsection{Visualisieren der Daten}
+\label{subsection_Visualisieren der Daten DS18S20}
+Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hier wurden zwei Grafen erstellt die die gemessenen Temperaturwerte für verschiedene Zeiträume darstellen. Zur Erstellung dieser Grafen wurde ein Script verwendet, das den entsprechenden Code enthält. Der Quellcode zur Erstellung der Graphen ist im Anhang dargestellt. Die einzelnen Befehle können auf folgender Quelle nachgeschlagen werden \url{http://oss.oetiker.ch/rrdtool/doc/rrdgraph_data.en.html}.\\
+\\Abbildung \ref{Abb_Temperaturverlauf_Stunde_DS18S20} und \ref{Abb_Temperaturverlauf_10Stunden_DS18S20} zeigen die mittels RRDtool erzeugten Graphen.
+
+%RRD Graphen
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.28]{BilderAllgemein/TemperaturStunde.png}
+  \caption{Temperaturverlauf der letzten Stunde}
+  \label{Abb_Temperaturverlauf_Stunde_DS18S20}
+\end{figure}
+
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.28]{BilderAllgemein/TemperaturTag.png}
+  \caption{Temperaturverlauf der letzten 10 Stunden}
+  \label{Abb_Temperaturverlauf_10Stunden_DS18S20}
+\end{figure}
+
+Um die in diesem Versuch verwendeten Scripte zum Auslesen der Daten, Speichern der Daten oder Erstellung der Graphen für den Temperaturverlauf nicht immer von \glqq Hand\grqq ausführen zu müssen, wurde für jedes dieser Scripte ein extra Eintrag in der Datei \texttt{crontab\footnote{Cron-Daemon = Dienst der automatisch Scripte zu vorgegebenen Zeiten starten kann}} vorgenommen. Die Zeit wurde jeweils auf 1 Minute eingestellt.\\
+Als Erkenntnis konnte aus diesem Versuchsaufbau gewonnen werden, dass der Einsatz eines 1-Wire Sensors an dem \ac{RPI}\,3 zur Temperaturaufzeichnung, -speicherung und -visualisierung relativ schnell und problemlos möglich ist. Der Temperaturverlauf konnte an Hand der Graphen gut und übersichtlich nachvollzogen werden. 
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,54 @@
+body, html
+{
+	height: 100%;
+	background: linear-gradient(to bottom right, rgb(217,244,255)0%,rgb(187,219,230)50%,rgb(147,213,237)100%); 
+}
+
+.div_kreis
+{
+	margin-left:100px;
+	margin-right:100px;
+	background: black;
+}
+.div_text
+{
+	font-size: 32px;
+	color: #555;
+}
+
+#xWert
+{
+	font-size:72px;
+	color: white;
+	vertical-align: middle;
+	line-height:350px;
+}
+
+#yWert
+{
+	font-size:72px;
+	color: white;
+	vertical-align: middle;
+	line-height:350px;
+}
+
+#zWert
+{
+	font-size:72px;
+	color: white;
+	vertical-align: middle;
+	line-height:350px;
+}
+
+#Warnung
+{
+	margin-top: 150px;
+	font-size: 84px;
+	color: red;
+}
+
+.text_service
+{
+	margin-left: 150px;
+	font-size: 24px;
+}

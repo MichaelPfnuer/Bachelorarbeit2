@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="jquery/jquery-1.12.3.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+
+
+</head>
+<body>
+<div class="container-fluid">
+	
+	<!--Navigation Bar-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Temperaturauswertung</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Temperatur
+					<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="Bilder/TemperaturStunde.png">1 Stunde</a></li>
+						<li><a href="Bilder/TemperaturTag.png">10 Stunden</a></li>
+						<li><a href="Bilder/Temperatur3Tage.png">3 Tage</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Luftfeuchtigkeit
+					<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="Bilder/FeuchtigkeitStunde.png">1 Stunde</a></li>
+						<li><a href="Bilder/FeuchtigkeitTag.png">10 Stunden</a></li>
+						<li><a href="Bilder/Feuchtigkeit3Tage.png">3 Tage</a></li>
+					</ul>
+				</li>
+				<li ><a href="http://localhost/Vibration/Vibration.html">Vibration</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://localhost/phpmyadmin/"><span class="glyphicon glyphicon-log-in" ></span> SQL Login</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--Ende Navigation Bar-->
+	
+	<!--Überschrift-->
+	<div class="row">
+		<div class="col-sm-4">
+		</div>
+		<div class="col-sm-4">
+			<div align="center">
+				<h2 class="Ueberschrift_Schatten">Aktuelle Temperatur</h2>
+			</div>
+		</div>
+		<div class="col-sm-4">
+		</div> 
+	</div>
+	<!--Ende Überschrift-->
+	
+	<!--DIV Temperaturanzeige -->
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="_span img-circle"></div>
+		</div>
+		<div class="col-sm-4">
+			<div id="div_span"class="_span img-circle">
+				<span class="img-circle" id="temp">
+					Temp
+				</span>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			
+		</div>	
+	</div>
+	<!--Ende DIV Temperaturanzeige -->
+
+	<!--DIV Imagebild -->
+	<div class="row">
+		<div class="col-sm-4">
+		</div>
+		<div class="col-sm-4">
+			<div><img style="margin-top 30px" src="Imagebild.png" alt="Imagebild_Temperatur" width="600 px" height="400 px"></div>
+		</div>
+		<div class="col-sm-4">
+			<p class="text_service"><strong>Service</strong></p>
+			<p class="text_service" id="Name"><span class="glyphicon glyphicon-user"></span> Christian Auer</p>
+			<p class="text_service"><span class="glyphicon glyphicon-map-marker"></span> (HlP/TEF1) Container 207</p>
+			<p class="text_service"><span class="glyphicon glyphicon-phone"></span> +43(6245)792-6014</p>
+			<p class="text_service"><span class="glyphicon glyphicon-envelope"></span> Christian.Auer2@bosch.com</p>
+		</div> 
+	</div>
+	<!--Ende DIV Imagebild -->
+	
+	<!--Warnung Temperatur-->
+	<div align="center">
+		<p id="Warnung">Temperatur!!!</p>
+	</div>
+	<!--Ende Warnung Temperatur-->
+	
+</div>
+</body>
+</html>
