@@ -20,8 +20,15 @@
 \BOOKMARK [3][-]{subsubsection.2.4.2.3}{\334bertragungsprotokoll}{subsection.2.4.2}% 20
 \BOOKMARK [0][-]{chapter.3}{Praktischer Teil}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Ben\366tigte Materialien}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.2}{Temperaturmessung mit Sensor DB18S20}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.3}{Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.4}{Vibrationsmessung mit Sensor BMA020}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 26
-\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 27
+\BOOKMARK [1][-]{section.3.2}{Temperaturmessung mit Sensor DS18S20}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{DS18S20}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Schaltungsaufbau}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{Auslesen des Sensors}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.4}{Speicherung der Daten}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Temperatur- und Luftfeuchtigkeitsmessung mit HTY-221}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.1}{HYT-221}{section.3.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Vibrationsmessung mit Sensor BMA020}{chapter.3}% 30
+\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 31
+\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 32
+\BOOKMARK [0][-]{appendix.A}{Quellcode}{}% 33
+\BOOKMARK [1][-]{section.A.1}{Auslesen DS18S20}{appendix.A}% 34

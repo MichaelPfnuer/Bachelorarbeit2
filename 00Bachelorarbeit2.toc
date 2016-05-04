@@ -1,28 +1,35 @@
 \select@language {ngerman}
-\contentsline {chapter}{Inhaltsverzeichnis}{4}{chapter*.4}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{5}{chapter*.5}
-\contentsline {chapter}{Abbildungsverzeichnis}{6}{chapter*.6}
-\contentsline {chapter}{Tabellenverzeichnis}{7}{chapter*.8}
-\contentsline {chapter}{Listingverzeichnis}{8}{chapter*.9}
-\contentsline {chapter}{\numberline {1}Einleitung}{9}{chapter.1}
-\contentsline {chapter}{\numberline {2}Theoretischer Teil}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Begriffsdefinition}{10}{section.2.1}
-\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{11}{section.2.2}
-\contentsline {section}{\numberline {2.3}Raspberry Pi 3}{13}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{13}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{14}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Bussysteme}{16}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}1-Wire}{16}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Allgemeine Informationen}{16}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {2.4.1.2}\IeC {\"U}bertragungsprotokoll}{17}{subsubsection.2.4.1.2}
-\contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{18}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Allgemeine Informationen}{18}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {2.4.2.2}Definierte Zust\IeC {\"a}nde und Adressierung}{18}{subsubsection.2.4.2.2}
-\contentsline {subsubsection}{\numberline {2.4.2.3}\IeC {\"U}bertragungsprotokoll}{20}{subsubsection.2.4.2.3}
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{22}{chapter.3}
-\contentsline {section}{\numberline {3.1}Ben\IeC {\"o}tigte Materialien}{22}{section.3.1}
-\contentsline {section}{\numberline {3.2}Temperaturmessung mit Sensor DB18S20}{24}{section.3.2}
-\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HTY221}{24}{section.3.3}
-\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{24}{section.3.4}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{25}{chapter.4}
-\contentsline {chapter}{Literatur}{26}{chapter.4}
+\contentsline {chapter}{Inhaltsverzeichnis}{5}{chapter*.4}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{6}{chapter*.5}
+\contentsline {chapter}{Abbildungsverzeichnis}{7}{chapter*.6}
+\contentsline {chapter}{Tabellenverzeichnis}{8}{chapter*.8}
+\contentsline {chapter}{Listingverzeichnis}{9}{chapter*.9}
+\contentsline {chapter}{\numberline {1}Einleitung}{10}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theoretischer Teil}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Begriffsdefinition}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Raspberry Pi 3}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{15}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Bussysteme}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}1-Wire}{17}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Allgemeine Informationen}{17}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}\IeC {\"U}bertragungsprotokoll}{18}{subsubsection.2.4.1.2}
+\contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{19}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Allgemeine Informationen}{19}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Definierte Zust\IeC {\"a}nde und Adressierung}{19}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {2.4.2.3}\IeC {\"U}bertragungsprotokoll}{21}{subsubsection.2.4.2.3}
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Ben\IeC {\"o}tigte Materialien}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Temperaturmessung mit Sensor DS18S20}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}DS18S20}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Schaltungsaufbau}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Auslesen des Sensors}{26}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Speicherung der Daten}{27}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HTY-221}{28}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}HYT-221}{28}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{28}{section.3.4}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{29}{chapter.4}
+\contentsline {chapter}{Literatur}{30}{chapter.4}
+\contentsline {chapter}{\numberline {A}Quellcode}{31}{appendix.A}
+\contentsline {section}{\numberline {A.1}Auslesen DS18S20}{31}{section.A.1}
