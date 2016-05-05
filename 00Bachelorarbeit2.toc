@@ -27,8 +27,9 @@
 \contentsline {subsection}{\numberline {3.2.3}Auslesen des Sensors}{26}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Datenspeicherung}{27}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Visualisieren der Daten}{29}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HTY-221}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}HYT-221}{31}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HYT-221}{30}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}HYT-221}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Schaltungsaufbau}{31}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{31}{section.3.4}
 \contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{32}{chapter.4}
 \contentsline {chapter}{Literatur}{33}{chapter.4}

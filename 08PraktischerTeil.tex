@@ -141,35 +141,11 @@ Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hie
 Um die in diesem Versuch verwendeten Scripte zum Auslesen der Daten, Speichern der Daten oder Erstellung der Graphen für den Temperaturverlauf nicht immer von \glqq Hand\grqq ausführen zu müssen, wurde für jedes dieser Scripte ein extra Eintrag in der Datei \texttt{crontab\footnote{Cron-Daemon = Dienst der automatisch Scripte zu vorgegebenen Zeiten starten kann}} vorgenommen. Die Zeit wurde jeweils auf 1 Minute eingestellt.\\
 Als Erkenntnis konnte aus diesem Versuchsaufbau gewonnen werden, dass der Einsatz eines 1-Wire Sensors an dem \ac{RPI}\,3 zur Temperaturaufzeichnung, -speicherung und -visualisierung relativ schnell und problemlos möglich ist. Der Temperaturverlauf konnte an Hand der Graphen gut und übersichtlich nachvollzogen werden. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Abschnitt HYT-221
-\section{Temperatur- und Luftfeuchtigkeitsmessung mit HTY-221}
+\section{Temperatur- und Luftfeuchtigkeitsmessung mit HYT-221}
 \label{section_HTY221}
-
+Bei diesem Versuchsaufbau, kommen im Gegensatz zu dem Aufbau in Abschnitt \ref{section_DS18S20} zwei weiter Sensoren hinzu. Zum Einen wird ein weiterer DS18S20 verbaut und zum Anderen ein HYT-221. Diese drei Sensoren werden gleichzeitig betrieben und liefern so eine gute Möglichkeit die Temperaturwerte zu einer bestimmten Zeit an Hand von unterschiedlichen Sensoren zu vergleichen.
 \subsection{HYT-221}
 \label{subsection_HYT221}
 Der HYT-221 ist ein Sensor zur Messung der Temperatur und Luftfeuchtigkeit. Er wurde von der Schweizer Firma \ac{IST} für die Anwendung in den Bereichen Meteorologie, Industrielle Trocknungstechnik, Medizinische Geräte, Luftfahrt und Extremsport entwickelt. Der Sensor kommuniziert über eine \ac{I$^2$C} Schnittstelle und besitzt eine hohe Messgenauigkeit. In Tabelle \ref{Tabelle_Technische_Daten_HYT221}  werden die wichtigsten Daten des Sensors aufgelistet. Diese wurden dem Sensor zugehörigen Datenblatt entnommen \citep{Datenblatt_HYT221}.
@@ -195,18 +171,30 @@ Auflösung & 0,02\,\% rF & Auflösung & 0.015 $^\circ\text{C}$\\
 \label{Tabelle_Technische_Daten_HYT221}
 \end{table}
 
-Für einen sicheren Betrieb des Sensors muss die angelegte Versorgungsspannung zwischen 2,7\dots 5,5\,$V$ liegen.
+
 
 %Abbildund  HYT221
 \begin{figure}[!h] 
   \centering
-     \includegraphics[scale=.8]{BilderAllgemein/HYT221.png}
+     \includegraphics[scale=.4]{BilderAllgemein/HYT221.png}
   \caption{HYT-221 \citep{Bild_HYT221}}
   \label{Abb_HYT221}
 \end{figure}
 
+Für einen sicheren Betrieb des Sensors muss die angelegte Versorgungsspannung zwischen 2,7\dots 5,5\,$V$ liegen.
+
+\subsection{Schaltungsaufbau}
+\label{subsection_Schaltungsaufbau_HYT221}
 
 
 
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vibrationsmessung mit Sensor BMA020}
 \label{section_BMA020}
