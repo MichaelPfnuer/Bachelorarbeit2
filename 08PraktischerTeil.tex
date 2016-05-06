@@ -223,9 +223,47 @@ Um auf die Tabelle in der Datenbank zugreifen zu können musste noch ein Cursor 
 
 \subsection{Visualisierung der Daten}
 \label{subsection_Visualisierung der Daten}
-Die Messdaten wurden wie schon im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind für die verschiedenen Zeitspannen im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.
+Die Messdaten wurden wie im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind für die verschiedenen Zeitspannen im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vibrationsmessung mit Sensor BMA020}
 \label{section_BMA020}
+Im dritten Versuchsaufbau sollte mit dem Beschleunigungssensor BMA020 die Vibration gemessen werden. Verwendet wurde hier eine schon fertig bestückte Platine die den BMA020 enthält und ein Auslesen mittels \ac{I$^2$C} ermöglicht.
+
+\subsection{BMA\,020}
+\label{subsection_BMA020}
+Der BMA\,020 ist ein von Bosch entwickelter Sensor, der die Beschleunigung in drei Richtungen (x-, y- und z-Achse) misst. Die Messdaten werden im Format eines 2er Komplements mit 10\,Bit ausgegeben. Die wichtigsten technischen Daten wurden dem Datenblatt \citep{Datenblatt_BMA020} entnommen und in der Tabelle \ref{Tabelle_Technische_Daten_BMA020} dargestellt.  
+
+%Tabelle Technische Daten HYT-221
+\begin{table}[H]
+%\rowcolors{2}{black!10}{black!20}
+\centering
+\begin{tabular}{
+lll
+}
+\toprule
+
+\multicolumn{1}{p{5.5cm}}{\textit{Parameter}} & \multicolumn{1}{p{3cm}}{\textit{Minimum} }&\multicolumn{1}{p{3cm}}{\textit{Maximum}}\\\midrule
+&-2\,g & 2\,g\\
+Acceleration range & -4\,g & 4\,g\\
+&-8\,g & 8\,g\\
+&&\\
+Supply voltage analogue & 2\,V & 3,6\,V\\
+&&\\
+Acceleration output resolution &&10\,Bit\\
+\bottomrule
+\end{tabular}
+\caption{Technische Daten BMA020 \citep{Datenblatt_BMA020}}
+\label{Tabelle_Technische_Daten_BMA020}
+\end{table}
+
+Abbildung zeigt die fertig bestückte Platine mit dem BMA020.
+
+%Abbildung  BMA020
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.4]{BilderAllgemein/Beschleunigungssensor.png}
+  \caption{Platine mit BMA020 \citep{Bild_BMA020}}
+  \label{Abb_HYT221}
+\end{figure}

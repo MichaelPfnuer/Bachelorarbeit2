@@ -33,14 +33,15 @@
 \contentsline {subsection}{\numberline {3.3.3}Auslesen der Daten}{32}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Datenspeicherung}{33}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Visualisierung der Daten}{34}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{34}{section.3.4}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{35}{chapter.4}
-\contentsline {chapter}{Literatur}{36}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{37}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{37}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{38}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{40}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{43}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{46}{section.A.5}
-\contentsline {chapter}{\numberline {B}Abbildungen}{52}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{52}{section.B.1}
+\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{35}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}BMA\tmspace +\thinmuskip {.1667em}020}{35}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{36}{chapter.4}
+\contentsline {chapter}{Literatur}{37}{chapter.4}
+\contentsline {chapter}{\numberline {A}Quellcode}{39}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{39}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{40}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{42}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{45}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{48}{section.A.5}
+\contentsline {chapter}{\numberline {B}Abbildungen}{54}{appendix.B}
+\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{54}{section.B.1}

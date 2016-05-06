@@ -29,6 +29,14 @@
   Timestamp                = {2016.04.06}
 }
 
+@Manual{Datenblatt_BMA020,
+  title =        {BMA020 Digital, triaxial acceleration sensor},
+  organization = {Bosch Sensortec GmbH},
+  edition =      {1.2},
+  month =        may,
+  year =         {2008}
+}
+
 @Manual{Datenblatt_DB18S20,
   Title                    = {DS18S20 High-Precision 1-Wire Digital Thermometer},
   Organization             = {Maxim Integrated Products},
@@ -42,6 +50,15 @@
   Year                     = {2011},
   Owner                    = {Michi},
   Timestamp                = {2016.04.29}
+}
+
+@Electronic{Datenblatt_I2C_HYT221,
+  month =        {May},
+  year =         {2010},
+  title =        {DIGITALER FEUCHTESENSOR PROTOKOLLBESCHREIBUNG I2C},
+  language =     {deutsch},
+  organization = {HYGROSENS INSTRUMENTS GmbH},
+  url =          {http://www.hygrochip.com/fileadmin/user_upload/Produkte/Sensorelemente/Digitale_Feuchtesensoren/HYT_I2C_Protokollbeschreibung_D.pdf}
 }
 
 @Electronic{GPIO_Header_Bild,

@@ -54,6 +54,13 @@ Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout. [Online]. Available:
   \url{http://www.voelkner.de/products/207755/Feuchte-und-Temperaturesensor-digital-Hyt-221.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Bild_BMA020}
+\BIBentryALTinterwordspacing
+\BIBforeignlanguage{deutsch}{3-Achsen-Beschleunigungssensor}. ELV-/eQ-3-Gruppe.
+  [Online]. Available:
+  \url{http://www.elv.de/3-achsen-beschleunigungssensor-3d-bs-komplettbausatz.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
   0.4em\relax Franzis Verlag GmbH, 2015.
@@ -61,6 +68,10 @@ W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
 \bibitem{Datenblatt_HYT221}
 \emph{HYGROCHIP DIGITALER FEUCHTESENSOR HYT-221}, INNOVATIVE SENSOR TECHNOLOGY,
   September 2011.
+
+\bibitem{Datenblatt_BMA020}
+\emph{BMA020 Digital, triaxial acceleration sensor}, 1.~Aufl., Bosch Sensortec
+  GmbH, Mai 2008.
 
 \bibitem{Raspberri_Pi_Handbuch}
 Kofler, Kühnast, und Scherbeck, \emph{Raspberry Pi Das umfassende
