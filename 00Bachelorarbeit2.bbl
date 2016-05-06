@@ -92,4 +92,11 @@ T.~Oetiker. (2014, September) \BIBforeignlanguage{englisch}{About RRDtool}.
   OETIKER+PARTNER AG. [Online]. Available: \url{http://oss.oetiker.ch/rrdtool/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Datenblatt_I2C_HYT221}
+\BIBentryALTinterwordspacing
+(2010, May) \BIBforeignlanguage{deutsch}{DIGITALER FEUCHTESENSOR
+  PROTOKOLLBESCHREIBUNG I2C}. HYGROSENS INSTRUMENTS GmbH. [Online]. Available:
+  \url{http://www.hygrochip.com/fileadmin/user_upload/Produkte/Sensorelemente/Digitale_Feuchtesensoren/HYT_I2C_Protokollbeschreibung_D.pdf}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

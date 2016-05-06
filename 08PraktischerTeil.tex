@@ -107,7 +107,7 @@ Wie eine solche Datenbank definiert und erstellt wird, wird im Quellcode \ref{li
 Zeile 2 des in \ref{list_Quellcode_RRD_Datenbank} dargestellten Source Codes erstellt das File, welches als Datenbank fungiert. Weiterhin wird die Schrittweite\footnote{Datenbank erwartet alle 60 Sekunden einen Wert} auf \textit{60 Sekunden} festgelegt. In der nächsten Zeile wird die Datenreihe festgelegt, die Zahlen am Ende der Zeile legen fest, dass wenn innerhalb von 120 Sekunden kein gültiger Wert geliefert wird, die Datenbank an dessen Stelle \textit{NAN} (Not A Number) einträgt. Die Begründung liegt darin, dass wenn im weiteren Verlauf Mittelwerte etc. gebildet werden keine Verfälschung der Daten erfolgt (würde passieren wenn z.B. 0 eingetragen wird). In Zeile 4 wird der Zeitbereich der Speicherung von den gelieferten Werten festgelegt. In dem dargestellten Beispiel werden jede Minute ein Wert gespeichert und dies 600 Minuten ($\approx$ 10 Stunden) lang. Die Zeilen 5-9 des Quellcodes dienen dazu um die Bereiche von Maximl- bzw. Minimalwerten, sowie die Zeitspannen wann älteren Datenwerte zusammengefasst werden zu definieren. Genauere Informationen bezüglich der Erstellung der Datenbank können von folgender Adresse bezogen werden \url{http://oss.oetiker.ch/rrdtool/} \citep{Hompage_RRDtool}.\\\\
 Das in Quellcode \ref{list_Quellcode_RRD_Datenbank} dargestellte Script musste nach dem speichern noch ausführbar gemacht werden. Dabei ergab sich das Problem, dass dieses beim Aufrufen die Datenbank wegen einer fehlenden Berechtigung nicht erstellen konnte. Dies wurde dadurch behoben, dass in Zeile 1 des Scripts der Aufruf des rrdtool mit \textit{sudo} realisiert wurde. Mit dem erfolgreichen Ausführen des Scripts wurde die Datenbank im Verzeichnis \texttt{/home/pi/Temperatur/TemperaturSensor/} erstellt.
 
-\subsection*{Speicherung der Daten des DS18S20}
+\subsection*{Datenspeicherung}
 \label{subsection_Speicherung der Daten des DS18S20}
 Damit die über das Python Script wie vorher dargestellt ausgelesenen Daten in die Datenbank geschrieben werden, wurde am Ende des Scriptes folgende Zeile hinzugefügt.
 
@@ -173,7 +173,7 @@ Auflösung & 0,02\,\% rF & Auflösung & 0.015 $^\circ\text{C}$\\
 
 
 
-%Abbildund  HYT221
+%Abbildung  HYT221
 \begin{figure}[!h] 
   \centering
      \includegraphics[scale=.4]{BilderAllgemein/HYT221.png}
@@ -185,14 +185,45 @@ Für einen sicheren Betrieb des Sensors muss die angelegte Versorgungsspannung z
 
 \subsection{Schaltungsaufbau}
 \label{subsection_Schaltungsaufbau_HYT221}
+Der in Abbildung dargestellte Schaltungsaufbau beinhaltet zwei Sensoren der des Typs DS18S20, welche mit dem 1-Wire Bus betrieben werden. Der in Kapitel \ref{subsection_Schaltungsaufbau_DS18S20} erwähnte Pull-Up Widerstand wird dafür allerdings nur einmal benötigt, da beide Sensoren parallel zueinander geschalten sind. Als dritter Sensor ist ein HYT-221 verbaut, welcher Temperaturwerte und die Luftfeuchtigkeit misst. Der HYT-221 wird über den \ac{I$^2$C} Bus betrieben. Dieser benötigt eine $3,3\,V$ Versorgungsspannung (rote Verbindung), einen GROUND Anschluss (schwarze Verbindung), sowie zur Datenübertragung eine Taktleitung (SCL = rote Verbindung) und eine Datenleitung (SDA = blaue Verbindung).
 
+%Abbildung Schaltungsaufbau HYT221
+\begin{figure}[!h] 
+  \centering
+     \includegraphics[scale=.72]{BilderAllgemein/Schaltung_HYT221.png}
+  \caption{Schaltungsaufbau mit drei Sensoren}
+  \label{Abb_Schaltungsaufbau_HYT221}
+\end{figure}
 
+%Subsection Auslesen der Daten HYT221
+\subsection{Auslesen der Daten}
+\label{subsection_Auslesen der Daten HYT221}
+Im folgenden wird der Code zum Auslesen der Daten des HYT-221 über den \ac{I$^2$C} Bus erklärt. Das Auslesen der Daten der beiden anderen Sensoren erfolgt analog zu der in Abschnitt \ref{subsection_Auslesen_DS18S20} dargestellten Möglichkeit, daher wird darauf nicht mehr explizit eingegangen. Der komplette Source Code ist in Anhang dargestellt.
 
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Python, firstline=20, lastline=45, caption=Auslesen der Temperatur und Luftfeuchtigkeit]{Listings/HYT221/Messung.py}
 
+Um das Auslesen der Daten einfach zu gestalten, wurde im Script die Bibliothek \textit{smbus} importiert, welche fertige Funktionen zum Auslesen eines \ac{I$^2$C} Busses bereitstellt.\\
+Als erstes wurde eine Variable mit der Adresse des Sensors angelegt. Diese Adresse kann dem Datenblatt des Sensors entnommen werden oder über den Befehl \texttt{i2cdetect -y 1} in der Konsole des \ac{RPI}\,3 ausgelesen werden. Der Parameter -y bewirkt, dass der Befehl sofort ausgeführt wird, der Parameter 1 legt fest das es sich um den \ac{I$^2$C} Bus Nummer 1 handelt (andere Hardware kann auch mehrere \ac{I$^2$C} Busse besitzen).\\
+Um den smbus verwenden zu können muss ein Objekt dessen erzeugt werden (Zeile 13), die 1 in der Funktion steht wie schon beschrieben für den Bus Nummer 1. Im Anschluss wird das erzeugte Array zur Speicherung der Daten noch initialisiert. Die Funktion in Zeile 22 erzeugt die wie im Theorieteil beschriebene Startbedingung. Im Anschluss an die Startbedingung werden mit der Funktion \texttt{read\_i2c\_block\_data()} die Register, in denen die Werte für die Temperatur und Luftfeuchtigkeit gespeichert sind ausgelesen und in das Array gespeichert. Die Temperatur- und Feuchtigkeitswerte sind in vier Byte aufgeteilt und müssen dementsprechend ausgelesen werden. Dies kann in der Protokollbeschreibung für den Sensor in folgender Quelle nachgelesen werden \citep{Datenblatt_I2C_HYT221}. Die übertragenen Werte, mussten im Anschluss an Hand von bestimmten Formeln, die dem Datenblatt des Sensors entnommen wurden in die jeweils richtige Form umgerechnet werden, um diese korrekt weiterverarbeiten zu können.
 
+\subsection{Datenspeicherung}
+\label{subsection_Datenspeicherung_HYT221}
+Wie schon in Abschnitt \ref{subsection_Speicherung der Daten des DS18S20} beschrieben, wurden die Daten wieder in eine RRD Datenbank gespeichert. Der Source Code hierfür ist in Anhang \ref{Python Script HYT-221 mit RDD} abgebildet.\\
+Weiterhin wurden die Sensordaten in einer mySQL Datenbank abgelegt, um die Möglichkeit zu schaffen, zu einem späteren Zeitpunkt durch exportieren dieser Daten (z.B. als CSV-File) eine weitere Bearbeitung zu ermöglichen. Möglichkeiten hierfür wären z.B. bei einer Fehlproduktion zu einem bestimmten Zeitpunkt (der die Aufzeichnungszeit des RRDtools übersteigt) eine Aussage über eventuelle Faktoren die dafür verantwortlich sein könnten tätigen zu können.\\
+Der Source Code zur Realisierung der Datenspeicherung mittels mySQL DB ist im folgenden ersichtlich. Die entsprechende DB wurde zuvor auf dem \ac{RPI}\,3 erstellt. Zur einfacheren Nutzung der mySQL Datenbank in dem Python Script wurde die Bibliothek \texttt{mysql.connector} importiert. Diese stellt vordefinierte Funktionen für die Verbindung mit der DB zur Verfügung, sowie Funktionen zum Lesen und Schreiben in bzw. aus der DB. Die Herstellung einer Verbindung zur Datenbank ist in Listing \ref{Datenbankverbindung} ersichtlich. Wichtig dabei war, die korrekten Anmeldedaten für die Datenbank zu verwenden, da ansonsten die Verbindung nicht hergestellt werden konnte und eine Fehlermeldung ausgegeben wurde.
 
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Python, firstline=12, lastline=17, caption=Verbindung zur DB herstellen,label=Datenbankverbindung]{Listings/HYT221/Messung.py}
 
+Um auf die Tabelle in der Datenbank zugreifen zu können musste noch ein Cursor erzeugt werden (Zeile 4). An Hand von SQL Statements wurden dann die Daten in die entsprechenden Spalten der Tabelle eingefügt (Zeile 9-10 und Zeile 13-14). Um die Änderungen in der Tabelle wirksam zu machen, wurde in Zeile 16 noch ein commit durchgeführt und im Anschluss die Verbindung zu Datenbank wieder geschlossen.
 
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Python, firstline=95, lastline=112, caption=Speicherung der Daten in mySQL DB]{Listings/HYT221/Messung.py}
+
+\subsection{Visualisierung der Daten}
+\label{subsection_Visualisierung der Daten}
+Die Messdaten wurden wie schon im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind für die verschiedenen Zeitspannen im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -29,9 +29,17 @@
 \BOOKMARK [1][-]{section.3.3}{Temperatur- und Luftfeuchtigkeitsmessung mit HYT-221}{chapter.3}% 29
 \BOOKMARK [2][-]{subsection.3.3.1}{HYT-221}{section.3.3}% 30
 \BOOKMARK [2][-]{subsection.3.3.2}{Schaltungsaufbau}{section.3.3}% 31
-\BOOKMARK [1][-]{section.3.4}{Vibrationsmessung mit Sensor BMA020}{chapter.3}% 32
-\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 33
-\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 34
-\BOOKMARK [0][-]{appendix.A}{Quellcode}{}% 35
-\BOOKMARK [1][-]{section.A.1}{Python Script DS18S20}{appendix.A}% 36
-\BOOKMARK [1][-]{section.A.2}{Erstellung Graphen DS18S20}{appendix.A}% 37
+\BOOKMARK [2][-]{subsection.3.3.3}{Auslesen der Daten}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.4}{Datenspeicherung}{section.3.3}% 33
+\BOOKMARK [2][-]{subsection.3.3.5}{Visualisierung der Daten}{section.3.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Vibrationsmessung mit Sensor BMA020}{chapter.3}% 35
+\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 36
+\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 37
+\BOOKMARK [0][-]{appendix.A}{Quellcode}{}% 38
+\BOOKMARK [1][-]{section.A.1}{Python Script DS18S20}{appendix.A}% 39
+\BOOKMARK [1][-]{section.A.2}{Erstellung Graphen DS18S20}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.3}{Python Script HYT-221 mit RRD}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.4}{Python Script HYT-221 mit mySQL}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.5}{Erstellung Graphen HYT-221}{appendix.A}% 43
+\BOOKMARK [0][-]{appendix.B}{Abbildungen}{}% 44
+\BOOKMARK [1][-]{section.B.1}{Graphen Temperatur und Luftfeuchtigkeit}{appendix.B}% 45
