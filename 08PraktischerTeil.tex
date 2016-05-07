@@ -229,11 +229,11 @@ Die Messdaten wurden wie im Abschnitt \ref{subsection_Visualisieren der Daten DS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vibrationsmessung mit Sensor BMA020}
 \label{section_BMA020}
-Im dritten Versuchsaufbau sollte mit dem Beschleunigungssensor BMA020 die Vibration gemessen werden. Verwendet wurde hier eine schon fertig bestückte Platine die den BMA020 enthält und ein Auslesen mittels \ac{I$^2$C} ermöglicht.
+Im dritten Versuchsaufbau sollte mit dem Beschleunigungssensor BMA020 die Vibration gemessen werden. Verwendet wurde hier eine schon fertig bestückte Platine die den BMA020 enthält.
 
 \subsection{BMA\,020}
 \label{subsection_BMA020}
-Der BMA\,020 ist ein von Bosch entwickelter Sensor, der die Beschleunigung in drei Richtungen (x-, y- und z-Achse) misst. Die Messdaten werden im Format eines 2er Komplements mit 10\,Bit ausgegeben. Die wichtigsten technischen Daten wurden dem Datenblatt \citep{Datenblatt_BMA020} entnommen und in der Tabelle \ref{Tabelle_Technische_Daten_BMA020} dargestellt.  
+Der BMA\,020 ist ein von Bosch entwickelter Sensor, der die Beschleunigung in drei Richtungen (x-, y- und z-Achse) misst. Die Messdaten werden im Format eines 2er Komplements mit 10\,Bit ausgegeben. Als Schnittstellen stellt der BMA\,020 einen SPI- und \ac{I$^2$C} Bus zur Verfügung. Die wichtigsten technischen Daten wurden dem Datenblatt \citep{Datenblatt_BMA020} entnommen und in der Tabelle \ref{Tabelle_Technische_Daten_BMA020} dargestellt.  
 
 %Tabelle Technische Daten HYT-221
 \begin{table}[H]
@@ -278,3 +278,22 @@ Abbildung zeigt die fertig bestückte Platine mit dem BMA020.
   \caption{Schaltungsaufbau Vibrationsmessung mit  BMA020}
   \label{Abb_Schaltungsaufbau_BMA020}
 \end{figure}
+
+Die in Abbildung \ref{Abb_Schaltungsaufbau_BMA020} dargestellte Schaltung beinhaltet die fertig bestückte Platine mit dem BMA020. Weiterhin ist auf der Platine auch ein Pullup Widerstand mit verbaut, sowie weitere Widerstände, um eine Spannungsversorgung der Platine mit 2,5\,V - 6\,V zu gewährleisten ohne dass der BMA020 Schaden nimmt (Spannungsversorgung des BMA\,020 liegt sonst bei max. 3,6\,V).\\
+Die Schaltung wurde an Hand des Datenblattes der Platine für einen Betrieb mittles \ac{I$^2$C} Schnittstelle verdrahtet. Dafür wurde die Pins \textit{UIN, CSB} und \textit{UPULLUP} mit einer 3,3\,V Versorgungsspannung belegt (rote Verbindungen). Die Pins \textit{SDO} und \textit{GND} wurde auf GROUND gelegt (schwarze Verbindungen). Für die Datenübertragung wurde der Pin SCK mit dem SCL Pin des \ac{RPI} (grüne Verbindung), sowie der SDI Pin mit dem SDA Pin des \ac{RPI} (gelbe Verbindung) verbunden.
+
+\subsection{Auslesen der Daten}
+\label{subsection_Auslesen_Daten_BMA020}
+
+Um die Daten über den \ac{I$^2$C} Bus auszulesen, wurde ähnlich vorgegangen wie bei der Temperatur- und Luftfeuchtigkeitsmessung. Die Änderung dazu war allerdings, dass das Python Script nicht wie zuvor über den Crown-Deamon jede Minute aufgerufen wurde sondern die Messungen in einer while Schleife jede Sekunde ausgewertet wurden. Dies war für die Aussage über eventuelle Vibrationen nötig, da ansonsten keine aussagekräftigen Werte ermittelt werden können.\\
+Als erstes wurden die Funktionen zum Auslesen der Register und für die Umwandlung des 2er Komplements definiert (Zeile 30 - 43). In Zeile 45 - 47 ist die Funktion für die Startbedingung des \ac{I$^2$C} Busses definiert. In der folgenden while Schleife wurden dann mittels der vorher definierten Funktion die Register für die verschiedenen Beschleunigungsrichtungen ausgelesen. Hier mussten für jeden Beschleunigungswert zwei verschiedene Register gelesen werden, da die Werte in diesen gespeichert waren\footnote{im Datenblatt des Sensors ersichtlich} (für x-Achse musste z.B. das Register 0x02, das die LSB-Werte enthält und das Register 0x03 mit den MSB-Werten gelesen und entsprechend zusammengesetzt werden). Im Anschluss wurden noch die digitalen Werte in die entsprechnden g-Werte umgerechnet um eine aussagekräftige Darstellung zu ermöglichen. Der Ausschnitt für den eben beschrieben Teil des Source Codes ist in Listing \ref{Auslesen_Vibrationswerte_BMA020} ersichtlich. Der gesamte Quellcode ist in Anhang \ref{Python Script Vibrationsmessung} aufgelistet.
+
+\lstset{escapeinside={\%*}{*)},numbers=left}
+\lstinputlisting[language=Python, firstline=30, lastline=66, caption=Auslesen der Vibrationswerte,label=Auslesen_Vibrationswerte_BMA020]{Listings/Vibration/Vibration.py}
+
+\subsection{Datenspeicherung}
+\label{subsection_Speicherung_der_Vibrationsdaten}
+Die Vibrationswerte der verschiedenen Bewegungsrichtungen wurden in diesem Testaufbau im Sekundentakt in einer mySQL Datenbank gespeichert. Die Werte wurden wie schon im vorherigen Beispiel über SQL Statements in die entsprechende Tabelle der Datenbank geschrieben. Zuvor wurde wieder die Verbindung zur DB über das Python Script hergestellt. Der genaue Ablauf ist im Quelltext im Anhang \ref{Python Script Vibrationsmessung} ersichtlich.
+
+\subsection{Visualisierung der Vibrationswerte}
+\label{subsection_Visualisierung der Vibrationswerte}

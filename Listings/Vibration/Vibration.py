@@ -50,7 +50,7 @@ def Initialisierung_BMA020(SensorAdd):
 Initialisierung_BMA020(add)
 
 # Cursor Erstellung für DB-Zugriff
-#cur = db.cursor()
+cur = db.cursor()
 
 # Dauerschleife für Ausgabe der Beschleunigungswerte
 
@@ -74,13 +74,13 @@ while(0==0):
 	daten_out.write(str(x) + " " + str(y) + " " + str(z))
 	daten_out.close() 	
 	# Daten in DB eintragen
-	#cur.execute(sql,(x, y, z,))
-	#db.commit()
+	cur.execute(sql,(x, y, z,))
+	db.commit()
 	
 	# Gesamtbeschleunigung berechnen
 	total = (sqrt(x**2 + y**2 + z**2))
 	total = round(total, 3)
 
 # Ausgabe der Ergebnisse		
-	#print("x: " + str(x) + "     " + "y: " + str(y) + "     " + "z: " + str(z) + "     " + "Beschleunigung: " + str(total) + " g")
+	print("x: " + str(x) + "     " + "y: " + str(y) + "     " + "z: " + str(z) + "     " + "Beschleunigung: " + str(total) + " g")
 	sleep(1)

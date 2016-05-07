@@ -36,13 +36,18 @@
 \contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{35}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}BMA\tmspace +\thinmuskip {.1667em}020}{35}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Schaltungsaufbau}{36}{subsection.3.4.2}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{37}{chapter.4}
-\contentsline {chapter}{Literatur}{38}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{40}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{40}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{41}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{43}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{46}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{49}{section.A.5}
-\contentsline {chapter}{\numberline {B}Abbildungen}{55}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{55}{section.B.1}
+\contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{36}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Datenspeicherung}{38}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{38}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{39}{chapter.4}
+\contentsline {chapter}{Literatur}{40}{chapter.4}
+\contentsline {chapter}{\numberline {A}Quellcode}{42}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{42}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{43}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{45}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{48}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{51}{section.A.5}
+\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{57}{section.A.6}
+\contentsline {chapter}{\numberline {B}Abbildungen}{60}{appendix.B}
+\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{60}{section.B.1}
+\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{60}{section.B.2}
