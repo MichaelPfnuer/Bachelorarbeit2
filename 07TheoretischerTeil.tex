@@ -160,19 +160,19 @@ Im folgenden Kapitel werden die am häufigsten verwendeten Bussysteme für die v
 \subsection{1-Wire}
 \label{subsection_1Wire}
 Der 1-Wire Bus ist ein serielles Bussystem von der Firma \textit{Dallas\footnote{2001 von Maxim Integrated übernommen}} , bei dem die Daten seriell (nacheinander) über eine Datenleitung übertragen werden.
-\subsubsection{Allgemeine Informationen}
+\subsubsection*{Allgemeine Informationen}
 \label{subsection_Allgemeine_Informationen_1Wire}
- Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen benötigt, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl an Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Dies kommt daher, da für die Datenübertragung und die Stromversorgung die gleiche Leitung genutzt wird, wird während der Kommunikation der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren wo die interne Spannungsversorgung nicht ausreichend ist  eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
-Diese System ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es nur einen Master (z.B. \ac{RPI}) gibt aber mehrere Slaves (z.B. Sensoren). Die Aufgabe des Masters in diesem System ist es, die Kommunikation zu steuern. Die Anzahl der Sensoren kann bis zu 100 betragen, die parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in \citep{Bussysteme_in_der_Praxis}
+ Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen verwendet, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl von Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Dies kommt daher, da für die Datenübertragung und die Stromversorgung die gleiche Leitung genutzt wird. Während der Kommunikation wird der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren wo die interne Spannungsversorgung nicht ausreichend ist  eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
+Der 1-Wire Bus ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es  einen Master (z.B. \ac{RPI}) und mehrere Slaves (z.B. Sensoren) gibt. Die Aufgabe des Masters  ist es, die Kommunikation zu steuern. Die maximale Anzahl der Sensoren kann bis zu 100 betragen, welche parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in \citep{Bussysteme_in_der_Praxis}
 \begin{itemize}
 \item 8 Bit \textit{Family Code}
 \item 48 Bit \textit{Seriennummer}
 \item 8 Bit \textit{CRC-Prüfsumme}
 \end{itemize}
 
-\subsubsection{Übertragungsprotokoll}
+\subsubsection*{Übertragungsprotokoll}
 \label{subsection_Protokoll_1Wire}
-Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. In dem andern Fall wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Da wie schon angesprochen keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden. Dafür gibt es zwei Übertragungsmöglichkeiten, den \textit{normalen Modus} wo ca. 16,3\;$kBit/s$ übertragen werden und den \textit{Overdrive Modus} mit bis zu 142\;$kBit/s$.
+Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. Wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Dadurch, dass keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden (siehe Tabelle \ref{Tabelle_Befehle_1Wire}).\\
 Die Zeitspanne für die Übertragung von 1 Bit beträgt immer 60\,$\mu s$. Diese Steuerung, egal in welche Richtung die Übertragung stattfindet werden durch den Master initiiert. Die Befehle die dazu notwendig sind, können aus der Tabelle \ref{Tabelle_Befehle_1Wire} entnommen werden \citep{Bussysteme_in_der_Praxis}.
 
 %Tabelle 1
@@ -211,13 +211,13 @@ llll
 \label{subsection_I2C}
 Der \ac{I$^2$C} Bus ist auch noch unter einem anderen Namen als \ac{TWI} Bus (z.B. bei Atmel) bekannt. Er wurde 1982 von der Firma Philips Semiconductors\footnote{heute NPX} entwickelt und wird vornehmlich zur internen Kommunikation von Geräten benutzt \citep{Bussysteme_in_der_Praxis}.
 
-\subsubsection{Allgemeine Informationen}
+\subsubsection*{Allgemeine Informationen}
 \label{subsubsection_Allgemeine_Informationen_I2C}
-Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben \citep{Bussysteme_in_der_Praxis}. 
+Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen zur Datenübertragung notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben \citep{Bussysteme_in_der_Praxis}. 
 
-\subsubsection{Definierte Zustände und Adressierung}
+\subsubsection*{Definierte Zustände und Adressierung}
 \label{subsubsection_definierte_Zustände_Adressierung}
-Bei der Kommunikation mittels \ac{I$^2$C} müssen bestimmte Zustände eingehalten werden um die korrekte Funktion sicherzustellen. Diese werden im folgenden dargestellt. Für die folgenden Definitionen dient falls nicht anders angegeben folgende Quelle \citep{I2C_Datenblatt}.
+Bei der Kommunikation mittels \ac{I$^2$C} müssen bestimmte Zustände eingehalten werden um die korrekte Funktion sicherzustellen. Diese werden im Anschluss dargestellt. Für die folgenden Definitionen dient falls nicht anders angegeben folgende Quelle \citep{I2C_Datenblatt}.
 \subsubsection*{Gültigkeit Datenbit}
 \label{subsubsection_Gültigkeit_Datenbit}
 Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen Pegel während der High Phase der Taktleitung nicht ändern. Dieser Zustand ist in Abbildung \ref{Abb_Bild_I2C_data_valid} dargestellt.
@@ -232,11 +232,11 @@ Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen
 
 \subsubsection*{START Bedingung}
 \label{subsubsection_START_Bedingung}
-Damit eine Kommunikation stattfinden kann muss diese als erstes einmal gestartet werden. Dies geschieht, indem der Master die SDA Leitung auf Ground zieht, während die SCL Leitung auf HIGH gesetzt ist. Dieser Zustand wird in Abbildung nocheinmal grafisch dargestellt
+Damit eine Kommunikation stattfinden kann muss diese als erstes einmal durch eine Start Bedingung eingeleitet werden. Dies geschieht, indem der Master die SDA Leitung auf Ground zieht, während die SCL Leitung auf HIGH gesetzt ist. Abbildung \ref{Abb_Bild_I2C_START_STOP} zeigt diesen Zustand.
 
 \subsubsection*{STOP Bedingung}
 \label{subsubsection_STOP_Bedingung}
-Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese unterscheidet sich von der START Bedingung dadurch, dass der Master bei HIGH Zustand der Taktleitung die Datenleitung ebenfalls auf HIGH zieht. Grafisch ist dies in Abbildung dargestellt.
+Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese unterscheidet sich von der START Bedingung dadurch, dass der Master bei HIGH Zustand der Taktleitung die Datenleitung ebenfalls auf HIGH zieht. Grafisch ist dies in Abbildung \ref{Abb_Bild_I2C_START_STOP} dargestellt.
 
 %Grafik START STOP
 \begin{figure}[!h] 
@@ -250,7 +250,7 @@ Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese untersch
 \subsubsection*{Adressierung}
 \label{subsubsection_Adressierung}
 Bei der Adressierung wird nach der Start Bedingung 1 Byte vom Master an den Slave gesendet. Bei diesem Byte stellen die ersten sieben Bits die Adresse des Slaves dar und das achte Bit das Read\,/\,Write Bit. Die Kennzeichnung des R\,/\,W Bits ist immer aus Sicht des Masters zu deuten. Dies bedeutet, dass bei WRITE Daten vom Master an den Slave übertragen werden und bei READ Daten vom Slave an den Master.
-Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} verdeutlicht noch einmal den Aufbau des ersten Bytes.\\ Dadurch, dass sieben Bits für die Adresse des Slaves verwendet werden können und 16 Adressen davon für Erweiterungen reserviert sind, können bis zu maximal 112 Teilnehmer (Berechnung entsprechend Formel \ref{Formel_Max_Teilnehmer_I2C} ) an den Bus angeschlossen werden.
+Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} verdeutlicht noch einmal den Aufbau des ersten Bytes.\\ Dadurch, dass sieben Bits für die Adresse des Slaves verwendet werden können und 16 Adressen davon für Erweiterungen reserviert sind, können maximal 112 Teilnehmer (Berechnung entsprechend Formel \ref{Formel_Max_Teilnehmer_I2C} ) an den Bus betrieben werden.
 
 \begin{equation}
 max. Teilnehmer = 2^7-16 = 112
@@ -266,7 +266,7 @@ max. Teilnehmer = 2^7-16 = 112
 \end{figure}
 
 %Subsubsection Übertragungsprotokoll
-\subsubsection{Übertragungsprotokoll}
+\subsubsection*{Übertragungsprotokoll}
 \label{subsubsection_Übertragungsprotokoll_I2C}
 Das Übertragungsprotokoll beim \ac{I$^2$C} Bus ist immer so aufgebaut, dass die Kommunikation mit einem Start Signal beginnt und als nächstes das Byte mit der Slave Adresse und dem R\,/\,W Bit folgt. Jedes Byte das gesendet wird, wird durch den Slave mit einem ACK-Bit quittiert. Je nachdem wie das R\,/\,W Bit gesetzt ist (READ = 1, WRITE = 0) werden die Daten byteweise gelesen oder geschrieben. Das ACK Bit wird dann entweder vom Master oder vom Slave gesendet. Ist das letzte Byte der Übertragung gesendet, wird dieses vom Master mit einem NACK quittiert. Im Anschluss wird die Kommunikation durch die STOP Bedingung beendet. In Abbildung ist der Ablauf noch einmal grafisch dargestellt.\newpage
 

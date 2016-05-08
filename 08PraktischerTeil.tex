@@ -1,7 +1,7 @@
 \chapter{Praktischer Teil}
 \label{chapter_Praktischer_Teil}
 In diesem Kapitel werden die verschiedenen Sensorschaltungen und deren Konfiguration, die Problem
-die sich bei der Realisierung ergaben, sowie die Ergebnisse und Auswertungen beschrieben. Außerdem werden die verschiedenen Möglichkeiten zur Datenspeicherung und Visualisierung dargestellt und erklärt. Am Anfang dieses Kapitels werden die zur Realisierung der verschiedenen Aufgaben benötigten Bauteile, kurz etwas näher erklärt und aufgelistet. In Abschnitt \ref{section_DS18S20} wird eine Schaltung mit einem einzigen 1-Wire Temperatursensor aufgebaut, bei der zweiten Schaltung in Abschnitt \ref{section_HTY221} kommt zu dem Sensor aus \ref{section_DS18S20} ein zweiter Temperatursensor und ein Sensor zur Temperaturmessung und Bestimmung der Luftfeuchtigkeit hinzu. Der letzte Abschnitt (\ref{section_BMA020}) befasst sich mit der Realisierung einer Vibrationsmessung mittels Beschleunigungssensors.
+die sich bei der Realisierung ergaben, sowie die Ergebnisse und Auswertungen beschrieben. Außerdem werden die verschiedenen Möglichkeiten zur Datenspeicherung und Visualisierung dargestellt und erklärt. Am Anfang dieses Kapitels werden die zur Realisierung der verschiedenen Aufgaben benötigten Bauteile, kurz etwas näher erklärt und aufgelistet. In Abschnitt \ref{section_DS18S20} wird eine Schaltung mit einem einzigen 1-Wire Temperatursensor aufgebaut, bei der zweiten Schaltung in Abschnitt \ref{section_HTY221} kommt zu dem Sensor aus \ref{section_DS18S20} ein zweiter Temperatursensor und ein Sensor zur Temperatur- und Luftfeuchtigkeitsmessung hinzu. Der letzte Abschnitt (\ref{section_BMA020}) befasst sich mit der Realisierung einer Vibrationsmessung mittels Beschleunigungssensors.
 
 \section{Benötigte Materialien}
 \label{section_Benötigte_Materialien}
@@ -38,14 +38,12 @@ Elektronik Steckbrett & 1\\
 %Abschnitt DS18S20
 \section{Temperaturmessung mit Sensor DS18S20}
 \label{section_DS18S20}
-Abschnitt \ref{section_DS18S20} befasst sich mit dem Schaltungsaufbau zur Temperaturmessung mittels DS18S20. Weiterhin werden die verschiedenen Möglichkeiten zur Datenspeicherung (RRD Tool, mySQL), sowie eine Möglichkeit zur Visualisierung der Daten erläutert. 
+Abschnitt \ref{section_DS18S20} befasst sich mit dem Schaltungsaufbau zur Temperaturmessung mittels DS18S20. Hier wird auf die Möglichkeit der Datenspeicherung und Visualisierung der Daten mit dem RRDtool eingegangen.
  
-
-
 
 \subsection{DS18S20}
 \label{subsection_DS18S20}
-Der DS18S20 (siehe Abbildung \ref{Abb_DS18S20}) ist ein digitaler 1-Wire Temperatursensor, der eine 9\,Bit Temperaturmessung ermöglicht. Dieser ist von der Firma \textit{Maxim Integrated} entwickelt worden.
+Der DS18S20 (siehe Abbildung \ref{Abb_DS18S20}) ist ein digitaler 1-Wire Temperatursensor, der eine Temperaturmessung mit 9\,Bit Auflösung ermöglicht. Dieser ist von der Firma \textit{Maxim Integrated} entwickelt worden.
 Folgend werden die wichtigsten technischen Daten des DB18S20 aufgeführt.
 
 %Abbildund Daten DS18S20
@@ -67,7 +65,7 @@ Folgend werden die wichtigsten technischen Daten des DB18S20 aufgeführt.
 \subsection{Schaltungsaufbau}
 \label{subsection_Schaltungsaufbau_DS18S20}
 
-Abbildung \ref{Abb_Schaltung_DS18S20} zeigt den schematischen Schaltungsaufbau mit dem Temperatursensor DS18S20. Anzumerken ist, dass die in der Schaltung in Abbildung \ref{Abb_Schaltung_DS18S20} dargestellten Bauteile optisch nicht immer den realen Bauteilen entsprechen (z.B. Aufdruck auf dem Sensor). Die Beschaltung der Bauteile wurde in der praktischen Erprobung ganz genau so durchgeführt. 
+Abbildung \ref{Abb_Schaltung_DS18S20} zeigt den schematischen Schaltungsaufbau mit dem Temperatursensor DS18S20. Anzumerken ist, dass die in der Schaltung in Abbildung \ref{Abb_Schaltung_DS18S20} dargestellten Bauteile optisch nicht immer den realen Bauteilen entsprechen (z.B. Form, Farbe oder Aufdruck). Die Beschaltung der Bauteile ist jedoch korrekt dargestellt. 
 
 %Abbildund Schaltungsaufbau DS18S20
 \begin{figure}[!h] 
@@ -77,22 +75,23 @@ Abbildung \ref{Abb_Schaltung_DS18S20} zeigt den schematischen Schaltungsaufbau m
   \label{Abb_Schaltung_DS18S20}
 \end{figure}
 
-Die oben dargestellte Schaltung\footnote{gezeichnet mit Fritzing} zur Temperaturmessung wird folgendermaßen realisiert, der Pin $V_{DD}$ des Sensors ist mit Pin\,1 (3,3\,V) des \ac{RPI}\,3 verbunden (rote Verbindung). Die schwarze Verbindung stellt die GROUND Verbindung des Pin\,6 des \ac{RPI} mit dem GND Pin des Sensors dar. Weiterhin ist der er DQ Pin des Sensors (1-Wire Interface) mit dem Pin\,7 des \ac{RPI} verbunden (violette Verbindung) welcher für den 1-Wire Bus verwendet wird. Zu dem  $V_{DD}$ Pin  und dem DQ Pin ein Pullup Widerstand parallel geschalten.
+Die oben dargestellte Schaltung\footnote{gezeichnet mit Fritzing} zur Temperaturmessung wird folgendermaßen realisiert, der Pin $V_{DD}$ des Sensors ist mit Pin\,1 (3,3\,V) des \ac{RPI}\,3 verbunden (rote Verbindung). Die schwarze Verbindung stellt die GROUND Verbindung des Pin\,6 des \ac{RPI} mit dem GND Pin des Sensors dar. Weiterhin ist der er DQ Pin des Sensors (1-Wire Interface) mit dem Pin\,7 des \ac{RPI} verbunden (violette Verbindung). Der Pin\,7 des \ac{RPI} wurde für die Verwendung als 1-Wire Bus konfiguriert. Parallel zu dem  $V_{DD}$ und DQ Pin ist ein Pullup Widerstand geschalten.
 
 \subsection{Auslesen des Sensors}
 \label{subsection_Auslesen_DS18S20}
-Um die vom Sensor erfassten Daten auf dem \ac{RPI}\,3 auszulesen, wird ein Python Script verwendet. Dieses wird im Anschluss an Hand kurzer Ausschnitte aus dem Quellcodes erklärt. Der komplette Quellcode ist im Anhand dieser Arbeit zu finden.\\
+Um die vom Sensor erfassten Daten auf dem \ac{RPI}\,3 auszulesen, wird ein Python Script verwendet. Dieses wird im Anschluss an Hand kurzer Ausschnitte aus dem Quellcodes erklärt. Der komplette Quellcode ist im Anhang \ref{Python Script DS18S20} zu finden.\\
 
 %Quellcode DS18S20
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
 \lstinputlisting[language=Python, firstline=16, lastline=32, caption=Auslesen der gemessenen Temperatur, label=list_DS18S20]{Listings/DS18S20/DS18S20.py}
 
-Um die Temperatur des Sensors auslesen zu können wird als erstes das File wie in Zeile 2 des Codes ersichtlich ist geöffnet und dessen Inhalt in eine Variable gespeichert. Dieses File enthält die gesamten an den \ac{RPI}\,3 angeschlossenen IDs der 1-Wire Sensoren. Jeder angeschlossenen 1-Wire Sensor besitzt im Pfad \texttt{/sys/bus/w1/devices/} einen Ordner mit seiner ID. In diesem gibt es wiederum eine Datei mit der Bezeichnung \texttt{w1\_slave}, die die gemessenen Daten enthält. Um diese auszulesen, werden in unseren Python Script in den Zeilen $8-15$ verschiedene Schritte durchgeführt, auf die nicht näher eingegangen wird\footnote{kann in verschiedenen Python Tutorials nachgelesen werden}. Da die Temperatur in dieser Datei vom Sensor im Format von z.B. 17687 ($\approx$ 17,7 $^\circ$C) angegeben wird, muss dieser Wert noch durch 1000 dividiert werden um den genauen Temperaturwert zu erhalten(Zeile 15 im Quellcode). In Zeile 16 wird der Wert noch auf zwei Stellen nach dem Komma gerundet und ist in der Variable \texttt{temperature} gespeichert. Mit dem Wert dieser Variable kann nun weiter gearbeitet werden.
+Um die Temperatur des Sensors auslesen zu können wird in Zeile 2 des Codes das File geöffnet und dessen Inhalt in eine Variable gespeichert. Dieses File enthält die IDs, der an den \ac{RPI}\,3 angeschlossenen 1-Wire Sensoren. Jeder dieser Sensoren besitzt im Pfad \texttt{/sys/bus/w1/devices/} einen Ordner mit seiner ID. In diesem gibt es wiederum eine Datei mit der Bezeichnung \texttt{w1\_slave}, die die gemessenen Daten enthält. Um diese auszulesen, werden in dem Python Script in den Zeilen $8-15$ verschiedene Schritte durchgeführt, auf die nicht näher eingegangen wird\footnote{kann in verschiedenen Python Tutorials nachgelesen werden}. Da die Temperatur in der Datei im Format von z.B. 17687 ($\approx$ 17,7 $^\circ$C) angegeben wird, muss dieser Wert noch durch 1000 dividiert werden um den genauen Temperaturwert zu erhalten(Zeile 15 im Quellcode). In Zeile 16 wird der Wert noch auf zwei Stellen nach dem Komma gerundet und ist in der Variable \texttt{temperature} gespeichert. Mit dem Wert dieser Variable kann nun weiter gearbeitet werden.\\
+Wichtig beim Auslesen der Dateien war es, darauf zu achten, dass die Temperaturwerte im richtigen Format ausgelesen werden, da es sonst im späteren Verlauf zu Problemen kommen kann (unübersichtliche Darstellung bei der Visualisierung).
 
 %Subsection Datenspeicherung
 \subsection{Datenspeicherung}
 \label{subsectio_Datenspeicherung_DS18S20}
-Wie schon in Abschnitt \ref{section_DS18S20} angesprochen, wird in dieser Arbeit auf zwei verschiedene Möglichkeiten der Datenspeicherung eingegangen. Zum Einen mit dem RRDtool und zum Andern mittels mySQL Datenbank. Die Möglichkeit der Datenspeicherung in einer mySQL Datenbank wird im Abschnitt \ref{section_HTY221} beschrieben. In diesem Abschnitt wird näher auf die Möglichkeiten mit dem RRDtool eingegangen.
+Wie schon in Abschnitt \ref{section_DS18S20} angesprochen, wird in diesem Teil der Arbeit auf die Möglichkeit der Datenspeicherung mittels RRDtool eingegangen. 
 
 \subsection*{RRDtool}
 Das RRDtool ist ein Programm, welches es ermöglicht, Messdaten für einen beim Erstellen festgelegten Zeitbereich zu speichern. RRD steht für \textit{Round-Robin-Database}, diese wird durch das Tool in einer Datei erzeugt, die von der Erstellung weg eine feste Größe besitzt. Dies ist ein großer Unterschied zu herkömmlichen mySQL Datenbanken, da bei diesen mit zunehmender Zeit und Datenmenge auch die Größe der Datenbank anwächst. Das Anwachsen der Größe der Datei wird bei der RRD Datenbank dadurch verhindert, dass sie wie ein Ringbuffer arbeitet, was bedeutet, dass wenn der Speicherplatz belegt ist, Werte zusammengefasst (z.B. durch Bildung eines Mittelwertes für einen Tag aus den einzelnen stündlichen Werten) und die ältesten überschrieben werden. Somit kann sichergestellt werden, dass die Größe der Datenbank schon beim Erstellen dieser festgelegt ist.\\
@@ -104,12 +103,12 @@ Wie eine solche Datenbank definiert und erstellt wird, wird im Quellcode \ref{li
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
 \lstinputlisting[language=Python, firstline=1, lastline=9, caption=Erstellung RRD Datenbank , label=list_Quellcode_RRD_Datenbank]{Listings/DS18S20/RRD_DB_Erstellen.sh}
 
-Zeile 2 des in \ref{list_Quellcode_RRD_Datenbank} dargestellten Source Codes erstellt das File, welches als Datenbank fungiert. Weiterhin wird die Schrittweite\footnote{Datenbank erwartet alle 60 Sekunden einen Wert} auf \textit{60 Sekunden} festgelegt. In der nächsten Zeile wird die Datenreihe festgelegt, die Zahlen am Ende der Zeile legen fest, dass wenn innerhalb von 120 Sekunden kein gültiger Wert geliefert wird, die Datenbank an dessen Stelle \textit{NAN} (Not A Number) einträgt. Die Begründung liegt darin, dass wenn im weiteren Verlauf Mittelwerte etc. gebildet werden keine Verfälschung der Daten erfolgt (würde passieren wenn z.B. 0 eingetragen wird). In Zeile 4 wird der Zeitbereich der Speicherung von den gelieferten Werten festgelegt. In dem dargestellten Beispiel werden jede Minute ein Wert gespeichert und dies 600 Minuten ($\approx$ 10 Stunden) lang. Die Zeilen 5-9 des Quellcodes dienen dazu um die Bereiche von Maximl- bzw. Minimalwerten, sowie die Zeitspannen wann älteren Datenwerte zusammengefasst werden zu definieren. Genauere Informationen bezüglich der Erstellung der Datenbank können von folgender Adresse bezogen werden \url{http://oss.oetiker.ch/rrdtool/} \citep{Hompage_RRDtool}.\\\\
-Das in Quellcode \ref{list_Quellcode_RRD_Datenbank} dargestellte Script musste nach dem speichern noch ausführbar gemacht werden. Dabei ergab sich das Problem, dass dieses beim Aufrufen die Datenbank wegen einer fehlenden Berechtigung nicht erstellen konnte. Dies wurde dadurch behoben, dass in Zeile 1 des Scripts der Aufruf des rrdtool mit \textit{sudo} realisiert wurde. Mit dem erfolgreichen Ausführen des Scripts wurde die Datenbank im Verzeichnis \texttt{/home/pi/Temperatur/TemperaturSensor/} erstellt.
+Um eine Datenbank zu erstellen, wurde in Zeile 2 des in \ref{list_Quellcode_RRD_Datenbank} dargestellten Source Codes der Name des zu erstellenden Datenbank Files festgelegt. Weiterhin wurde die Schrittweite\footnote{Datenbank erwartet alle 60 Sekunden einen Wert} auf \textit{60 Sekunden} festgelegt. Die nächsten Zeile definiert die Datenreihe, die Zahlen am Ende der Zeile legen fest, dass wenn innerhalb von 120 Sekunden kein gültiger Wert geliefert wird, die Datenbank an dessen Stelle \textit{NAN} (Not A Number) einträgt. Die Begründung liegt darin, dass wenn im weiteren Verlauf Mittelwerte etc. gebildet werden keine Verfälschung der Daten erfolgt (würde passieren wenn z.B. 0 eingetragen wird). In Zeile 4 wird der Zeitbereich der Speicherung von den gelieferten Werten definiert. Festgelegt wurde, dass jede Minute ein Wert gespeichert wird und dies 600 Minuten ($\approx$ 10 Stunden) lang.  Die Zeilen 5-9 des Quellcodes dienen dazu um die Bereiche von Maximl- bzw. Minimalwerten, sowie die Zeitspannen wann älteren Datenwerte zusammengefasst werden zu definieren. Genauere Informationen bezüglich der Erstellung der Datenbank können von folgender Adresse bezogen werden \url{http://oss.oetiker.ch/rrdtool/} \citep{Hompage_RRDtool}.\\\\
+Das in Quellcode \ref{list_Quellcode_RRD_Datenbank} dargestellte Script musste nach dem speichern noch ausführbar gemacht werden. Dabei ergab sich das Problem, dass dieses beim Aufrufen die Datenbank wegen einer fehlenden Berechtigung nicht erstellen konnte. Dies wurde dadurch behoben, dass in Zeile 1 des Scripts der Aufruf des rrdtool mit \textit{sudo} realisiert wurde. Mit dem erfolgreichen Ausführen des Scripts wurde die Datenbank im Verzeichnis \texttt{/home/pi/Temperatur/TemperaturSensor/} angelegt.
 
 \subsection*{Datenspeicherung}
 \label{subsection_Speicherung der Daten des DS18S20}
-Damit die über das Python Script wie vorher dargestellt ausgelesenen Daten in die Datenbank geschrieben werden, wurde am Ende des Scriptes folgende Zeile hinzugefügt.
+Damit die über das Python Script ausgelesenen Daten in die Datenbank geschrieben werden, wurde am Ende des Scriptes folgende Zeile hinzugefügt.
 
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
 \lstinputlisting[language=Python, firstline=25, lastline=27, caption=Datenspeicherung in DB]{Listings/DS18S20/DS18S20.py}
@@ -120,7 +119,7 @@ Durch diese Codezeile, wird ein Update der Datenbank durchgeführt und der Wert,
 %Subsection Visualisierung
 \subsection{Visualisieren der Daten}
 \label{subsection_Visualisieren der Daten DS18S20}
-Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hier wurden zwei Grafen erstellt die die gemessenen Temperaturwerte für verschiedene Zeiträume darstellen. Zur Erstellung dieser Grafen wurde ein Script verwendet, das den entsprechenden Code enthält. Der Quellcode zur Erstellung der Graphen ist im Anhang dargestellt. Die einzelnen Befehle können auf folgender Quelle nachgeschlagen werden \url{http://oss.oetiker.ch/rrdtool/doc/rrdgraph_data.en.html}.\\
+Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hier wurden zwei Grafen erstellt die die gemessenen Temperaturwerte für verschiedene Zeiträume darstellen. Zur Erstellung dieser Grafen wurde ein Shell Script verwendet, das den entsprechenden Code enthält. Der Quellcode zur Erstellung der Graphen ist im Anhang dargestellt. Die einzelnen Befehle können auf folgender Quelle nachgeschlagen werden \url{http://oss.oetiker.ch/rrdtool/doc/rrdgraph_data.en.html}.\\
 \\Abbildung \ref{Abb_Temperaturverlauf_Stunde_DS18S20} und \ref{Abb_Temperaturverlauf_10Stunden_DS18S20} zeigen die mittels RRDtool erzeugten Graphen.
 
 %RRD Graphen
@@ -139,7 +138,9 @@ Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hie
 \end{figure}
 
 Um die in diesem Versuch verwendeten Scripte zum Auslesen der Daten, Speichern der Daten oder Erstellung der Graphen für den Temperaturverlauf nicht immer von \glqq Hand\grqq ausführen zu müssen, wurde für jedes dieser Scripte ein extra Eintrag in der Datei \texttt{crontab\footnote{Cron-Daemon = Dienst der automatisch Scripte zu vorgegebenen Zeiten starten kann}} vorgenommen. Die Zeit wurde jeweils auf 1 Minute eingestellt.\\
-Als Erkenntnis konnte aus diesem Versuchsaufbau gewonnen werden, dass der Einsatz eines 1-Wire Sensors an dem \ac{RPI}\,3 zur Temperaturaufzeichnung, -speicherung und -visualisierung relativ schnell und problemlos möglich ist. Der Temperaturverlauf konnte an Hand der Graphen gut und übersichtlich nachvollzogen werden. 
+Durch die Erstellung der oben aufgelisteten Graphen war es möglich den Temperaturverlauf im gemessenen Zeitraum nachzuverfolgen. Der Zeitraum der Messungen wurde über mehrere Tage ausgedehnt, damit eine realistische Temperaturaufzeichnung ausgewertet werden konnte. An Hand der erhaltenen Graphen konnten diverse Rückschlüsse gezogen werden (z.B. sank die Temperatur morgens um sechs Uhr jeweils um zwei Grad ab was über mehrere Tage nachzuverfolgen war. Dies lag daran, dass um diese Uhrzeit immer die Fenster geöffnet wurden).\\
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Abschnitt HYT-221
@@ -185,7 +186,7 @@ Für einen sicheren Betrieb des Sensors muss die angelegte Versorgungsspannung z
 
 \subsection{Schaltungsaufbau}
 \label{subsection_Schaltungsaufbau_HYT221}
-Der in Abbildung dargestellte Schaltungsaufbau beinhaltet zwei Sensoren der des Typs DS18S20, welche mit dem 1-Wire Bus betrieben werden. Der in Kapitel \ref{subsection_Schaltungsaufbau_DS18S20} erwähnte Pull-Up Widerstand wird dafür allerdings nur einmal benötigt, da beide Sensoren parallel zueinander geschalten sind. Als dritter Sensor ist ein HYT-221 verbaut, welcher Temperaturwerte und die Luftfeuchtigkeit misst. Der HYT-221 wird über den \ac{I$^2$C} Bus betrieben. Dieser benötigt eine $3,3\,V$ Versorgungsspannung (rote Verbindung), einen GROUND Anschluss (schwarze Verbindung), sowie zur Datenübertragung eine Taktleitung (SCL = rote Verbindung) und eine Datenleitung (SDA = blaue Verbindung).
+Der in Abbildung dargestellte Schaltungsaufbau beinhaltet zwei Sensoren des Typs DS18S20, welche mit dem 1-Wire Bus betrieben werden. Der in Kapitel \ref{subsection_Schaltungsaufbau_DS18S20} erwähnte Pull-Up Widerstand wird dafür allerdings nur einmal benötigt, da beide Sensoren parallel zueinander geschalten sind. Als dritter Sensor ist ein HYT-221 verbaut, welcher Temperaturwerte und die Luftfeuchtigkeit misst. Der HYT-221 wird über den \ac{I$^2$C} Bus betrieben. Für diesen wurde eine $3,3\,V$ Versorgungsspannung (rote Verbindung), ein GROUND Anschluss (schwarze Verbindung), sowie zur Datenübertragung eine Taktleitung (SCL = rote Verbindung) und eine Datenleitung (SDA = blaue Verbindung) benötigt. Beim Aufbau dieser Schaltung war es wichtig, eine einheitliche Verkabelung der einzelnen Komponenten sicherzustellen (rote Verbindungen für 3,3\,V, schwarz für Ground etc.), um die Übersichtlichkeit zu bewahren. Ebenso musste darauf geachtet werden, dir Richtigen Pins miteinander zu verbinden, da die Fehlersuche ansonsten aufwendig werden würde.
 
 %Abbildung Schaltungsaufbau HYT221
 \begin{figure}[!h] 
@@ -198,32 +199,33 @@ Der in Abbildung dargestellte Schaltungsaufbau beinhaltet zwei Sensoren der des 
 %Subsection Auslesen der Daten HYT221
 \subsection{Auslesen der Daten}
 \label{subsection_Auslesen der Daten HYT221}
-Im folgenden wird der Code zum Auslesen der Daten des HYT-221 über den \ac{I$^2$C} Bus erklärt. Das Auslesen der Daten der beiden anderen Sensoren erfolgt analog zu der in Abschnitt \ref{subsection_Auslesen_DS18S20} dargestellten Möglichkeit, daher wird darauf nicht mehr explizit eingegangen. Der komplette Source Code ist in Anhang dargestellt.
+Im folgenden Code wurde das Auslesen der Daten des HYT-221 über den \ac{I$^2$C} Bus realisiert. Das Auslesen der Daten der beiden anderen Sensoren erfolgt analog zu der in Abschnitt \ref{subsection_Auslesen_DS18S20} dargestellten Möglichkeit, daher wird darauf nicht mehr explizit eingegangen. Der komplette Source Code ist in Anhang dargestellt.
 
 \lstset{escapeinside={\%*}{*)},numbers=left}
 \lstinputlisting[language=Python, firstline=20, lastline=45, caption=Auslesen der Temperatur und Luftfeuchtigkeit]{Listings/HYT221/Messung.py}
 
 Um das Auslesen der Daten einfach zu gestalten, wurde im Script die Bibliothek \textit{smbus} importiert, welche fertige Funktionen zum Auslesen eines \ac{I$^2$C} Busses bereitstellt.\\
 Als erstes wurde eine Variable mit der Adresse des Sensors angelegt. Diese Adresse kann dem Datenblatt des Sensors entnommen werden oder über den Befehl \texttt{i2cdetect -y 1} in der Konsole des \ac{RPI}\,3 ausgelesen werden. Der Parameter -y bewirkt, dass der Befehl sofort ausgeführt wird, der Parameter 1 legt fest das es sich um den \ac{I$^2$C} Bus Nummer 1 handelt (andere Hardware kann auch mehrere \ac{I$^2$C} Busse besitzen).\\
-Um den smbus verwenden zu können muss ein Objekt dessen erzeugt werden (Zeile 13), die 1 in der Funktion steht wie schon beschrieben für den Bus Nummer 1. Im Anschluss wird das erzeugte Array zur Speicherung der Daten noch initialisiert. Die Funktion in Zeile 22 erzeugt die wie im Theorieteil beschriebene Startbedingung. Im Anschluss an die Startbedingung werden mit der Funktion \texttt{read\_i2c\_block\_data()} die Register, in denen die Werte für die Temperatur und Luftfeuchtigkeit gespeichert sind ausgelesen und in das Array gespeichert. Die Temperatur- und Feuchtigkeitswerte sind in vier Byte aufgeteilt und müssen dementsprechend ausgelesen werden. Dies kann in der Protokollbeschreibung für den Sensor in folgender Quelle nachgelesen werden \citep{Datenblatt_I2C_HYT221}. Die übertragenen Werte, mussten im Anschluss an Hand von bestimmten Formeln, die dem Datenblatt des Sensors entnommen wurden in die jeweils richtige Form umgerechnet werden, um diese korrekt weiterverarbeiten zu können.
+Um den smbus verwenden zu können musste ein Objekt dessen erzeugt werden (Zeile 13), die 1 in der Funktion steht wie schon beschrieben für den Bus Nummer 1. Im Anschluss wurde das erzeugte Array zur Speicherung der Daten noch initialisiert. Die Funktion in Zeile 22 erzeugt die im Theorie Teil beschriebene Startbedingung. Im Anschluss an die Startbedingung werden mit der Funktion \texttt{read\_i2c\_block\_data()} die Register, in denen die Werte für die Temperatur und Luftfeuchtigkeit gespeichert sind ausgelesen und in das Array gespeichert. Die Temperatur- und Feuchtigkeitswerte sind in vier Byte aufgeteilt und müssen dementsprechend nacheinander ausgelesen werden. Dies kann in der Protokollbeschreibung für den Sensor in folgender Quelle nachgelesen werden \citep{Datenblatt_I2C_HYT221}. Die übertragenen Werte, mussten im Anschluss an Hand von bestimmten Formeln, die dem Datenblatt des Sensors entnommen wurden in die jeweils richtige Form umgerechnet werden, um diese korrekt weiterverarbeiten zu können.
 
 \subsection{Datenspeicherung}
 \label{subsection_Datenspeicherung_HYT221}
 Wie schon in Abschnitt \ref{subsection_Speicherung der Daten des DS18S20} beschrieben, wurden die Daten wieder in eine RRD Datenbank gespeichert. Der Source Code hierfür ist in Anhang \ref{Python Script HYT-221 mit RDD} abgebildet.\\
 Weiterhin wurden die Sensordaten in einer mySQL Datenbank abgelegt, um die Möglichkeit zu schaffen, zu einem späteren Zeitpunkt durch exportieren dieser Daten (z.B. als CSV-File) eine weitere Bearbeitung zu ermöglichen. Möglichkeiten hierfür wären z.B. bei einer Fehlproduktion zu einem bestimmten Zeitpunkt (der die Aufzeichnungszeit des RRDtools übersteigt) eine Aussage über eventuelle Faktoren die dafür verantwortlich sein könnten tätigen zu können.\\
-Der Source Code zur Realisierung der Datenspeicherung mittels mySQL DB ist im folgenden ersichtlich. Die entsprechende DB wurde zuvor auf dem \ac{RPI}\,3 erstellt. Zur einfacheren Nutzung der mySQL Datenbank in dem Python Script wurde die Bibliothek \texttt{mysql.connector} importiert. Diese stellt vordefinierte Funktionen für die Verbindung mit der DB zur Verfügung, sowie Funktionen zum Lesen und Schreiben in bzw. aus der DB. Die Herstellung einer Verbindung zur Datenbank ist in Listing \ref{Datenbankverbindung} ersichtlich. Wichtig dabei war, die korrekten Anmeldedaten für die Datenbank zu verwenden, da ansonsten die Verbindung nicht hergestellt werden konnte und eine Fehlermeldung ausgegeben wurde.
+Der Source Code zur Realisierung der Datenspeicherung mittels mySQL DB ist im Anschluss aufgeführt. Die entsprechende DB wurde zuvor auf dem \ac{RPI}\,3 erstellt. Zur einfacheren Nutzung der mySQL Datenbank in dem Python Script wurde die Bibliothek \texttt{mysql.connector} importiert. Diese stellt vordefinierte Funktionen für die Verbindung mit der DB zur Verfügung, sowie Funktionen zum Lesen und Schreiben in bzw. aus der DB. Die Herstellung einer Verbindung zur Datenbank ist in Listing \ref{Datenbankverbindung} zu sehen.
+Wichtig dabei war, die korrekten Anmeldedaten für die Datenbank zu verwenden, da ansonsten die Verbindung nicht hergestellt werden konnte und eine Fehlermeldung ausgegeben wurde.
 
 \lstset{escapeinside={\%*}{*)},numbers=left}
 \lstinputlisting[language=Python, firstline=12, lastline=17, caption=Verbindung zur DB herstellen,label=Datenbankverbindung]{Listings/HYT221/Messung.py}
 
-Um auf die Tabelle in der Datenbank zugreifen zu können musste noch ein Cursor erzeugt werden (Zeile 4). An Hand von SQL Statements wurden dann die Daten in die entsprechenden Spalten der Tabelle eingefügt (Zeile 9-10 und Zeile 13-14). Um die Änderungen in der Tabelle wirksam zu machen, wurde in Zeile 16 noch ein commit durchgeführt und im Anschluss die Verbindung zu Datenbank wieder geschlossen.
+Um auf die Tabelle in der Datenbank zugreifen zu können musste noch ein Cursor erzeugt werden (Zeile 4). An Hand von SQL Statements wurden dann die Daten in die entsprechenden Spalten der Tabelle eingefügt (Zeile 9-10 und Zeile 13-14). Damit die Änderungen in der Tabelle gespeichert werden, musste in Zeile 16 noch ein commit durchgeführt werden. Am Ende wurde die Verbindung zu Datenbank wieder geschlossen.
 
 \lstset{escapeinside={\%*}{*)},numbers=left}
 \lstinputlisting[language=Python, firstline=95, lastline=112, caption=Speicherung der Daten in mySQL DB]{Listings/HYT221/Messung.py}
 
 \subsection{Visualisierung der Daten}
 \label{subsection_Visualisierung der Daten}
-Die Messdaten wurden wie im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind für die verschiedenen Zeitspannen im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.\newpage
+Die Messdaten wurden wie im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Hier wurden die Werte aller drei Sensoren in den Graphen abgebildet, was einen Vergleich der Temperaturwerte zwischen den verschiedenen Sensoren recht leicht machte. Als Ergebnis konnte festgehalten werden, dass sich die Sensoren im Durchschnitt um maximal 0,5 Grad unterschieden haben. Dies spricht wiederum für die Messgenauigkeit der einzelnen verwendeten Sensoren. Auch wurde noch ein weiterer Graph für den Zeitraum von den letzten drei Tagen hinzugefügt. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.\newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
