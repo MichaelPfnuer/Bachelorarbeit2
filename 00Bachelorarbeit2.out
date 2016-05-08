@@ -47,6 +47,9 @@
 \BOOKMARK [1][-]{section.A.4}{Python Script HYT-221 mit mySQL}{appendix.A}% 47
 \BOOKMARK [1][-]{section.A.5}{Erstellung Graphen HYT-221}{appendix.A}% 48
 \BOOKMARK [1][-]{section.A.6}{Python Script Vibrationsmessung}{appendix.A}% 49
-\BOOKMARK [0][-]{appendix.B}{Abbildungen}{}% 50
-\BOOKMARK [1][-]{section.B.1}{Graphen Temperatur und Luftfeuchtigkeit}{appendix.B}% 51
-\BOOKMARK [1][-]{section.B.2}{Visualisierung der Vibrationswerte}{appendix.B}% 52
+\BOOKMARK [1][-]{section.A.7}{PHP-Script zum Auslesen der Beschleunigungswerte}{appendix.A}% 50
+\BOOKMARK [1][-]{section.A.8}{JavaScript File zur Visualisierung der Beschleunigungswerte}{appendix.A}% 51
+\BOOKMARK [1][-]{section.A.9}{HTML File zur Darstellung der Beschleunigungswerte}{appendix.A}% 52
+\BOOKMARK [0][-]{appendix.B}{Abbildungen}{}% 53
+\BOOKMARK [1][-]{section.B.1}{Graphen Temperatur und Luftfeuchtigkeit}{appendix.B}% 54
+\BOOKMARK [1][-]{section.B.2}{Visualisierung der Vibrationswerte}{appendix.B}% 55

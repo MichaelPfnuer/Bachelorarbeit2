@@ -39,15 +39,18 @@
 \contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{36}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Datenspeicherung}{38}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{38}{subsection.3.4.5}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{39}{chapter.4}
-\contentsline {chapter}{Literatur}{40}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{42}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{42}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{43}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{45}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{48}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{51}{section.A.5}
-\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{57}{section.A.6}
-\contentsline {chapter}{\numberline {B}Abbildungen}{60}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{60}{section.B.1}
-\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{60}{section.B.2}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{40}{chapter.4}
+\contentsline {chapter}{Literatur}{42}{chapter.4}
+\contentsline {chapter}{\numberline {A}Quellcode}{44}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{44}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{45}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{47}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{50}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{53}{section.A.5}
+\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{59}{section.A.6}
+\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{62}{section.A.7}
+\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{63}{section.A.8}
+\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{65}{section.A.9}
+\contentsline {chapter}{\numberline {B}Abbildungen}{68}{appendix.B}
+\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{68}{section.B.1}
+\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{71}{section.B.2}

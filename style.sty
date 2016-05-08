@@ -113,6 +113,18 @@
 \usepackage{amssymb,amsmath}			% Listing configs
 \usepackage{listings}
 \usepackage{courier}
+\lstdefinelanguage{JavaScript} {
+	morekeywords={
+		break,const,continue,delete,do,while,export,for,in,function,
+		if,else,import,in,instanceOf,label,let,new,return,switch,this,
+		throw,try,catch,typeof,var,void,with,yield
+	},
+	sensitive=false,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]",
+	morestring=[d]'
+}
 
 \lstset{%
 	language=[Sharp]C,

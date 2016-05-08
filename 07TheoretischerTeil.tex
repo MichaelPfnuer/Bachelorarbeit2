@@ -1,6 +1,6 @@
 \chapter{Theoretischer Teil}
 \label{chapter_TheoretischerTeil}
-Dieses Kapitel befasst sich mit den theoretischen Grundlagen, die für den Einsatz von \acp{SBC} zur Datenerfassung mittels verschiedenen Sensoren nötig sind. In Abschnitt \ref{section_Begriffsdefiniton} werden die im weiteren Verlauf der Arbeit verwendeten Fachbegriffe erläutert, um die beschriebenen Zusammenhänge gut zu verstehen. Der Abschnitt \ref{section_Vergleich_SBC} behandelt die unterschiedlichen sich auf dem Markt befindenden \acp{SBC} mit ihren jeweiligen Vor- bzw. Nachteilen. Die verschiedenen Bussysteme wie z.B. der \ac{I$^2$C}  Bus werden in Abschnitt \ref{section_Bussysteme} erklärt und deren Funktionsweise erläutert. 
+Dieses Kapitel befasst sich mit den theoretischen Grundlagen, die für den Einsatz von \acp{SBC} zur Datenerfassung mittels verschiedener Sensoren nötig sind. In Abschnitt \ref{section_Begriffsdefiniton} werden die im weiteren Verlauf der Arbeit verwendeten Fachbegriffe erläutert, um die beschriebenen Zusammenhänge gut zu verstehen. Der Abschnitt \ref{section_Vergleich_SBC} behandelt die unterschiedlichen sich auf dem Markt befindenden \acp{SBC} mit ihren jeweiligen Vor- bzw. Nachteilen. Die verschiedenen Bussysteme wie z.B. der \ac{I$^2$C}  Bus werden in Abschnitt \ref{section_Bussysteme} erklärt und deren Funktionsweise erläutert. 
 
 
 \section{Begriffsdefinition}
@@ -8,10 +8,10 @@ Dieses Kapitel befasst sich mit den theoretischen Grundlagen, die für den Einsa
 Die in diesem Abschnitt beschriebenen Definitionen wurden, soweit nicht anders angegeben aus folgendem Dokument entnommen \citep{Bussysteme_in_der_Praxis}.
 
 \subsection*{Single Board Computer}
-Unter einem \textit{Single Board Computer} (\ac{SBC}) versteht man ein Computersystem, welches sich komplett auf einer einzigen Platine befindet. \acp{SBC} können fast die gleichen Aufgaben erledigen wie gewöhnliche Computer, allerdings sind die Einplatinen Rechner diesen in Hinblick auf die Hardwareausstattung doch um einiges unterlegen.
+Unter einem \textit{Single Board Computer} (\ac{SBC}) versteht man ein Computersystem, welches sich komplett auf einer einzigen Platine befindet. \acp{SBC} können fast die gleichen Aufgaben erledigen wie gewöhnliche Computer, allerdings sind die Einplatinen-Rechner diesen im Hinblick auf die Hardwareausstattung (z.B. Größe des Speichers, Taktfrequenz der CPU etc.) um einiges unterlegen.
 
 \subsection*{Bussysteme}
-\textit{Bussysteme} sind Systeme, die verwendet werden zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
+\textit{Bussysteme} sind Systeme, die  zur seriellen Datenübertragung zwischen einen oder mehreren Komponenten verwendet werden. Beispiele hierfür sind der \ac{I$^2$C} Bus, der \ac{SPI} Bus oder auch der \ac{CAN} Bus. Eine genauere Beschreibung der Bussysteme folgt in Abschnitt \ref{section_Bussysteme}.
 
 \subsection*{Raspberry Pi}
 Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry Pi Foundation} aus Komponenten von Android-Smartphones entwickelt wurde.
@@ -20,22 +20,24 @@ Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry
 \textit{Raspbian} ist ein Betriebssystem, welches auf der Linux Distribution Debian basiert und speziell auf den Raspberry Pi angepasst wurde.
 
 \subsection*{RRDTool}
-Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperaturmessungen oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
+Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperatur- oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
 
 \subsection*{General Purpose Input/Output}
-Unter \textit{\ac{GPIO}} versteht man elektrische Kontakte, die zur Realisierung verschiedener Funktionen für elektronische Geräte verwendet werden. Eine genauere Erklärung erfolgt in Abschnitt \ref{subsection_GPIO} \citep{Raspberri_Pi_Handbuch}.
+\textit{\ac{GPIO}} sind elektrische Kontakte auf einem SBC, die zur Realisierung verschiedener Funktionen für elektronische Geräte verwendet werden. Eine genauere Erklärung erfolgt in Abschnitt \ref{subsection_GPIO} \citep{Raspberri_Pi_Handbuch}.
+
 \subsection*{Python}
 \textit{Python} ist eine Programmiersprache, die vor allem auf dem Raspberry Pi bevorzugt verwendet wird.
+
 \subsection*{Bluetooth Low Energy}
 \textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Die Stromkosten bei \ac{BLE} sind um einiges geringe als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
 \subsection*{Windows 10 IoT}
-\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq Version von Windows 10, die auf Mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
+\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq \;Version von Windows 10, die auf Mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
 
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBC}
 \label{section_Vergleich_SBC}
-In diesem Abschnitt werden einige der bekanntesten \acp{SBC}, die sich auf dem Markt befinden miteinander verglichen, um den bestmöglichen für die vorgegebenen Anforderungen auswählen zu können.
-Wichtige Kriterien für die Auswahl sind, dass die Möglichkeit besteht verschiedene Betriebssysteme (Windows und Linux) mit dem jeweiligen Einplatinenrechner betreiben zu können, sowie die verbaute Hardware(Taktfrequenz des Chips, RAM-Speicher). Ein weiterer Punkt welcher von Bedeutung ist, ist die Unterstützung von verschiedenen Kommunikationsschnittstellen (\ac{I$^2$C}, \ac{SPI}, 1-Wire), um eine große Anzahl von Sensoren nutzen zu können. Eine Übersicht der einzelnen Komponenten der verschiedenen \acp{SBC} sind in den Tabellen \ref{Tabelle_Vergleich_SBC1} und \ref{Tabelle_Vergleich_SBC2} dargestellt.
+In diesem Abschnitt werden einige der bekanntesten \acp{SBC}, die sich auf dem Markt befinden, miteinander verglichen, um den bestmöglichen für die vorgegebenen Anforderungen auswählen zu können.
+Wichtige Kriterien für die Auswahl sind, dass die Möglichkeit besteht, verschiedene Betriebssysteme (Windows und Linux) mit dem jeweiligen Einplatinenrechner betreiben zu können. Vergleichskriterium ist die Unterstützung von verschiedenen Kommunikationsschnittstellen (\ac{I$^2$C}, \ac{SPI}, 1-Wire), um eine große Anzahl von Sensoren nutzen zu können. Eine Übersicht der einzelnen Komponenten der verschiedenen \acp{SBC} sind in den Tabellen \ref{Tabelle_Vergleich_SBC1} und \ref{Tabelle_Vergleich_SBC2} dargestellt.
 
 %Tabelle 1
 \begin{table}[H]
@@ -94,7 +96,7 @@ Radxa Rock & I$^2$C, SPI\tnote{2}&10/100\;Mbps&80\\
 \label{Tabelle_Vergleich_SBC2}
 \end{threeparttable}
 
-Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist. Aus diesem Grund fiel die Wahl auf den \ac{RPI}\;3, da dieser beide Betriebssysteme unterstützt und auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den \ac{RPI}\;3 war, dass es für diesen eine sehr große Anzahl an unterstützten Sensoren gibt (Sensoren die mit einer elektrischen Spannung von 3,3\;$V$ - 5\;$V$) betrieben werden. Dies ermöglicht einen sehr weit gefächerten Einsatz des \ac{RPI}\;3 und ist für das vorgesehene Projekt von großer Bedeutung.
+Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist, um sich im späteren Verlauf des Projektes nicht auf ein Betriebssystem einzuschränken. Aus diesem Grund fiel die Wahl auf den \ac{RPI}\;3, da dieser beide Betriebssysteme unterstützt und auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den \ac{RPI}\;3 war, dass es für diesen eine sehr große Anzahl an unterstützten Sensoren gibt (Sensoren die mit einer elektrischen Spannung von 3,3\;$V$ - 5\;$V$ betrieben werden). Dies ermöglicht einen sehr weit gefächerten Einsatz des \ac{RPI}\;3 ,was für das vorgesehene Projekt von großer Bedeutung ist.
 
 %%Kapitel Raspberry PI
 \section{Raspberry Pi 3}
@@ -128,7 +130,7 @@ Die aktuelle Version des Raspberry Pi, der \ac{RPI}\;3 ist in Abbildung \ref{Abb
   \label{Abb_Bild_RPI3}
 \end{figure}
 
-Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} auf dem Gerät zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten (nicht mehr nur auf Linux Betriebssysteme beschränkt) ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen beim aktuellen ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr extra durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
+Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten (nicht mehr nur auf Linux Ebene beschränkt) ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen  ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
 
 \subsection{GPIO-Kontakte}
 \label{subsection_GPIO}
