@@ -42,10 +42,9 @@ Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout. [Online]. Available:
   Products, 2015.
 
 \bibitem{Bild_DS18S20}
-\BIBentryALTinterwordspacing
-\BIBforeignlanguage{englisch}{DS18S20 Temperature Sensor}. [Online]. Available:
+{Smart Living Technology}, ,,{DS18S20 Temperature Sensor},''
   \url{http://www.smartliving.com.au/ds18b20-temperature-sensor.html}
-\BIBentrySTDinterwordspacing
+  (21.04.2016).
 
 \bibitem{Bild_HYT221}
 \BIBentryALTinterwordspacing
@@ -55,11 +54,9 @@ Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout. [Online]. Available:
 \BIBentrySTDinterwordspacing
 
 \bibitem{Bild_BMA020}
-\BIBentryALTinterwordspacing
-\BIBforeignlanguage{deutsch}{3-Achsen-Beschleunigungssensor}. ELV-/eQ-3-Gruppe.
-  [Online]. Available:
+{ELV-/eQ-3-Gruppe}, ,,{3-Achsen-Beschleunigungssensor},''
   \url{http://www.elv.de/3-achsen-beschleunigungssensor-3d-bs-komplettbausatz.html}
-\BIBentrySTDinterwordspacing
+  (28.04.2016).
 
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus

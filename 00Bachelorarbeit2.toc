@@ -1,51 +1,51 @@
 \select@language {ngerman}
-\contentsline {chapter}{Inhaltsverzeichnis}{5}{chapter*.4}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{6}{chapter*.5}
-\contentsline {chapter}{Abbildungsverzeichnis}{7}{chapter*.6}
-\contentsline {chapter}{Tabellenverzeichnis}{8}{chapter*.8}
-\contentsline {chapter}{Listingverzeichnis}{9}{chapter*.9}
-\contentsline {chapter}{\numberline {1}Einleitung}{10}{chapter.1}
-\contentsline {chapter}{\numberline {2}Theoretischer Teil}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Begriffsdefinition}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Raspberry Pi 3}{14}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{15}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Bussysteme}{17}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}1-Wire}{17}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{19}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Praktischer Teil}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Ben\IeC {\"o}tigte Materialien}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Temperaturmessung mit Sensor DS18S20}{24}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}DS18S20}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Schaltungsaufbau}{25}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Auslesen des Sensors}{26}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Datenspeicherung}{27}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Visualisieren der Daten}{29}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HYT-221}{30}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}HYT-221}{30}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Schaltungsaufbau}{31}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Auslesen der Daten}{32}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Datenspeicherung}{33}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Visualisierung der Daten}{35}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{36}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}BMA\tmspace +\thinmuskip {.1667em}020}{36}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Schaltungsaufbau}{37}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{37}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Datenspeicherung}{39}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{39}{subsection.3.4.5}
-\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{41}{chapter.4}
-\contentsline {chapter}{Literatur}{43}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{45}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{46}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{48}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{51}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{54}{section.A.5}
-\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{60}{section.A.6}
-\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{63}{section.A.7}
-\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{64}{section.A.8}
-\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{66}{section.A.9}
-\contentsline {chapter}{\numberline {B}Abbildungen}{69}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{69}{section.B.1}
-\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{72}{section.B.2}
+\contentsline {chapter}{Inhaltsverzeichnis}{6}{chapter*.4}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{7}{chapter*.5}
+\contentsline {chapter}{Abbildungsverzeichnis}{8}{chapter*.6}
+\contentsline {chapter}{Tabellenverzeichnis}{9}{chapter*.8}
+\contentsline {chapter}{Listingverzeichnis}{10}{chapter*.9}
+\contentsline {chapter}{\numberline {1}Einleitung}{11}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theoretischer Teil}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Begriffsdefinition}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Raspberry Pi 3}{15}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{16}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Bussysteme}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}1-Wire}{18}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}I$^2$C-Bus}{20}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Praktischer Teil}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Ben\IeC {\"o}tigte Materialien}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Temperaturmessung mit Sensor DS18S20}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}DS18S20}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Schaltungsaufbau}{26}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Auslesen des Sensors}{27}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Datenspeicherung}{28}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Visualisieren der Daten}{30}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Temperatur- und Luftfeuchtigkeitsmessung mit HYT-221}{31}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}HYT-221}{31}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Schaltungsaufbau}{32}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Auslesen der Daten}{33}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Datenspeicherung}{34}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Visualisierung der Daten}{36}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}BMA\tmspace +\thinmuskip {.1667em}020}{37}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Schaltungsaufbau}{38}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{38}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Datenspeicherung}{40}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{40}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{42}{chapter.4}
+\contentsline {chapter}{Literatur}{44}{chapter.4}
+\contentsline {chapter}{\numberline {A}Quellcode}{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{46}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{47}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{49}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{52}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{55}{section.A.5}
+\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{61}{section.A.6}
+\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{64}{section.A.7}
+\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{65}{section.A.8}
+\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{67}{section.A.9}
+\contentsline {chapter}{\numberline {B}Abbildungen}{70}{appendix.B}
+\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{70}{section.B.1}
+\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{73}{section.B.2}
