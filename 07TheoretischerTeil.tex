@@ -3,7 +3,7 @@
 Dieses Kapitel befasst sich mit den theoretischen Grundlagen, die für den Einsatz von \acp{SBC} zur Datenerfassung mittels verschiedener Sensoren nötig sind. In Abschnitt \ref{section_Begriffsdefiniton} werden die im weiteren Verlauf der Arbeit verwendeten Fachbegriffe erläutert, um die beschriebenen Zusammenhänge gut zu verstehen. Der Abschnitt \ref{section_Vergleich_SBC} behandelt die unterschiedlichen sich auf dem Markt befindenden \acp{SBC} mit ihren jeweiligen Vor- bzw. Nachteilen. Die verschiedenen Bussysteme wie z.B. der \ac{I$^2$C}  Bus werden in Abschnitt \ref{section_Bussysteme} erklärt und deren Funktionsweise erläutert. 
 
 
-\section{Begriffsdefinition}
+\section{Begriffsdefinitionen}
 \label{section_Begriffsdefiniton}
 Die in diesem Abschnitt beschriebenen Definitionen wurden, soweit nicht anders angegeben aus folgendem Dokument entnommen \citep{Bussysteme_in_der_Praxis}.
 
@@ -23,21 +23,21 @@ Der \textit{\ac{RPI}} ist ein \ac{SBC}, der von der britischen \textit{Raspberry
 Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erstellen kann. Diese Datenbanken eignen sich besonders gut für die Aufzeichnung von zeitlich fortlaufenden Datenreihen wie z.B. Temperatur- oder Strommessungen. Die Datenbank liegt dabei in einem einzigen File auf dem Datenträger und hat ab dem Erstellen eine feste Größe, die sich auch bei vielen Messungen über einen längeren Zeitraum nicht vergrößert. 
 
 \subsection*{General Purpose Input/Output}
-\textit{\ac{GPIO}} sind elektrische Kontakte auf einem SBC, die zur Realisierung verschiedener Funktionen für elektronische Geräte verwendet werden. Eine genauere Erklärung erfolgt in Abschnitt \ref{subsection_GPIO} \citep{Raspberri_Pi_Handbuch}.
+\textit{\ac{GPIO}} sind elektrische Kontakte auf einem SBC, die zur Realisierung verschiedener Funktionen für elektronische Geräte verwendet werden \citep{Raspberri_Pi_Handbuch}. Eine genauere Erklärung erfolgt in Abschnitt \ref{subsection_GPIO} .
 
 \subsection*{Python}
 \textit{Python} ist eine Programmiersprache, die vor allem auf dem Raspberry Pi bevorzugt verwendet wird.
 
 \subsection*{Bluetooth Low Energy}
-\textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Die Stromkosten bei \ac{BLE} sind um einiges geringe als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
+\textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Der Strombedarf bei \ac{BLE} ist um einiges geringer als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
 \subsection*{Windows 10 IoT}
-\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq \;Version von Windows 10, die auf Mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
+\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq \;Version von Windows 10, die auf mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
 
 %Abschnitt Vergleich von SBCs 
-\section{Vergleich von verschiedenen SBC}
+\section{Vergleich von verschiedenen SBCs}
 \label{section_Vergleich_SBC}
 In diesem Abschnitt werden einige der bekanntesten \acp{SBC}, die sich auf dem Markt befinden, miteinander verglichen, um den bestmöglichen für die vorgegebenen Anforderungen auswählen zu können.
-Wichtige Kriterien für die Auswahl sind, dass die Möglichkeit besteht, verschiedene Betriebssysteme (Windows und Linux) mit dem jeweiligen Einplatinenrechner betreiben zu können. Vergleichskriterium ist die Unterstützung von verschiedenen Kommunikationsschnittstellen (\ac{I$^2$C}, \ac{SPI}, 1-Wire), um eine große Anzahl von Sensoren nutzen zu können. Eine Übersicht der einzelnen Komponenten der verschiedenen \acp{SBC} sind in den Tabellen \ref{Tabelle_Vergleich_SBC1} und \ref{Tabelle_Vergleich_SBC2} dargestellt.
+Wichtige Kriterien für die Auswahl sind, dass die Möglichkeit besteht, verschiedene Betriebssysteme (Windows und Linux) mit dem jeweiligen Einplatinenrechner betreiben zu können. Vergleichskriterium ist die Unterstützung von verschiedenen Kommunikationsschnittstellen (\ac{I$^2$C}, \ac{SPI}, 1-Wire), um eine große Anzahl von Sensoren nutzen zu können. Eine Übersicht der verschiedenen \acp{SBC} ist in den Tabellen \ref{Tabelle_Vergleich_SBC1} und \ref{Tabelle_Vergleich_SBC2} dargestellt.
 
 %Tabelle 1
 \begin{table}[H]

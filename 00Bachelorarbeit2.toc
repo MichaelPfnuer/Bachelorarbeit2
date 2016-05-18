@@ -6,8 +6,8 @@
 \contentsline {chapter}{Listingverzeichnis}{10}{chapter*.9}
 \contentsline {chapter}{\numberline {1}Einleitung}{11}{chapter.1}
 \contentsline {chapter}{\numberline {2}Theoretischer Teil}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Begriffsdefinition}{12}{section.2.1}
-\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBC}{13}{section.2.2}
+\contentsline {section}{\numberline {2.1}Begriffsdefinitionen}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Vergleich von verschiedenen SBCs}{13}{section.2.2}
 \contentsline {section}{\numberline {2.3}Raspberry Pi 3}{15}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Allgemeine technische Daten}{15}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}GPIO-Kontakte}{16}{subsection.2.3.2}
@@ -36,16 +36,16 @@
 \contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{40}{subsection.3.4.5}
 \contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{42}{chapter.4}
 \contentsline {chapter}{Literatur}{44}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{46}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{46}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{47}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{49}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{52}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{55}{section.A.5}
-\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{61}{section.A.6}
-\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{64}{section.A.7}
-\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{65}{section.A.8}
-\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{67}{section.A.9}
-\contentsline {chapter}{\numberline {B}Abbildungen}{70}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{70}{section.B.1}
-\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{73}{section.B.2}
+\contentsline {chapter}{\numberline {A}Quellcode}{45}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{46}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{48}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{51}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{54}{section.A.5}
+\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{60}{section.A.6}
+\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{63}{section.A.7}
+\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{64}{section.A.8}
+\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{66}{section.A.9}
+\contentsline {chapter}{\numberline {B}Abbildungen}{69}{appendix.B}
+\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{69}{section.B.1}
+\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{72}{section.B.2}

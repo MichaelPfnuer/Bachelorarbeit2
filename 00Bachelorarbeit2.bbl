@@ -22,17 +22,14 @@
 \BIBdecl
 
 \bibitem{RPI_Bild}
-\BIBentryALTinterwordspacing
-E.~Upton. (2016, Februar) \BIBforeignlanguage{Englisch}{RASPBERRY PI 3 ON SALE
-  NOW AT \$35}. [Online]. Available:
-  \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/}
-\BIBentrySTDinterwordspacing
+{Eben Upton}, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
+  \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/} (17.04.2016),
+  Februar 2016.
 
 \bibitem{GPIO_Header_Bild}
-\BIBentryALTinterwordspacing
-Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout. [Online]. Available:
+{ Premier Farnell}, ,,{Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout},''
   \url{https://www.element14.com/community/docs/DOC-73950/l/raspberry-pi-3-model-b-gpio-40-pin-block-pinout}
-\BIBentrySTDinterwordspacing
+  (18.04.2016).
 
 \bibitem{I2C_Datenblatt}
 \emph{I2C-bus specification and user manual}, NXP Semiconductor, April 2014.
@@ -47,11 +44,10 @@ Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout. [Online]. Available:
   (21.04.2016).
 
 \bibitem{Bild_HYT221}
-\BIBentryALTinterwordspacing
-\BIBforeignlanguage{deutsch}{Feuchte- und Temperatursensor digital Hyt221}.
-  [Online]. Available:
+{Re-In Retail International GmbH}, ,,{Feuchte- und Temperatursensor digital
+  Hyt221},''
   \url{http://www.voelkner.de/products/207755/Feuchte-und-Temperaturesensor-digital-Hyt-221.html}
-\BIBentrySTDinterwordspacing
+  (21.04.2016).
 
 \bibitem{Bild_BMA020}
 {ELV-/eQ-3-Gruppe}, ,,{3-Achsen-Beschleunigungssensor},''
@@ -76,35 +72,25 @@ Kofler, Kühnast, und Scherbeck, \emph{Raspberry Pi Das umfassende
   Bonn, 2015.
 
 \bibitem{Bluetooth_Low_Energy}
-\BIBentryALTinterwordspacing
-Bluetooth Low Energy. [Online]. Available:
+{ Bluetooth SIG}, ,,{Bluetooth Low Energy},''
   \url{https://www.bluetooth.com/what-is-bluetooth-technology/bluetooth-technology-basics/low-energy}
-\BIBentrySTDinterwordspacing
+  (18.04.2016).
 
 \bibitem{RaspberryPiHomePage}
-\BIBentryALTinterwordspacing
-RASPBERRY PI 3 MODEL B. [Online]. Available:
+{ Raspberry PI Foundation}, ,,{RASPBERRY PI 3 MODEL B},''
   \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}
-\BIBentrySTDinterwordspacing
+  (16.04.2016).
 
 \bibitem{RPI_Verkaufszahlen}
-\BIBentryALTinterwordspacing
-L.~Upton. (2015, Oktober) \BIBforeignlanguage{Englisch}{SENIOR PI}. Raspberry
-  Pi Foundation. [Online]. Available:
-  \url{https://www.raspberrypi.org/blog/senior-pi/}
-\BIBentrySTDinterwordspacing
+{Liz Upton}, ,,{SENIOR PI},'' \url{https://www.raspberrypi.org/blog/senior-pi/}
+  (17.04.2016), Raspberry Pi Foundation, Oktober 2015.
 
 \bibitem{Hompage_RRDtool}
-\BIBentryALTinterwordspacing
-T.~Oetiker. (2014, September) \BIBforeignlanguage{englisch}{About RRDtool}.
-  OETIKER+PARTNER AG. [Online]. Available: \url{http://oss.oetiker.ch/rrdtool/}
-\BIBentrySTDinterwordspacing
+{ Tobias Oetiker}, ,,{About RRDtool},'' \url{http://oss.oetiker.ch/rrdtool/}
+  (25.04.2016), OETIKER+PARTNER AG, September 2014.
 
 \bibitem{Datenblatt_I2C_HYT221}
-\BIBentryALTinterwordspacing
-(2010, May) \BIBforeignlanguage{deutsch}{DIGITALER FEUCHTESENSOR
-  PROTOKOLLBESCHREIBUNG I2C}. HYGROSENS INSTRUMENTS GmbH. [Online]. Available:
-  \url{http://www.hygrochip.com/fileadmin/user_upload/Produkte/Sensorelemente/Digitale_Feuchtesensoren/HYT_I2C_Protokollbeschreibung_D.pdf}
-\BIBentrySTDinterwordspacing
+\emph{DIGITALER FEUCHTESENSOR PROTOKOLLBESCHREIBUNG I2C}, HYGROSENS INSTRUMENTS
+  GmbH, May 2010.
 
 \end{thebibliography}
