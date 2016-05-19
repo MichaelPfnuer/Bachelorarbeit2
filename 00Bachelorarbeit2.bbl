@@ -22,7 +22,7 @@
 \BIBdecl
 
 \bibitem{RPI_Bild}
-{Eben Upton}, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
+E.~Upton, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
   \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/} (17.04.2016),
   Februar 2016.
 
@@ -54,6 +54,17 @@
   \url{http://www.elv.de/3-achsen-beschleunigungssensor-3d-bs-komplettbausatz.html}
   (28.04.2016).
 
+\bibitem{Quelle_Tabelle}
+D.~G. Calin, ,,{Compare 10 Linux single-board computers to find the right one
+  for you},''
+  \url{http://www.intorobotics.com/compare-10-linux-single-board-computers-to-find-the-right-one-for-you/}
+  (18.05.2016).
+
+\bibitem{RaspberryPiHomePage}
+{ Raspberry PI Foundation}, ,,{RASPBERRY PI 3 MODEL B},''
+  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}
+  (16.04.2016).
+
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
   0.4em\relax Franzis Verlag GmbH, 2015.
@@ -76,17 +87,12 @@ Kofler, Kühnast, und Scherbeck, \emph{Raspberry Pi Das umfassende
   \url{https://www.bluetooth.com/what-is-bluetooth-technology/bluetooth-technology-basics/low-energy}
   (18.04.2016).
 
-\bibitem{RaspberryPiHomePage}
-{ Raspberry PI Foundation}, ,,{RASPBERRY PI 3 MODEL B},''
-  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}
-  (16.04.2016).
-
 \bibitem{RPI_Verkaufszahlen}
-{Liz Upton}, ,,{SENIOR PI},'' \url{https://www.raspberrypi.org/blog/senior-pi/}
+L.~Upton, ,,{SENIOR PI},'' \url{https://www.raspberrypi.org/blog/senior-pi/}
   (17.04.2016), Raspberry Pi Foundation, Oktober 2015.
 
 \bibitem{Hompage_RRDtool}
-{ Tobias Oetiker}, ,,{About RRDtool},'' \url{http://oss.oetiker.ch/rrdtool/}
+T.~Oetiker, ,,{About RRDtool},'' \url{http://oss.oetiker.ch/rrdtool/}
   (25.04.2016), OETIKER+PARTNER AG, September 2014.
 
 \bibitem{Datenblatt_I2C_HYT221}

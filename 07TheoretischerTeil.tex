@@ -31,7 +31,7 @@ Das \textit{RRDTool} ist ein Programm, mit dem man Round-Robin Datenbanken erste
 \subsection*{Bluetooth Low Energy}
 \textit{\ac{BLE}} ist eine Funktechnologie, die es ermöglicht, dass sich Geräte in unmittelbarer Entfernung zueinander vernetzen lassen. Der Strombedarf bei \ac{BLE} ist um einiges geringer als bei herkömmlichen Bluetooth \citep{Bluetooth_Low_Energy}.
 \subsection*{Windows 10 IoT}
-\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq \;Version von Windows 10, die auf mobilen Geräten wie dem Raspberry Pi lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
+\textit{Windows 10 IoT} ist eine \glqq abgespeckte\grqq \;Version von Windows 10, die auf mobilen Geräten wie dem Raspberry Pi\,3 lauffähig ist. IoT steht dabei für \textit{Internet of Things} \citep{Raspberri_Pi_Handbuch}.
 
 %Abschnitt Vergleich von SBCs 
 \section{Vergleich von verschiedenen SBCs}
@@ -61,7 +61,7 @@ Intel Galileo Gen 2 & Windows, Linux & 256 MB & x86 Quark 400 MHz\\
 Radxa Rock & Linux & 2 GB & ARM Cortex-A9 1,6 GHz\\
 \bottomrule
 \end{tabular}
-\caption{Vergleich OS, RAM, CPU verschiedener SBCs}
+\caption{Vergleich OS, RAM, CPU verschiedener SBCs \citep{Quelle_Tabelle} \citep{RaspberryPiHomePage}}
 \label{Tabelle_Vergleich_SBC1}
 \end{table}
 
@@ -92,11 +92,11 @@ Radxa Rock & I$^2$C, SPI\tnote{2}&10/100\;Mbps&80\\
 \item[2] nur für Android
 \end{tablenotes}
 
-\caption{Vergleich Schnittstellen, Netzwerkverbindung, Anzahl GPIO Pins}
+\caption{Vergleich Schnittstellen, Netzwerkverbindung, Anzahl GPIO Pins \citep{Quelle_Tabelle} \citep{RaspberryPiHomePage}}
 \label{Tabelle_Vergleich_SBC2}
 \end{threeparttable}
 
-Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist, um sich im späteren Verlauf des Projektes nicht auf ein Betriebssystem einzuschränken. Aus diesem Grund fiel die Wahl auf den \ac{RPI}\;3, da dieser beide Betriebssysteme unterstützt und auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den \ac{RPI}\;3 war, dass es für diesen eine sehr große Anzahl an unterstützten Sensoren gibt (Sensoren die mit einer elektrischen Spannung von 3,3\;$V$ - 5\;$V$ betrieben werden). Dies ermöglicht einen sehr weit gefächerten Einsatz des \ac{RPI}\;3 ,was für das vorgesehene Projekt von großer Bedeutung ist.
+Wie aus den Tabellen ersichtlich ist, unterstützen die meisten aktuellen \acp{SBC} das Betriebssystem Linux. Eine Anforderung für diese Projekt war allerdings, dass sowohl ein Linux System, wie auch ein Windows System auf dem Board lauffähig ist, um sich im späteren Verlauf des Projektes nicht auf ein Betriebssystem einzuschränken. Aus diesem Grund fiel die Wahl auf den \ac{RPI}\;3, da dieser beide Betriebssysteme unterstützt und auch bei den anderen betrachteten Aspekten wie \textit{RAM, CPU} etc. den meisten Boards ebenbürtig oder sogar überlegen ist. Ein weiterer wichtiger Entscheidungsgrund für den \ac{RPI}\;3 war, dass es für diesen eine sehr große Anzahl an unterstützten Sensoren gibt (Sensoren die mit einer elektrischen Spannung von 3,3\;$V$ - 5\;$V$ betrieben werden). Dies ermöglicht einen sehr weit gefächerten Einsatz des \ac{RPI}\;3, was für das vorgesehene Projekt von großer Bedeutung ist.
 
 %%Kapitel Raspberry PI
 \section{Raspberry Pi 3}
@@ -105,8 +105,8 @@ Das folgende Kapitel beschreibt den Raspberry Pi 3 und befasst sich genauer mit 
 
 \subsection{Allgemeine technische Daten}
 \label{subsection_Allgemeine_technische_Daten}
-Die im folgenden Information wurden, soweit nicht anders angegeben von der offiziellen Homepage der \textbf{Raspberry Pi Foundation} entnommen \citep{RaspberryPiHomePage}.\\
-Der \ac{RPI} 3 ist ein Kreditkarten großer Einplatinenrechner, welcher aktuell an die \textit{sieben Million} Mal verkauft wurde \citep{RPI_Verkaufszahlen}. Dieser besitzt\dots
+Die folgenden Information wurden, soweit nicht anders angegeben von der offiziellen Homepage der \textbf{Raspberry Pi Foundation} entnommen \citep{RaspberryPiHomePage}.\\
+Der \ac{RPI} 3 ist ein kreditkartengroßer Einplatinenrechner, welcher aktuell an die \textit{sieben Million} Mal verkauft wurde \citep{RPI_Verkaufszahlen}. Dieser besitzt:
 \begin{itemize}
 \item einen 1.2\;GHz 64-bit quad-core ARMv8 CPU
 \item 802.11n Wireless LAN
@@ -130,53 +130,49 @@ Die aktuelle Version des Raspberry Pi, der \ac{RPI}\;3 ist in Abbildung \ref{Abb
   \label{Abb_Bild_RPI3}
 \end{figure}
 
-Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten (nicht mehr nur auf Linux Ebene beschränkt) ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen  ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
+Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen  ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
 
 \subsection{GPIO-Kontakte}
 \label{subsection_GPIO}
-Wie bereits in Abschnitt \ref{subsection_Allgemeine_technische_Daten} angesprochen besitzt der \ac{RPI}\,3 40 GPIO-Kontakte, welche in einer Ecke der Platine zu 2\;x\;20 Kontakten angeordnet sind. Diese haben einen Rasterabstand von 2,54 mm zueinander und stellen die Grundlage für viele Projekte dar. Die ersten Modelle des \ac{RPI} besaßen dagegen nur 26 Pins die zur Verfügung standen. Die GPIO-Pins sind elektrische Kontakte, die zur Messung und Steuerung von elektronischen Geräten wie z.B. Sensoren, Analog Digital Wandlern, LEDs etc. verwendet werden.\\
-Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;General Purpose Input\;/\;Output}), sowie zwei verschiedene Spannungsversorgungen (\textit{3,3\;V} und \textit{5\;V}) und Masse Anschlüsse (\textit{0\;V}). Weiterhin beinhaltet die Steckerleiste Kontakte für den \ac{I$^2$C}-, \ac{SPI}- und 1-Wire-Bus. Bei der Verwendung der GPIO-Kontakten für verschiedene Projekte, muss darauf geachtet werden, welche Bezeichnung verwendet wird. Diese ist in vielen Literaturen verschieden angegeben, da es drei verschiedene Möglichkeiten der Bezeichnung gibt. Die Benennung kann durch
+Im Gegensatz zu den Vorgängermodellen des \ac{RPI}\,3, welche nur 26 GPIO Pins besaßen, besitzt der \ac{RPI}\,3 40 GPIO Pins. Diese sind in Abbildung \ref{Abb_Bild_RPI3} ersichtlich am linken oberen Ende der Platine zu 2\;x\;20 Kontakten angeordnet. Der Rasterabstand von einem Pin zum nächsten beträgt 2,54 mm. Die GPIO-Pins sind elektrische Kontakte, die zur Messung und Steuerung von elektronischen Geräten wie z.B. Sensoren, Analog Digital Wandlern, LEDs etc. verwendet werden.\\
+Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;General Purpose Input\;/\;Output}), sowie zwei verschiedene Spannungsversorgungen (\textit{3,3\;V} und \textit{5\;V}) und Masse Anschlüsse (\textit{0\;V}). Weiterhin beinhaltet die Steckerleiste Kontakte für den \ac{I$^2$C}-, \ac{SPI}- und 1-Wire-Bus. Bei der Verwendung der GPIO-Kontakten für verschiedene Projekte muss darauf geachtet werden, welche Bezeichnung verwendet wird. Die drei Möglichkeiten sind:
 \begin{itemize}
 \item die physikalische Pin-Nummer, anhand seine Position auf dem Board (von oben gesehen, Pin 1 besitzt eine quadratische Lötstelle)
 \item die BCM-Pin-Nummer, welche sich auf die Nummerierung der offiziellen Dokumentation des BCM2836-Chips bezieht
 \item den Pin Namen, welcher von den \ac{RPI} Entwicklern vergeben wurde 
 \end{itemize} 
 vorgenommen werden \citep{Raspberri_Pi_Handbuch}.\\\\
-In Abbildung ist die Pin Belegung des \ac{RPI} grafisch dargestellt.
+In Abbildung \ref{Abb_Bild_GPIO} ist die Pin Belegung des \ac{RPI}\,3 grafisch dargestellt.
 
 %Grafik GPIO Pins
 \begin{figure}[!h] 
   \centering
      \includegraphics[scale=.35]{BilderAllgemein/GPIO.png}
-  \caption{GPIO-Header \citep{GPIO_Header_Bild}}
+  \caption{GPIO-Kontakte \citep{GPIO_Header_Bild}}
   \label{Abb_Bild_GPIO}
 \end{figure}
 
 %% Section Bussysteme
 \section{Bussysteme}
 \label{section_Bussysteme}
-Im folgenden Kapitel werden die am häufigsten verwendeten Bussysteme für die verschiedenen Sensoren erläutert. Zu diesen Bussystemen gehören der \textit{1-Wire}, \textit{\ac{I$^2$C}} und der \textit{\ac{SPI}} Bus. Auch wird auf die Funktion, sowie die Eigenheiten der Datenübertragung des jeweiligen Busses eingegangen.
+Im folgenden Kapitel werden die am häufigsten verwendeten Bussysteme für die verschiedenen Sensoren erläutert. Zu diesen Bussystemen gehören der \textit{1-Wire}, \textit{\ac{I$^2$C}} und der \textit{\ac{SPI}} Bus. 
 
 \subsection{1-Wire}
 \label{subsection_1Wire}
 Der 1-Wire Bus ist ein serielles Bussystem von der Firma \textit{Dallas\footnote{2001 von Maxim Integrated übernommen}} , bei dem die Daten seriell (nacheinander) über eine Datenleitung übertragen werden.
 \subsubsection*{Allgemeine Informationen}
 \label{subsection_Allgemeine_Informationen_1Wire}
- Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen verwendet, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl von Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Dies kommt daher, da für die Datenübertragung und die Stromversorgung die gleiche Leitung genutzt wird. Während der Kommunikation wird der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren wo die interne Spannungsversorgung nicht ausreichend ist  eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
-Der 1-Wire Bus ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es  einen Master (z.B. \ac{RPI}) und mehrere Slaves (z.B. Sensoren) gibt. Die Aufgabe des Masters  ist es, die Kommunikation zu steuern. Die maximale Anzahl der Sensoren kann bis zu 100 betragen, welche parallel an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt. Diese gliedert sich in \citep{Bussysteme_in_der_Praxis}
-\begin{itemize}
-\item 8 Bit \textit{Family Code}
-\item 48 Bit \textit{Seriennummer}
-\item 8 Bit \textit{CRC-Prüfsumme}
-\end{itemize}
+ Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen verwendet, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl an Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Während der Kommunikation wird der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren bei denen die interne Spannungsversorgung nicht ausreichend ist, eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
+Der 1-Wire Bus ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es  einen Master (z.B. \ac{RPI}\,3) und mehrere Slaves (z.B. Sensoren) gibt. Die Aufgabe des Masters  ist es, die Kommunikation zu steuern. Die maximale Anzahl der Sensoren kann bis zu 100 betragen, welche parallel zueinander an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt \citep{Bussysteme_in_der_Praxis}.
+
 
 \subsubsection*{Übertragungsprotokoll}
 \label{subsection_Protokoll_1Wire}
-Der 1-Wire Bus wird dadurch, dass er keine Taktsignal benötigt als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen und der in Abschnitt \ref{subsection_Allgemeine_Informationen_1Wire} erwähnte interne Kondensator geladen. Wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor siehe \ref{subsection_Allgemeine_Informationen_1Wire}). Dadurch, dass keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden (siehe Tabelle \ref{Tabelle_Befehle_1Wire}).\\
+Der 1-Wire Bus wird dadurch, dass er kein Taktsignal benötigt, als \textit{asynchroner} Bus bezeichnet. Dieser kommuniziert im \textit{Halbduplex} Verfahren, was bedeutet, dass immer nur ein Teilnehmer auf dem Bus senden oder empfangen kann (entweder Master oder ein Slave). Wenn keine Kommunikation stattfindet, wird die Datenleitung über einen Pullup-Widerstand auf \textit{high} gezogen\footnote{bedeutet, dass durch den Pullup Widerstand exakt die Versorgungsspannung z.B. 3,3\,V anliegt} und der zuvor erwähnte interne Kondensator geladen.  Wenn eine Übertragung stattfindet liegt die Datenleitung auf Masse und der Kondensator liefert in diesem Fall die Spannungsversorgung für den Sensor (abhängig vom Sensor). Dadurch, dass keine Taktleitung vorhanden ist, muss für die Kommunikation ein bestimmter Ablauf eingehalten werden (siehe Tabelle \ref{Tabelle_Befehle_1Wire}).\\
 Die Zeitspanne für die Übertragung von 1 Bit beträgt immer 60\,$\mu s$. Diese Steuerung, egal in welche Richtung die Übertragung stattfindet werden durch den Master initiiert. Die Befehle die dazu notwendig sind, können aus der Tabelle \ref{Tabelle_Befehle_1Wire} entnommen werden \citep{Bussysteme_in_der_Praxis}.
 
 %Tabelle 1
-\begin{table}[H]
+\begin{threeparttable}[H]
 %\rowcolors{2}{black!10}{black!20}
 \centering
 \begin{tabular}{
@@ -188,12 +184,12 @@ llll
 & ungenutzt.\\
 &\\
 \textbf{Write 0} & Der Master zieht den Bus für mindestens $60\;\mu s$ bis maximal\\
-& $120\;\mu s$ auf Low.\\
+& $120\;\mu s$ auf Low\tnote{3}.\\
 &\\
 \textbf{Read}& Der Master zieht für $1-15\;\mu s$ auf Low. Der Slave, der kommunizieren\\
-& möchte, hält für eine 0 den Bus weiter auf Low. Will der Slave eine\\
+& möchte, hält für eine 0 den Bus weiter auf Low\footnote{Hallo}. Will der Slave eine\\
 & 1 senden, gibt er direkt den Bus wieder frei. Wie man leicht erkennt,\\
-& ist der Status \textit{Write 1} oder Read für den Master gleich. Alleine der \\
+& ist der Status Write 1 oder Read für den Master gleich. Alleine der \\
 & Status des Sensors bestimmt, ob ein Read oder Write 1 ausgeführt wird. \\
 &\\
 \textbf{Reset /} & Der Master zieht den Bus für min. $480\;\mu s$ auf Low. Wenn ein\\
@@ -202,9 +198,12 @@ llll
 & ein Slave angeschlossen ist.\\ 
 \bottomrule
 \end{tabular}
+\begin{tablenotes}\footnotesize
+\item[3] auf Low ziehen = es liegen exakt 0\,V an
+\end{tablenotes}
 \caption{Befehle bei 1-Wire \citep[S. 35]{Bussysteme_in_der_Praxis}}
 \label{Tabelle_Befehle_1Wire}
-\end{table}
+\end{threeparttable}
 
 %I2C Bus
 \subsection{I$^2$C-Bus}
@@ -213,7 +212,7 @@ Der \ac{I$^2$C} Bus ist auch noch unter einem anderen Namen als \ac{TWI} Bus (z.
 
 \subsubsection*{Allgemeine Informationen}
 \label{subsubsection_Allgemeine_Informationen_I2C}
-Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus Lizenz rechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb, arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen zur Datenübertragung notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben \citep{Bussysteme_in_der_Praxis}. 
+Technisch gesehen sind der \ac{I$^2$C} und \ac{TWI} Bus identisch, die Unterscheidung wird lediglich aus lizenzrechtlichen Gründen getroffen. Bei dem Bus handelt es sich um einen \textit{Master-Slave-Bus}, allerdings ist auch ein \textit{Multi-Master\footnote{es gibt mehr als einen Master}} Betrieb möglich. Der Beginn einer Kommunikation wird immer vom Master initiiert, bei dem angesprochenen Multi-Master Betrieb arbeitet dann der vom Initiator angesprochene Master wie ein Slave. Im Gegensatz zum 1-Wire Bus sind zwei Leitungen zur Datenübertragung notwendig, eine Datenleitung (SDA) und eine Taktleitung (SCL). Da der \ac{I$^2$C} Bus eine Taktleitung besitzt, spricht man hier von einem synchronen seriellen Bussystem. Der Systemtakt wird bei diesem System immer vom Master vorgegeben \citep{Bussysteme_in_der_Praxis}. 
 
 \subsubsection*{Definierte Zustände und Adressierung}
 \label{subsubsection_definierte_Zustände_Adressierung}
@@ -232,11 +231,11 @@ Damit ein Bit auf der Datenleitung als gültig betrachtet wird, darf sich dessen
 
 \subsubsection*{START Bedingung}
 \label{subsubsection_START_Bedingung}
-Damit eine Kommunikation stattfinden kann muss diese als erstes einmal durch eine Start Bedingung eingeleitet werden. Dies geschieht, indem der Master die SDA Leitung auf Ground zieht, während die SCL Leitung auf HIGH gesetzt ist. Abbildung \ref{Abb_Bild_I2C_START_STOP} zeigt diesen Zustand.
+Damit eine Kommunikation stattfinden kann, muss diese als Erstes durch eine Start Bedingung eingeleitet werden.  Realisiert wird die Startbedingung, indem der Master die SDA Leitung auf Ground zieht, während die SCL Leitung auf HIGH gesetzt ist. Abbildung \ref{Abb_Bild_I2C_START_STOP} zeigt diesen Zustand.
 
 \subsubsection*{STOP Bedingung}
 \label{subsubsection_STOP_Bedingung}
-Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese unterscheidet sich von der START Bedingung dadurch, dass der Master bei HIGH Zustand der Taktleitung die Datenleitung ebenfalls auf HIGH zieht. Grafisch ist dies in Abbildung \ref{Abb_Bild_I2C_START_STOP} dargestellt.
+Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese unterscheidet sich von der START Bedingung dadurch, dass der Master bei HIGH Potential der Taktleitung die Datenleitung ebenfalls auf HIGH zieht. Grafisch ist dies in Abbildung \ref{Abb_Bild_I2C_START_STOP} dargestellt.
 
 %Grafik START STOP
 \begin{figure}[!h] 
@@ -250,12 +249,8 @@ Um die Übertragung zu beenden, ist die STOP Bedingung definiert. Diese untersch
 \subsubsection*{Adressierung}
 \label{subsubsection_Adressierung}
 Bei der Adressierung wird nach der Start Bedingung 1 Byte vom Master an den Slave gesendet. Bei diesem Byte stellen die ersten sieben Bits die Adresse des Slaves dar und das achte Bit das Read\,/\,Write Bit. Die Kennzeichnung des R\,/\,W Bits ist immer aus Sicht des Masters zu deuten. Dies bedeutet, dass bei WRITE Daten vom Master an den Slave übertragen werden und bei READ Daten vom Slave an den Master.
-Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} verdeutlicht noch einmal den Aufbau des ersten Bytes.\\ Dadurch, dass sieben Bits für die Adresse des Slaves verwendet werden können und 16 Adressen davon für Erweiterungen reserviert sind, können maximal 112 Teilnehmer (Berechnung entsprechend Formel \ref{Formel_Max_Teilnehmer_I2C} ) an den Bus betrieben werden.
+Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} verdeutlicht noch einmal den Aufbau des ersten Bytes.\\ Dadurch, dass sieben Bits für die Adresse des Slaves verwendet werden können und 16 Adressen davon für Erweiterungen reserviert sind, können maximal 112 Teilnehmer  an den Bus betrieben werden.
 
-\begin{equation}
-max. Teilnehmer = 2^7-16 = 112
-\label{Formel_Max_Teilnehmer_I2C}
-\end{equation}
 
 %Grafik Slave Adresse
 \begin{figure}[!h] 
@@ -268,7 +263,7 @@ max. Teilnehmer = 2^7-16 = 112
 %Subsubsection Übertragungsprotokoll
 \subsubsection*{Übertragungsprotokoll}
 \label{subsubsection_Übertragungsprotokoll_I2C}
-Das Übertragungsprotokoll beim \ac{I$^2$C} Bus ist immer so aufgebaut, dass die Kommunikation mit einem Start Signal beginnt und als nächstes das Byte mit der Slave Adresse und dem R\,/\,W Bit folgt. Jedes Byte das gesendet wird, wird durch den Slave mit einem ACK-Bit quittiert. Je nachdem wie das R\,/\,W Bit gesetzt ist (READ = 1, WRITE = 0) werden die Daten byteweise gelesen oder geschrieben. Das ACK Bit wird dann entweder vom Master oder vom Slave gesendet. Ist das letzte Byte der Übertragung gesendet, wird dieses vom Master mit einem NACK quittiert. Im Anschluss wird die Kommunikation durch die STOP Bedingung beendet. In Abbildung ist der Ablauf noch einmal grafisch dargestellt.\newpage
+Das Übertragungsprotokoll beim \ac{I$^2$C} Bus ist immer so aufgebaut, dass die Kommunikation mit einem Start Signal beginnt und als nächstes das Byte mit der Slave Adresse und dem R\,/\,W Bit folgt. Jedes Byte das gesendet wird, wird durch den Slave mit einem ACK-Bit quittiert. Je nachdem wie das R\,/\,W Bit gesetzt ist (READ = 1, WRITE = 0) werden die Daten byteweise gelesen oder geschrieben. Das ACK Bit wird dann entweder vom Master oder vom Slave gesendet. Ist das letzte Byte der Übertragung gesendet, wird dieses vom Master mit einem NACK quittiert. Im Anschluss wird die Kommunikation durch die STOP Bedingung beendet. In Abbildung \ref{Abb_Bild_I2C_Slave_Adresse} ist der Ablauf noch einmal grafisch dargestellt.
 
 %Grafik Übertragungsprotokoll
 \begin{figure}[h!] 
