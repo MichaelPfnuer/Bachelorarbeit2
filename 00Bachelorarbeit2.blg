@@ -28,45 +28,45 @@ I'm skipping whatever remains of this entry
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 17 entries,
+You've used 16 entries,
             3998 wiz_defined-function locations,
-            906 strings with 10006 characters,
-and the built_in function-call counts, 5620 in all, are:
-= -- 415
-> -- 65
+            901 strings with 9849 characters,
+and the built_in function-call counts, 5300 in all, are:
+= -- 392
+> -- 61
 < -- 3
-+ -- 33
-- -- 14
-* -- 182
-:= -- 998
-add.period$ -- 29
-call.type$ -- 17
++ -- 31
+- -- 13
+* -- 174
+:= -- 942
+add.period$ -- 27
+call.type$ -- 16
 change.case$ -- 0
 chr.to.int$ -- 9
-cite$ -- 17
-duplicate$ -- 511
-empty$ -- 609
-format.name$ -- 15
-if$ -- 1222
+cite$ -- 16
+duplicate$ -- 481
+empty$ -- 573
+format.name$ -- 14
+if$ -- 1152
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 112
-newline$ -- 74
-num.names$ -- 12
-pop$ -- 290
+int.to.str$ -- 16
+missing$ -- 105
+newline$ -- 71
+num.names$ -- 11
+pop$ -- 271
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 470
+skip$ -- 442
 stack$ -- 0
-substring$ -- 17
-swap$ -- 286
+substring$ -- 16
+swap$ -- 271
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 17
+type$ -- 16
 warning$ -- 0
-while$ -- 13
-width$ -- 19
-write$ -- 146
+while$ -- 12
+width$ -- 18
+write$ -- 139
 (There was 1 error message)

@@ -34,15 +34,6 @@ E.~Upton, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
 \bibitem{I2C_Datenblatt}
 \emph{I2C-bus specification and user manual}, NXP Semiconductor, April 2014.
 
-\bibitem{Datenblatt_DB18S20}
-\emph{DS18S20 High-Precision 1-Wire Digital Thermometer}, Maxim Integrated
-  Products, 2015.
-
-\bibitem{Bild_DS18S20}
-{Smart Living Technology}, ,,{DS18S20 Temperature Sensor},''
-  \url{http://www.smartliving.com.au/ds18b20-temperature-sensor.html}
-  (21.04.2016).
-
 \bibitem{Bild_HYT221}
 {Re-In Retail International GmbH}, ,,{Feuchte- und Temperatursensor digital
   Hyt221},''
@@ -68,6 +59,10 @@ D.~G. Calin, ,,{Compare 10 Linux single-board computers to find the right one
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
   0.4em\relax Franzis Verlag GmbH, 2015.
+
+\bibitem{Datenblatt_DB18S20}
+\emph{DS18S20 High-Precision 1-Wire Digital Thermometer}, Maxim Integrated
+  Products, 2015.
 
 \bibitem{Datenblatt_HYT221}
 \emph{HYGROCHIP DIGITALER FEUCHTESENSOR HYT-221}, INNOVATIVE SENSOR TECHNOLOGY,
