@@ -31,21 +31,22 @@
 \contentsline {section}{\numberline {3.4}Vibrationsmessung mit Sensor BMA020}{36}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}BMA\tmspace +\thinmuskip {.1667em}020}{36}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Schaltungsaufbau}{37}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{37}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Auslesen der Daten}{38}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Datenspeicherung}{39}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Visualisierung der Vibrationswerte}{39}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Validierung}{40}{section.3.5}
 \contentsline {chapter}{\numberline {4}Zusammenfassung und Ausblick}{41}{chapter.4}
 \contentsline {chapter}{Literatur}{43}{chapter.4}
-\contentsline {chapter}{\numberline {A}Quellcode}{44}{appendix.A}
-\contentsline {section}{\numberline {A.1}Python Script DS18S20}{44}{section.A.1}
-\contentsline {section}{\numberline {A.2}Erstellung Graphen DS18S20}{45}{section.A.2}
-\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{47}{section.A.3}
-\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{50}{section.A.4}
-\contentsline {section}{\numberline {A.5}Erstellung Graphen HYT-221}{53}{section.A.5}
-\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{59}{section.A.6}
-\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{62}{section.A.7}
-\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{63}{section.A.8}
-\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{65}{section.A.9}
-\contentsline {chapter}{\numberline {B}Abbildungen}{68}{appendix.B}
-\contentsline {section}{\numberline {B.1}Graphen Temperatur und Luftfeuchtigkeit}{68}{section.B.1}
-\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{71}{section.B.2}
+\contentsline {chapter}{\numberline {A}Quellcode}{45}{appendix.A}
+\contentsline {section}{\numberline {A.1}Python Script DS18S20}{45}{section.A.1}
+\contentsline {section}{\numberline {A.2}Erstellung Grafen DS18S20}{46}{section.A.2}
+\contentsline {section}{\numberline {A.3}Python Script HYT-221 mit RRD}{48}{section.A.3}
+\contentsline {section}{\numberline {A.4}Python Script HYT-221 mit mySQL}{51}{section.A.4}
+\contentsline {section}{\numberline {A.5}Erstellung Grafen HYT-221}{54}{section.A.5}
+\contentsline {section}{\numberline {A.6}Python Script Vibrationsmessung}{60}{section.A.6}
+\contentsline {section}{\numberline {A.7}PHP-Script zum Auslesen der Beschleunigungswerte}{63}{section.A.7}
+\contentsline {section}{\numberline {A.8}JavaScript File zur Visualisierung der Beschleunigungswerte}{64}{section.A.8}
+\contentsline {section}{\numberline {A.9}HTML File zur Darstellung der Beschleunigungswerte}{66}{section.A.9}
+\contentsline {chapter}{\numberline {B}Abbildungen}{69}{appendix.B}
+\contentsline {section}{\numberline {B.1}Grafen Temperatur und Luftfeuchtigkeit}{69}{section.B.1}
+\contentsline {section}{\numberline {B.2}Visualisierung der Vibrationswerte}{72}{section.B.2}

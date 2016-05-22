@@ -33,18 +33,19 @@
 \BOOKMARK [2][-]{subsection.3.4.3}{Auslesen der Daten}{section.3.4}% 33
 \BOOKMARK [2][-]{subsection.3.4.4}{Datenspeicherung}{section.3.4}% 34
 \BOOKMARK [2][-]{subsection.3.4.5}{Visualisierung der Vibrationswerte}{section.3.4}% 35
-\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 36
-\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 37
-\BOOKMARK [0][-]{appendix.A}{Quellcode}{}% 38
-\BOOKMARK [1][-]{section.A.1}{Python Script DS18S20}{appendix.A}% 39
-\BOOKMARK [1][-]{section.A.2}{Erstellung Graphen DS18S20}{appendix.A}% 40
-\BOOKMARK [1][-]{section.A.3}{Python Script HYT-221 mit RRD}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.4}{Python Script HYT-221 mit mySQL}{appendix.A}% 42
-\BOOKMARK [1][-]{section.A.5}{Erstellung Graphen HYT-221}{appendix.A}% 43
-\BOOKMARK [1][-]{section.A.6}{Python Script Vibrationsmessung}{appendix.A}% 44
-\BOOKMARK [1][-]{section.A.7}{PHP-Script zum Auslesen der Beschleunigungswerte}{appendix.A}% 45
-\BOOKMARK [1][-]{section.A.8}{JavaScript File zur Visualisierung der Beschleunigungswerte}{appendix.A}% 46
-\BOOKMARK [1][-]{section.A.9}{HTML File zur Darstellung der Beschleunigungswerte}{appendix.A}% 47
-\BOOKMARK [0][-]{appendix.B}{Abbildungen}{}% 48
-\BOOKMARK [1][-]{section.B.1}{Graphen Temperatur und Luftfeuchtigkeit}{appendix.B}% 49
-\BOOKMARK [1][-]{section.B.2}{Visualisierung der Vibrationswerte}{appendix.B}% 50
+\BOOKMARK [1][-]{section.3.5}{Validierung}{chapter.3}% 36
+\BOOKMARK [0][-]{chapter.4}{Zusammenfassung und Ausblick}{}% 37
+\BOOKMARK [0][-]{chapter.4}{Literatur}{}% 38
+\BOOKMARK [0][-]{appendix.A}{Quellcode}{}% 39
+\BOOKMARK [1][-]{section.A.1}{Python Script DS18S20}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.2}{Erstellung Grafen DS18S20}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.3}{Python Script HYT-221 mit RRD}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.4}{Python Script HYT-221 mit mySQL}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.5}{Erstellung Grafen HYT-221}{appendix.A}% 44
+\BOOKMARK [1][-]{section.A.6}{Python Script Vibrationsmessung}{appendix.A}% 45
+\BOOKMARK [1][-]{section.A.7}{PHP-Script zum Auslesen der Beschleunigungswerte}{appendix.A}% 46
+\BOOKMARK [1][-]{section.A.8}{JavaScript File zur Visualisierung der Beschleunigungswerte}{appendix.A}% 47
+\BOOKMARK [1][-]{section.A.9}{HTML File zur Darstellung der Beschleunigungswerte}{appendix.A}% 48
+\BOOKMARK [0][-]{appendix.B}{Abbildungen}{}% 49
+\BOOKMARK [1][-]{section.B.1}{Grafen Temperatur und Luftfeuchtigkeit}{appendix.B}% 50
+\BOOKMARK [1][-]{section.B.2}{Visualisierung der Vibrationswerte}{appendix.B}% 51

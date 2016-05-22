@@ -1,6 +1,6 @@
 \chapter{Praktischer Teil}
 \label{chapter_Praktischer_Teil}
- Die Aufgabe war es, verschiedene Möglichkeiten des Monitorings durch den Einsatz des \ac{RPI}\,3 mit unterschiedlichen Sensoren zu erarbeiten. Dafür wurden für die Bereiche Temperatur- , Feuchtigkeits- und Vibrationsermittlung entsprechende Schaltungen erarbeitet. Es wurde ein Schaltplan gezeichnet und entsprechend diesem, die Schaltungen auf einem Steckbrett aufgebaut und die benötigte Software zum Betrieb entwickelt.\\
+ Die Aufgabe war es, verschiedene Möglichkeiten des Monitorings durch den Einsatz des \ac{RPI}\;3 mit unterschiedlichen Sensoren zu erarbeiten. Dafür wurden für die Bereiche Temperatur- , Feuchtigkeits- und Vibrationsermittlung entsprechende Schaltungen erarbeitet. Es wurde ein Schaltplan gezeichnet und entsprechend diesem, die Schaltungen auf einem Steckbrett aufgebaut und die benötigte Software zum Betrieb entwickelt.\\
 Das Ziel dieser Aufgabenstellung war es, mit einfachen Schaltungen die Möglichkeit zu schaffen kritische Entwicklungen im Bereich der Produktion schnell erfassen und darstellen zu können. Dadurch sollte sichergestellt werden, dass eine Fehlerhafte Produktion z.B. durch zu hohe Vibrationen  vermieden wird und dadurch Kosteneinsparungen getätigt werden können.\\
 In diesem Kapitel werden die verschiedenen Sensorschaltungen und deren Konfiguration, die Problem
 die sich bei der Realisierung ergaben, sowie die Ergebnisse und Auswertungen beschrieben.
@@ -93,7 +93,7 @@ lll
 }
 \toprule
 
-\multicolumn{1}{p{3cm}}{\textit{\ac{RPI}\,3 Pin}} & \multicolumn{1}{p{3cm}}{\textit{Sensor Pin} }&\multicolumn{1}{p{3cm}}{\textit{Verbindung}}\\\midrule
+\multicolumn{1}{p{3cm}}{\textit{\ac{RPI}\;3 Pin}} & \multicolumn{1}{p{3cm}}{\textit{Sensor Pin} }&\multicolumn{1}{p{3cm}}{\textit{Verbindung}}\\\midrule
 Pin\,1 (3,3\,V) & $V_{DD}$ & Rot\\
 &&\\
 Pin\,6 (GND) & GND & Schwarz\\
@@ -109,13 +109,13 @@ Pin\,7 (1-Wire) & DQ & Violett\\
 
 \subsection{Auslesen des Sensors}
 \label{subsection_Auslesen_DS18S20}
-Um die vom Sensor erfassten Daten auf dem \ac{RPI}\,3 auszulesen, wird ein Python Script verwendet. Dieses wird in Listing \ref{list_DS18S20} anhand eines kurzen Ausschnittes erklärt. Der komplette Quellcode ist im Anhang \ref{Python Script DS18S20} zu finden.\\
+Um die vom Sensor erfassten Daten auf dem \ac{RPI}\;3 auszulesen, wird ein Python Script verwendet. Dieses wird in Listing \ref{list_DS18S20} anhand eines kurzen Ausschnittes erklärt. Der komplette Quellcode ist im Anhang \ref{Python Script DS18S20} zu finden.\\
 
 %Quellcode DS18S20
 \lstset{escapeinside={\%*}{*},numbers=left,stepnumber=1}
 \lstinputlisting[language=Python, firstline=16, lastline=32, caption=Auslesen der gemessenen Temperatur, label=list_DS18S20]{Listings/DS18S20/DS18S20.py}
 
-Um die Temperatur des Sensors auslesen zu können wird in Zeile 2 des Codes das File geöffnet und dessen Inhalt in eine Variable gespeichert. Dieses File enthält die IDs der an den \ac{RPI}\,3 angeschlossenen 1-Wire Sensoren. Jeder dieser Sensoren besitzt im Pfad \texttt{/sys/bus/w1/devices/} einen Ordner mit seiner ID. In diesem liegt eine Datei mit der Bezeichnung \texttt{w1\_slave}, die die gemessenen Daten enthält. Um diese auszulesen, werden in dem Python Script in den Zeilen $8-15$ verschiedene Schritte durchgeführt, auf die nicht näher eingegangen wird\footnote{kann unter \url{http://www.python-kurs.eu/kurs.php} nachgelesen werden}. Da die Temperatur in der Datei im Format von z.B. 17687 ($\approx$ 17,7 $^\circ$C) angegeben wird, muss dieser Wert noch durch 1000 dividiert werden um den genauen Temperaturwert zu erhalten(Zeile 15 im Quellcode). In Zeile 16 wird der Wert noch auf zwei Stellen nach dem Komma gerundet und ist in der Variable \texttt{temperature} gespeichert. Mit dem Wert dieser Variable kann nun weiter gearbeitet werden.\\
+Um die Temperatur des Sensors auslesen zu können wird in Zeile 2 des Codes das File geöffnet und dessen Inhalt in eine Variable gespeichert. Dieses File enthält die IDs der an den \ac{RPI}\;3 angeschlossenen 1-Wire Sensoren. Jeder dieser Sensoren besitzt im Pfad \texttt{/sys/bus/w1/devices/} einen Ordner mit seiner ID. In diesem liegt eine Datei mit der Bezeichnung \texttt{w1\_slave}, die die gemessenen Daten enthält. Um diese auszulesen, werden in dem Python Script in den Zeilen $8-15$ verschiedene Schritte durchgeführt, auf die nicht näher eingegangen wird\footnote{kann unter \url{http://www.python-kurs.eu/kurs.php} nachgelesen werden}. Da die Temperatur in der Datei im Format von z.B. 17687 ($\approx$ 17,7 $^\circ$C) angegeben wird, muss dieser Wert noch durch 1000 dividiert werden um den genauen Temperaturwert zu erhalten(Zeile 15 im Quellcode). In Zeile 16 wird der Wert noch auf zwei Stellen nach dem Komma gerundet und ist in der Variable \texttt{temperature} gespeichert. Mit dem Wert dieser Variable kann nun weiter gearbeitet werden.\\
 Wichtig beim Auslesen der Dateien ist es, darauf zu achten, dass die Temperaturwerte im richtigen Format ausgelesen werden, da es sonst im späteren Verlauf zu Problemen kommen kann (unübersichtliche Darstellung bei der Visualisierung).
 
 %Subsection Datenspeicherung
@@ -152,7 +152,7 @@ Durch diese Codezeile, wird ein Update der Datenbank durchgeführt und der Wert,
 Die grafische Darstellung der Daten wurde wieder mit dem RRDtool realisiert. Hier wurden zwei Grafen erstellt, die die gemessenen Temperaturwerte für verschiedene Zeiträume darstellen. Zur Erstellung dieser Grafen wurde ein Shell Script verwendet, das den entsprechenden Code enthält. Der Quellcode zur Erstellung der Grafen ist im Anhang dargestellt. Die einzelnen Befehle können auf folgender Quelle nachgeschlagen werden \citep{Hompage_RRDtool}.
 \\Abbildung \ref{Abb_Temperaturverlauf_Stunde_DS18S20} und \ref{Abb_Temperaturverlauf_10Stunden_DS18S20} zeigen die mittels RRDtool erzeugten Grafen.
 
-%RRD Graphen
+%RRD Grafen
 \begin{figure}[!h] 
   \centering
      \includegraphics[scale=.28]{BilderAllgemein/TemperaturStunde.png}
@@ -235,7 +235,7 @@ llll
 }
 \toprule
 
-\multicolumn{1}{p{3cm}}{\textit{\ac{RPI}\,3 Pin}} & \multicolumn{1}{p{3cm}}{\textit{DS18S20 Pin} }&\multicolumn{1}{p{3cm}}{\textit{HYT-221 Pin}}&\multicolumn{1}{p{3cm}}{\textit{Verbindung}}\\\midrule
+\multicolumn{1}{p{3cm}}{\textit{\ac{RPI}\;3 Pin}} & \multicolumn{1}{p{3cm}}{\textit{DS18S20 Pin} }&\multicolumn{1}{p{3cm}}{\textit{HYT-221 Pin}}&\multicolumn{1}{p{3cm}}{\textit{Verbindung}}\\\midrule
 Pin\,1 (3,3\,V) & $V_{DD}$&$V_{DD}$ & Rot\\
 &&&\\
 Pin\,6 (GND) & GND&GND & Schwarz\\
@@ -260,7 +260,7 @@ Im folgenden Code wurde das Auslesen der Daten des HYT-221 über den \ac{I$^2$C}
 \lstinputlisting[language=Python, firstline=20, lastline=45, caption=Auslesen der Temperatur und Luftfeuchtigkeit]{Listings/HYT221/Messung.py}
 
 Um das Auslesen der Daten einfach zu gestalten, wurde im Script die Bibliothek \textit{smbus} importiert, welche fertige Funktionen zum Auslesen eines \ac{I$^2$C} Busses bereitstellt.\\
-Als Erstes wurde eine Variable mit der Adresse des Sensors angelegt. Diese Adresse kann dem Datenblatt des Sensors entnommen werden oder über den Befehl \texttt{i2cdetect -y 1} in der Konsole des \ac{RPI}\,3 ausgelesen werden. Der Parameter -y bewirkt, dass der Befehl sofort ausgeführt wird, der Parameter 1 legt fest, dass es sich um den \ac{I$^2$C} Bus Nummer 1 handelt (andere Hardware kann auch mehrere \ac{I$^2$C} Busse besitzen).\\
+Als Erstes wurde eine Variable mit der Adresse des Sensors angelegt. Diese Adresse kann dem Datenblatt des Sensors entnommen werden oder über den Befehl \texttt{i2cdetect -y 1} in der Konsole des \ac{RPI}\;3 ausgelesen werden. Der Parameter -y bewirkt, dass der Befehl sofort ausgeführt wird, der Parameter 1 legt fest, dass es sich um den \ac{I$^2$C} Bus Nummer 1 handelt (andere Hardware kann auch mehrere \ac{I$^2$C} Busse besitzen).\\
 Um den smbus verwenden zu können musste ein Objekt dessen erzeugt werden (Zeile 13), die 1 in der Funktion steht wie schon beschrieben für Bus Nummer 1. Im Anschluss wurde das erzeugte Array zur Speicherung der Daten noch initialisiert. Die Funktion in Zeile 22 erzeugt die im Theorieteil beschriebene Startbedingung. Im Anschluss an die Startbedingung werden mit der Funktion \texttt{read\_i2c\_block\_data()} die Register, in denen die Werte für die Temperatur und Luftfeuchtigkeit gespeichert sind, ausgelesen und in das Array gespeichert. Die Temperatur- und Feuchtigkeitswerte sind in vier Byte aufgeteilt und müssen dementsprechend nacheinander ausgelesen werden. Dies kann in der Protokollbeschreibung für den Sensor in folgender Quelle nachgelesen werden \citep{Datenblatt_I2C_HYT221}. Die übertragenen Werte, mussten im Anschluss anhand bestimmter Formel in die richtige Form umgerechnet werden. Die Formeln wurden aus dem Datenblatt des Sensors entnommen. Erforderlich war dies, um die Werte korrekt weiterverarbeiten zu können.
 
 
@@ -269,7 +269,7 @@ Um den smbus verwenden zu können musste ein Objekt dessen erzeugt werden (Zeile
 \label{subsection_Datenspeicherung_HYT221}
 Wie schon in Abschnitt \ref{subsection_Speicherung der Daten des DS18S20} beschrieben, wurden die Daten wieder in eine RRD Datenbank gespeichert. Der Source Code hierfür ist in Anhang \ref{Python Script HYT-221 mit RDD} abgebildet.\\
 Weiterhin wurden die Sensordaten in einer mySQL Datenbank abgelegt, um die Möglichkeit zu schaffen, zu einem späteren Zeitpunkt durch Exportieren dieser Daten (z.B. als CSV-File) eine weitere Bearbeitung zu ermöglichen. Möglichkeiten hierfür wären z.B. bei einer Fehlproduktion zu einem bestimmten Zeitpunkt konkrete Aussagen über mögliche Ursachen tätigen zu können.\\
-Der Source Code zur Realisierung der Datenspeicherung mittels mySQL DB ist im Anschluss aufgeführt. Die entsprechende DB wurde zuvor auf dem \ac{RPI}\,3 erstellt. Zur einfacheren Nutzung der mySQL Datenbank in dem Python Script wurde die Bibliothek \texttt{mysql.connector} importiert. Diese stellt vordefinierte Funktionen für die Verbindung mit der DB zur Verfügung, sowie Funktionen zum Lesen und Schreiben in bzw. aus der DB. Die Herstellung einer Verbindung zur Datenbank ist in Listing \ref{Datenbankverbindung} zu sehen.
+Der Source Code zur Realisierung der Datenspeicherung mittels mySQL DB ist im Anschluss aufgeführt. Die entsprechende DB wurde zuvor auf dem \ac{RPI}\;3 erstellt. Zur einfacheren Nutzung der mySQL Datenbank in dem Python Script wurde die Bibliothek \texttt{mysql.connector} importiert. Diese stellt vordefinierte Funktionen für die Verbindung mit der DB zur Verfügung, sowie Funktionen zum Lesen und Schreiben in bzw. aus der DB. Die Herstellung einer Verbindung zur Datenbank ist in Listing \ref{Datenbankverbindung} zu sehen.
 Wichtig dabei war, die korrekten Anmeldedaten für die Datenbank zu verwenden, da ansonsten die Verbindung nicht hergestellt werden konnte und eine Fehlermeldung ausgegeben wurde.
 
 \lstset{escapeinside={\%*}{*)},numbers=left}
@@ -281,8 +281,9 @@ Um auf die Tabelle in der Datenbank zugreifen zu können musste noch ein Cursor 
 \lstinputlisting[language=Python, firstline=95, lastline=112, caption=Speicherung der Daten in mySQL DB]{Listings/HYT221/Messung.py}
 
 \subsection{Visualisierung der Daten}
-\label{subsection_Visualisierung der Daten}
-Die Messdaten wurden wie im Abschnitt \ref{subsection_Visualisieren der Daten DS18S20} mit dem RRDtool visualisiert. Hier wurden die Werte aller drei Sensoren in den Graphen abgebildet, was einen Vergleich der Temperaturwerte zwischen den verschiedenen Sensoren recht leicht machte. Als Ergebnis konnte festgehalten werden, dass sich die Sensoren im Durchschnitt um maximal 0,5 Grad unterschieden haben. Dies spricht wiederum für die Messgenauigkeit der einzelnen verwendeten Sensoren. Auch wurde noch ein weiterer Graph für den Zeitraum von den letzten drei Tagen hinzugefügt. Die Graphen mit den Temperatur und Feuchtigkeitswerten sind im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} aufgelistet. Ebenso ist der Quellcode für die Erstellung der Graphen in \ref{Erstellung Graphen HYT-221}  ersichtlich.\newpage
+\label{subsection_Visualisierung der Daten_HYT221}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%              Überarbeiten                        %%%%%%%%%%%%%%%%%%%%%%
+Die grafische Aufbereitung der Messdaten wurde in diesem Versuch wieder mit dem RRDtool realisiert. Dafür wurden drei Grafen für die unterschiedlichen Zeitspannen erstellt. Ein Graf bildet den Zeitraum der letzten Stunde ab, ein weiterer die letzten zehn Stunden und der dritte die Zeitspanne der letzten drei Tage. Die Erstellung der Grafen erfolgt über ein Shell Script, das über einen Eintrag in der Datei \texttt{crontab} jede Minute aufgerufen wird. Für jeden der erwähnten Zeiträume, wird jeweils ein Graf für den Temperatur- und Luftfeuchtigkeitsverlauf erzeugt. Das angesprochene Shell Script ist im Anhang \ref{Erstellung Graphen HYT-221} aufgelistet. Ein Beispiel für die Ausgabe der Grafen ist ebenfalls im Anhang \ref{Anhang_Abbildung_Temperaturverlauf} ersichtlich. \newpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +293,7 @@ Im dritten Versuchsaufbau sollte mit dem Beschleunigungssensor BMA020 die Vibrat
 
 \subsection{BMA\,020}
 \label{subsection_BMA020}
-Der BMA\,020 ist ein von Bosch entwickelter Sensor, der die Beschleunigung in drei Richtungen (x-, y- und z-Achse) misst. Die Messdaten werden im Format eines 2er Komplements mit 10\,Bit ausgegeben. Als Schnittstellen stellt der BMA\,020 einen SPI- und \ac{I$^2$C} Bus zur Verfügung. Die wichtigsten technischen Daten wurden dem Datenblatt \citep{Datenblatt_BMA020} entnommen und in der Tabelle \ref{Tabelle_Technische_Daten_BMA020} dargestellt.  
+Der BMA\,020 ist ein von Bosch entwickelter Sensor, der die Beschleunigung in drei Richtungen (x-, y- und z-Achse) misst. Die Messdaten werden im Format eines 2er Komplements mit 10\,Bit ausgegeben. Als Schnittstellen stellt der BMA\,020 einen SPI- und \ac{I$^2$C} Bus zur Verfügung. Die wichtigsten technischen Daten wurden dem Datenblatt \citep{Datenblatt_BMA020} entnommen und sind in der Tabelle \ref{Tabelle_Technische_Daten_BMA020} dargestellt.  
 
 %Tabelle Technische Daten HYT-221
 \begin{table}[H]
@@ -328,6 +329,8 @@ Abbildung zeigt die fertig bestückte Platine mit dem BMA020.
 \end{figure}
 \newpage
 
+
+%%%%%%%%%%%%%%% Schaltungsaufbau %%%%%%%%%%%%%%%%%%%%%
 \subsection{Schaltungsaufbau}
 \label{subsection_Schaltungsaufbau_BMA020}
 
@@ -338,14 +341,38 @@ Abbildung zeigt die fertig bestückte Platine mit dem BMA020.
   \label{Abb_Schaltungsaufbau_BMA020}
 \end{figure}
 
-Die in Abbildung \ref{Abb_Schaltungsaufbau_BMA020} dargestellte Schaltung beinhaltet die fertig bestückte Platine mit dem BMA020. Weiterhin ist auf der Platine auch ein Pullup Widerstand mit verbaut, sowie weitere Widerstände, um eine Spannungsversorgung der Platine mit 2,5\,V - 6\,V zu gewährleisten ohne dass der BMA020 Schaden nimmt (Spannungsversorgung des BMA\,020 liegt sonst bei max. 3,6\,V).\\
-Die Schaltung wurde an Hand des Datenblattes der Platine für einen Betrieb mittles \ac{I$^2$C} Schnittstelle verdrahtet. Dafür wurde die Pins \textit{UIN, CSB} und \textit{UPULLUP} mit einer 3,3\,V Versorgungsspannung belegt (rote Verbindungen). Die Pins \textit{SDO} und \textit{GND} wurde auf GROUND gelegt (schwarze Verbindungen). Für die Datenübertragung wurde der Pin SCK mit dem SCL Pin des \ac{RPI} (grüne Verbindung), sowie der SDI Pin mit dem SDA Pin des \ac{RPI} (gelbe Verbindung) verbunden.
+%Tabelle Technische Daten HYT-221
+\begin{table}[H]
+%\rowcolors{2}{black!10}{black!20}
+\centering
+\begin{tabular}{
+lll
+}
+\toprule
+
+\multicolumn{1}{p{3cm}}{\textit{\ac{RPI}\;3 Pin}} & \multicolumn{1}{p{4.5cm}}{\textit{BMA\,020 Pin} }&\multicolumn{1}{p{3cm}}{\textit{Verbindung}}\\\midrule
+Pin\,1 (3,3\,V) & UIN, CSB, UPULLUP & Rot\\
+&&\\
+Pin\,6 (GND) &GND, SDO & Schwarz\\
+&&\\
+Pin\,3 (SDA) &SDI &GELB\\
+&&\\
+Pin\,5 (SCL)&SCK& GRÜN\\ 
+\bottomrule
+\end{tabular}
+\caption{Verbindung der einzelnen Pins}
+\label{Verbindung der einzelnen Pins BMA020}
+\end{table}
+
+Die in Abbildung \ref{Abb_Schaltungsaufbau_BMA020} dargestellte Schaltung beinhaltet die fertig bestückte Platine mit dem BMA020. Weiterhin ist auf der Platine auch ein Pullup Widerstand verbaut, sowie weitere Widerstände, um eine Spannungsversorgung der Platine mit 2,5\,V - 6\,V zu gewährleisten ohne dass der BMA020 Schaden nimmt (Spannungsversorgung des BMA\,020 liegt sonst bei max. 3,6\,V).\\
+Die Schaltung wurde an Hand des Datenblattes der Platine, wie in Tabelle \ref{Verbindung der einzelnen Pins BMA020} beschrieben für einen Betrieb mittles \ac{I$^2$C} Schnittstelle verdrahtet. 
 
 \subsection{Auslesen der Daten}
 \label{subsection_Auslesen_Daten_BMA020}
 
-Um die Daten über den \ac{I$^2$C} Bus auszulesen, wurde ähnlich vorgegangen wie bei der Temperatur- und Luftfeuchtigkeitsmessung. Die Änderung dazu war allerdings, dass das Python Script nicht wie zuvor über den Crown-Deamon jede Minute aufgerufen wurde sondern die Messungen in einer while Schleife jede Sekunde ausgewertet wurden. Dies war für die Aussage über eventuelle Vibrationen nötig, da ansonsten keine aussagekräftigen Werte ermittelt werden können.\\
-Als erstes wurden die Funktionen zum Auslesen der Register und für die Umwandlung des 2er Komplements definiert (Zeile 30 - 43). In Zeile 45 - 47 ist die Funktion für die Startbedingung des \ac{I$^2$C} Busses definiert. In der folgenden while Schleife wurden dann mittels der vorher definierten Funktion die Register für die verschiedenen Beschleunigungsrichtungen ausgelesen. Hier mussten für jeden Beschleunigungswert zwei verschiedene Register gelesen werden, da die Werte in diesen gespeichert waren\footnote{im Datenblatt des Sensors ersichtlich} (für x-Achse musste z.B. das Register 0x02, das die LSB-Werte enthält und das Register 0x03 mit den MSB-Werten gelesen und entsprechend zusammengesetzt werden). Im Anschluss wurden noch die digitalen Werte in die entsprechnden g-Werte umgerechnet um eine aussagekräftige Darstellung zu ermöglichen. Der Ausschnitt für den eben beschrieben Teil des Source Codes ist in Listing \ref{Auslesen_Vibrationswerte_BMA020} ersichtlich. Der gesamte Quellcode ist in Anhang \ref{Python Script Vibrationsmessung} aufgelistet.
+Um die Daten über den \ac{I$^2$C} Bus auszulesen, wurde ähnlich vorgegangen wie bei der Temperatur- und Luftfeuchtigkeitsmessung. Die Änderung dazu war allerdings, dass das Python Script nicht wie zuvor über den Crown-Daemon jede Minute aufgerufen wurde sondern die Messungen in einer while Schleife jede Sekunde ausgewertet wurden. Dies war für die Aussage über eventuelle Vibrationen nötig, da ansonsten keine aussagekräftigen Werte ermittelt werden können.\\
+Als erstes wurden die Funktionen zum Auslesen der Register und für die Umwandlung des 2er Komplements definiert (Zeile 30 - 43). In Zeile 45 - 47 ist die Funktion für die Startbedingung des \ac{I$^2$C} Busses definiert. In der folgenden while Schleife wurden dann mittels der vorher definierten Funktion die Register für die verschiedenen Beschleunigungsrichtungen ausgelesen. Hier mussten für jeden Beschleunigungswert zwei verschiedene Register gelesen werden, da die Werte in diesen gespeichert waren\footnote{im Datenblatt des Sensors ersichtlich}. Der Wert für die x-Achse musste aus dem Register 0x02, das den LSB-Wert enthielt und aus dem Register 0x03 mit dem MSB-Wert zusammengesetzt werden.
+Im Anschluss wurden noch die digitalen Werte in die entsprechnden g-Werte umgerechnet um eine aussagekräftige Darstellung zu ermöglichen. Der Ausschnitt für den eben beschrieben Teil des Source Codes ist in Listing \ref{Auslesen_Vibrationswerte_BMA020} ersichtlich. Der gesamte Quellcode ist in Anhang \ref{Python Script Vibrationsmessung} aufgelistet.
 
 \lstset{escapeinside={\%*}{*)},numbers=left}
 \lstinputlisting[language=Python, firstline=30, lastline=66, caption=Auslesen der Vibrationswerte,label=Auslesen_Vibrationswerte_BMA020]{Listings/Vibration/Vibration.py}
@@ -356,5 +383,11 @@ Die Vibrationswerte der verschiedenen Bewegungsrichtungen wurden in diesem Testa
 
 \subsection{Visualisierung der Vibrationswerte}
 \label{subsection_Visualisierung der Vibrationswerte}
-Im Gegensatz zu den vorherigen Beispielen, wurde in diesem Fall auf eine Visualisierung mittels Graphen verzichtet, da damit eine Vibrationsmessung in nahezu Echtzeit schwer zu realisieren war. Es hätte hierfür jede Sekunde ein Graph mit dem RDDtool erstellt werden müssen, was eine sehr große Systemlast zur Folge gehabt hätte.\\
-Daher wurde die Auswertung über ein HTML File realisiert, welches mittels AJAX (Asynchronous JavaScript and XML) die aktuellen Beschleunigungswerte mit dem sich am Server befindenden PHP-Script austauscht. Das PHP-Script, das sich auf dem WebServer (wurde auf dem \ac{RPI} installiert) befindet, ließt die aktuellen Beschleunigungswerte aus einem Textfile aus. Die Daten in diesem Textfile wurden von dem Python Script in dieses geschrieben (Zeile 73 - 75 im Python Script). Die Darstellung der HTML Seite ist im Anhang \ref{Anhang_Visualisierung der Vibrationswerte} ersichtlich. Bei dieser Darstellung wurde noch darauf geachtet, dass bei nicht bedenklichen Beschleunigungswerten die Angaben in grüner Schrift, bei erhöhten Beschleunigungswerten in oranger Schrift und bei kritischen Beschleunigungswerten in roter Schrift dargestellt werden. Wenn nur ein Beschleunigungswert einer Richtung im kritischen Bereich liegt, so wird zusätzlich im unteren Bereich der Anzeige eine Warnmeldung eingeblendet. Dies Logik wurde über ein JavaScript File realisiert. Die verschiedenen Quelltexte der einzelnen Files sind im Anhang   \ref{PHP-Script zum Auslesen der Beschleunigungswerte} \ref{JavaScript File zur Visualisierung der Beschleunigungswerte} \ref{HTML File zur Darstellung der Beschleunigungswerte} aufgelistet. 
+Im Gegensatz zu den vorherigen Beispielen, wurde in diesem Fall auf eine Visualisierung mittels Grafen verzichtet, da damit eine Vibrationsmessung in nahezu Echtzeit schwer zu realisieren war. Es hätte hierfür jede Sekunde ein Graf mit dem RRDtool erstellt werden müssen, was eine sehr große Systemlast zur Folge gehabt hätte.\\
+Daher wurde die Auswertung über ein HTML File realisiert, welches mittels AJAX (Asynchronous JavaScript and XML) die aktuellen Beschleunigungswerte mit dem sich am Server befindenden PHP-Script austauscht. Das PHP-Script, das sich auf dem WebServer (\ac{RPI}\;3) befindet, liest die aktuellen Beschleunigungswerte aus einem Textfile aus. Die Daten in diesem Textfile wurden von dem Python Script in dieses geschrieben (Zeile 73 - 75 im Python Script). Die Darstellung der HTML Seite ist im Anhang \ref{Anhang_Visualisierung der Vibrationswerte} ersichtlich. Bei dieser Darstellung wurde noch darauf geachtet, dass bei nicht bedenklichen Beschleunigungswerten die Angaben in grüner Schrift, bei erhöhten Beschleunigungswerten in oranger Schrift und bei kritischen Beschleunigungswerten in roter Schrift dargestellt werden. Wenn nur der Beschleunigungswert einer Richtung im kritischen Bereich liegt, so wird zusätzlich im unteren Bereich der Anzeige eine Warnmeldung eingeblendet. Diese Logik wurde über ein JavaScript File realisiert. Die verschiedenen Quelltexte der einzelnen Files sind im Anhang   \ref{PHP-Script zum Auslesen der Beschleunigungswerte} \ref{JavaScript File zur Visualisierung der Beschleunigungswerte} \ref{HTML File zur Darstellung der Beschleunigungswerte} aufgelistet. 
+
+\section{Validierung}
+\label{section_Validierung}
+Anhand der unterschiedlichen Temperatursensoren, die bei Versuch zwei verwendet wurden, konnten die Temperaturwerte der einzelnen Sensoren zu bestimmten Zeitpunkten miteinander verglichen werden.\\
+Als Ergebnis stellte sich dar, dass die unterschiedlichen Sensoren im Durchschnitt um maximal 0,5$^\circ\text{C}$ voneinander abweichen. Bei den beiden verwendeten baugleichen DS18S20 betrug die maximale Abweichung nur 0,3$^\circ\text{C}$, was innerhalb der im Datenblatt angegeben Toleranz liegt. Dies lässt auf eine sehr gute Messgenauigkeit dieses Sensors schließen, wodurch sich dieser als bevorzugte Lösung für den Einsatz im Fertigungsumfeld herauskristallisiert. Die Messergebnisse der Luftfeuchtigkeit mit dem HYT-221 waren ebenfalls sehr zufriedenstellend, da auch hier die Wert die Umgebungssituation gut widerspiegelten. So konnte an regnerischen Tagen ein hoher Anstieg der Luftfeuchtigkeit beobachtet werden. Diese Erkenntnisse sind für den geplanten Einsatz im Fertigungsbetrieb ausreichend und können die dort vorherrschenden Produktionsbedingungen für den Anfang gut dokumentieren.\\
+Die Vibrationsmessung mit dem BMA\;020 lieferte ebenfalls zufriedenstellende Ergebnisse. Hierbei musste nur darauf geachtet werden, dass die Beschleunigungswerte auf der z-Achse in Ruhelage -1\;g betrugen, was aber durch die immer wirkende Erdbeschleunigung geschuldet ist. Für die Erkennung von Vibrationen hat dies aber keinen Einfluss, da diese durch eine spätere Auswertung in anderen Programmen (z.B. MatLab) ersichtlich sind. Für den Einsatz in den Produktionsmaschinen um etwaige Vibrationen zu erkennen, ist die erarbeitet Schaltung gänzlich ausreichend.

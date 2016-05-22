@@ -23,13 +23,13 @@
 
 \bibitem{RPI_Bild}
 E.~Upton, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
-  \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/} (17.04.2016),
-  Februar 2016.
+  \url{https://www.raspberrypi.org/blog/raspberry-pi-3-on-sale/} (letzter
+  Zugriff: 17.04.2016), Februar 2016.
 
 \bibitem{GPIO_Header_Bild}
 { Premier Farnell}, ,,{Raspberry Pi 3 Model B GPIO 40 Pin Block Pinout},''
   \url{https://www.element14.com/community/docs/DOC-73950/l/raspberry-pi-3-model-b-gpio-40-pin-block-pinout}
-  (18.04.2016).
+  (letzter Zugriff: 18.04.2016).
 
 \bibitem{I2C_Datenblatt}
 \emph{I2C-bus specification and user manual}, NXP Semiconductor, April 2014.
@@ -38,23 +38,23 @@ E.~Upton, ,,{RASPBERRY PI 3 ON SALE NOW AT \$35},''
 {Re-In Retail International GmbH}, ,,{Feuchte- und Temperatursensor digital
   Hyt221},''
   \url{http://www.voelkner.de/products/207755/Feuchte-und-Temperaturesensor-digital-Hyt-221.html}
-  (21.04.2016).
+  (letzter Zugriff: 21.04.2016).
 
 \bibitem{Bild_BMA020}
 {ELV-/eQ-3-Gruppe}, ,,{3-Achsen-Beschleunigungssensor},''
   \url{http://www.elv.de/3-achsen-beschleunigungssensor-3d-bs-komplettbausatz.html}
-  (28.04.2016).
+  (letzter Zugriff: 28.04.2016).
 
 \bibitem{Quelle_Tabelle}
 D.~G. Calin, ,,{Compare 10 Linux single-board computers to find the right one
   for you},''
   \url{http://www.intorobotics.com/compare-10-linux-single-board-computers-to-find-the-right-one-for-you/}
-  (18.05.2016).
+  (letzter Zugriff: 18.05.2016).
 
 \bibitem{RaspberryPiHomePage}
 { Raspberry PI Foundation}, ,,{RASPBERRY PI 3 MODEL B},''
-  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/}
-  (16.04.2016).
+  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/} (letzter
+  Zugriff: 16.04.2016).
 
 \bibitem{Bussysteme_in_der_Praxis}
 W.~Klaas, \emph{Bussysteme in der Praxis}.\hskip 1em plus 0.5em minus
@@ -80,15 +80,15 @@ Kofler, Kühnast, und Scherbeck, \emph{Raspberry Pi Das umfassende
 \bibitem{Bluetooth_Low_Energy}
 { Bluetooth SIG}, ,,{Bluetooth Low Energy},''
   \url{https://www.bluetooth.com/what-is-bluetooth-technology/bluetooth-technology-basics/low-energy}
-  (18.04.2016).
+  (letzter Zugriff: 18.04.2016).
 
 \bibitem{RPI_Verkaufszahlen}
 L.~Upton, ,,{SENIOR PI},'' \url{https://www.raspberrypi.org/blog/senior-pi/}
-  (17.04.2016), Raspberry Pi Foundation, Oktober 2015.
+  (letzter Zugriff: 17.04.2016), Raspberry Pi Foundation, Oktober 2015.
 
 \bibitem{Hompage_RRDtool}
-T.~Oetiker, ,,{About RRDtool},'' \url{http://oss.oetiker.ch/rrdtool/}
-  (25.04.2016), OETIKER+PARTNER AG, September 2014.
+T.~Oetiker, ,,{About RRDtool},'' \url{http://oss.oetiker.ch/rrdtool/} (letzter
+  Zugriff: 25.04.2016), OETIKER+PARTNER AG, September 2014.
 
 \bibitem{Datenblatt_I2C_HYT221}
 \emph{DIGITALER FEUCHTESENSOR PROTOKOLLBESCHREIBUNG I2C}, HYGROSENS INSTRUMENTS

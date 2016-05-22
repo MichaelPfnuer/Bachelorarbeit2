@@ -106,7 +106,7 @@ Das folgende Kapitel beschreibt den Raspberry Pi 3 und befasst sich genauer mit 
 \subsection{Allgemeine technische Daten}
 \label{subsection_Allgemeine_technische_Daten}
 Die folgenden Information wurden, soweit nicht anders angegeben von der offiziellen Homepage der \textbf{Raspberry Pi Foundation} entnommen \citep{RaspberryPiHomePage}.\\
-Der \ac{RPI} 3 ist ein kreditkartengroßer Einplatinenrechner, welcher aktuell an die \textit{sieben Million} Mal verkauft wurde \citep{RPI_Verkaufszahlen}. Dieser besitzt:
+Der \ac{RPI}\;3 ist ein kreditkartengroßer Einplatinenrechner, welcher aktuell an die \textit{sieben Million} Mal verkauft wurde \citep{RPI_Verkaufszahlen}. Dieser besitzt:
 \begin{itemize}
 \item einen 1.2\;GHz 64-bit quad-core ARMv8 CPU
 \item 802.11n Wireless LAN
@@ -130,11 +130,11 @@ Die aktuelle Version des Raspberry Pi, der \ac{RPI}\;3 ist in Abbildung \ref{Abb
   \label{Abb_Bild_RPI3}
 \end{figure}
 
-Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen  ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
+Durch die im Gegensatz zu den Vorgänger Modellen leistungsstärkere CPU mit einem 64-Bit quad-core Prozessor, ist es beim RPI\;3 möglich das Windows Betriebssystem \textit{Windows 10 IoT} zu betreiben, wodurch sich eine Erweiterung der Einsatzmöglichkeiten ergibt. Auch wurde im Gegensatz zu den vorherigen Modellen  ein WLAN Modul (2,4\;GHz) gleich auf der Platine verbaut und muss nicht mehr durch ein externes USB-WLAN Modul realisiert werden. Der \ac{RPI}\;3 bietet weiterhin einen 10/100 MBit Ethernet Anschluss sowie einen \ac{CSI} und \ac{DSI} Anschluss zur direkten Anbindung einer Kamera oder Displays. Die verschiedenen GPIO-Pins werden in Kapitel \ref{subsection_GPIO} genauer beschrieben.
 
 \subsection{GPIO-Kontakte}
 \label{subsection_GPIO}
-Im Gegensatz zu den Vorgängermodellen des \ac{RPI}\,3, welche nur 26 GPIO Pins besaßen, besitzt der \ac{RPI}\,3 40 GPIO Pins. Diese sind in Abbildung \ref{Abb_Bild_RPI3} ersichtlich am linken oberen Ende der Platine zu 2\;x\;20 Kontakten angeordnet. Der Rasterabstand von einem Pin zum nächsten beträgt 2,54 mm. Die GPIO-Pins sind elektrische Kontakte, die zur Messung und Steuerung von elektronischen Geräten wie z.B. Sensoren, Analog Digital Wandlern, LEDs etc. verwendet werden.\\
+Im Gegensatz zu den Vorgängermodellen des \ac{RPI}\;3, welche nur 26 GPIO Pins besaßen, besitzt der \ac{RPI}\;3 40 GPIO Pins. Diese sind in Abbildung \ref{Abb_Bild_RPI3} ersichtlich am linken oberen Ende der Platine zu 2\;x\;20 Kontakten angeordnet. Der Rasterabstand von einem Pin zum nächsten beträgt 2,54 mm. Die GPIO-Pins sind elektrische Kontakte, die zur Messung und Steuerung von elektronischen Geräten wie z.B. Sensoren, Analog Digital Wandlern, LEDs etc. verwendet werden.\\
 Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;General Purpose Input\;/\;Output}), sowie zwei verschiedene Spannungsversorgungen (\textit{3,3\;V} und \textit{5\;V}) und Masse Anschlüsse (\textit{0\;V}). Weiterhin beinhaltet die Steckerleiste Kontakte für den \ac{I$^2$C}-, \ac{SPI}- und 1-Wire-Bus. Bei der Verwendung der GPIO-Kontakten für verschiedene Projekte muss darauf geachtet werden, welche Bezeichnung verwendet wird. Die drei Möglichkeiten sind:
 \begin{itemize}
 \item die physikalische Pin-Nummer, anhand seine Position auf dem Board (von oben gesehen, Pin 1 besitzt eine quadratische Lötstelle)
@@ -142,7 +142,7 @@ Die Steckerleiste beinhaltet einige allgemein verwendbare Pins (\textit{=\;Gener
 \item den Pin Namen, welcher von den \ac{RPI} Entwicklern vergeben wurde 
 \end{itemize} 
 vorgenommen werden \citep{Raspberri_Pi_Handbuch}.\\\\
-In Abbildung \ref{Abb_Bild_GPIO} ist die Pin Belegung des \ac{RPI}\,3 grafisch dargestellt.
+In Abbildung \ref{Abb_Bild_GPIO} ist die Pin Belegung des \ac{RPI}\;3 grafisch dargestellt.
 
 %Grafik GPIO Pins
 \begin{figure}[!h] 
@@ -163,7 +163,7 @@ Der 1-Wire Bus ist ein serielles Bussystem von der Firma \textit{Dallas\footnote
 \subsubsection*{Allgemeine Informationen}
 \label{subsection_Allgemeine_Informationen_1Wire}
  Für dieses Bussystem wird nur eine Datenleitung benötigt, die auch als Spannungsversorgung für den\;/\;die jeweiligen Sensoren benutzt wird. Physikalisch werden allerdings zwei Leitungen verwendet, da die Masse auch mitgeführt werden muss. Es gibt für diesen Bus eine große Anzahl an Sensoren wie z.B. Temperatursensoren, die sich durch einen sehr geringen Stromverbrauch auszeichnen. Während der Kommunikation wird der Sensor aus einem internen Kondensator gespeist. Allerdings kann es notwendig sein, bei Sensoren bei denen die interne Spannungsversorgung nicht ausreichend ist, eine extra Spannungsversorgung für den jeweiligen Sensor mitzuführen. \\
-Der 1-Wire Bus ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es  einen Master (z.B. \ac{RPI}\,3) und mehrere Slaves (z.B. Sensoren) gibt. Die Aufgabe des Masters  ist es, die Kommunikation zu steuern. Die maximale Anzahl der Sensoren kann bis zu 100 betragen, welche parallel zueinander an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt \citep{Bussysteme_in_der_Praxis}.
+Der 1-Wire Bus ist ein \textit{One-Master-Multi-Slave} Bussystem, was bedeutet, dass es  einen Master (z.B. \ac{RPI}\;3) und mehrere Slaves (z.B. Sensoren) gibt. Die Aufgabe des Masters  ist es, die Kommunikation zu steuern. Die maximale Anzahl der Sensoren kann bis zu 100 betragen, welche parallel zueinander an den Master angeschlossen werden. Dies ist möglich, da jeder Sensor ein eindeutige 64 Bit lange ID besitzt \citep{Bussysteme_in_der_Praxis}.
 
 
 \subsubsection*{Übertragungsprotokoll}
